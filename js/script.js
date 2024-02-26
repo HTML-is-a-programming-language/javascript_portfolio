@@ -1,0 +1,1 @@
+document.getElementsByClassName('door').style.backgroundColor = 'white';
