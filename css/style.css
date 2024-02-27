@@ -78,10 +78,12 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     height: 68px;
 }
 header .left-box{
     display: flex;
+    align-items: center;
 }
 header .left-box .logo-box .logo .btn-home .triangle{
     width: 0;
@@ -102,13 +104,27 @@ header .left-box .logo-box .logo .btn-home .square .door{
     left: 50%;
     width: 4px;
     height: 7px;
-    background-color: #fff;
+    background-color: #000;
     transform: translateX(-50%);
-    transition: 0.3s;
+    transition: 1s;
 }
 header .left-box .menu-wrap .menu-box{
     display: flex;
 }
-header .right-box{
+header .left-box .menu-wrap .menu-box .menu-list{
+    margin-left: 20px;
+}
+header .left-box .menu-wrap .menu-box .menu-list .btn-menu{
+    display: block;
+    white-space: nowrap;
+}
+header .right-box .function-box{
     display: flex;
+}
+header .right-box .function-box .function-list{
+    margin-left: 20px;
+}
+header .right-box .function-box .function-list a{
+    display: block;
+    white-space: nowrap;
 }
