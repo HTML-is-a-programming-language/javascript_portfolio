@@ -127,4 +127,5 @@ header .right-box .function-box .function-list{
 header .right-box .function-box .function-list a{
     display: block;
     white-space: nowrap;
+    color: #000;
 }
