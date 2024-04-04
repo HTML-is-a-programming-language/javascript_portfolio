@@ -1,58 +1,17 @@
-/* web font */
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-/* reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+/* font */
+@font-face {
+  font-family: "Noto Sans Korean";
+  src: url(./font/NotoSansKR-VariableFont_wght.ttf);
 }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
+/* common */
 body {
-  line-height: 1;
+  font-family: "Noto Sans Korean", sans-serif;
+  font-size: 16px;
+  color: #000;
 }
 
-ol, ul {
+ul, ol {
   list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 a {
@@ -60,106 +19,76 @@ a {
   text-decoration: none;
 }
 
-img {
-  vertical-align: top;
-}
-
-button {
-  background: none;
-  padding: 0;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* common */
-body {
-  color: #000;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 16px;
-}
-
 .page-wrap {
-  padding: 0 60px;
+  padding: 0 20%;
 }
 
 /* header */
 header {
   display: flex;
-  justify-content: space-between;
+  flex-flow: wrap;
   align-items: center;
-  flex-wrap: wrap;
-  height: 68px;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
 }
-
 header .left-box {
   display: flex;
   align-items: center;
+  gap: 20px;
 }
-
-header .left-box .logo-box .logo .btn-home .triangle {
-  width: 0;
-  height: 0;
-  border-right: 8px solid transparent;
-  border-bottom: 7px solid #000;
-  border-left: 8px solid transparent;
-}
-
-header .left-box .logo-box .logo .btn-home .square {
-  position: relative;
-  width: 16px;
-  height: 11px;
-  background-color: #000;
-}
-
-header .left-box .logo-box .logo .btn-home .square .door {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 4px;
-  height: 7px;
-  background-color: #000;
-  transform: translateX(-50%);
-  transition: 1s;
-}
-
-header .left-box .menu-wrap .menu-box {
+header .menu-box {
   display: flex;
+  gap: 20px;
 }
-
-header .left-box .menu-wrap .menu-box .menu-list {
-  margin-left: 20px;
-}
-
-header .left-box .menu-wrap .menu-box .menu-list .btn-menu {
+header .btn-menu {
   display: block;
   white-space: nowrap;
 }
-
-header .right-box .function-box {
+header .function-box {
   display: flex;
+  gap: 20px;
 }
-
-header .right-box .function-box .function-list {
-  margin-left: 20px;
-}
-
-header .right-box .function-box .function-list a {
+header .btn-menu {
   display: block;
-  white-space: nowrap;
-  color: #000;
 }
 
 section.skill-wrap .banner-wrap {
   overflow: hidden;
 }
-
-section.skill-wrap .banner-wrap .banner-box {
+section.skill-wrap .banner-box {
   display: flex;
-  gap: 10px;
   width: 300%;
 }
-
-section.skill-wrap .banner-wrap .banner-box .banner-list {
+section.skill-wrap .banner-list {
+  display: flex;
   width: 100%;
+}
+section.skill-wrap .banner-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  background-color: rgba(145, 0, 255, 0.1882352941);
+}
+section.skill-wrap .banner-link:after {
+  display: block;
+  padding-top: 60%;
+  content: "";
+}
+section.skill-wrap .banner-description {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+section.skill-wrap .banner-description span {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
