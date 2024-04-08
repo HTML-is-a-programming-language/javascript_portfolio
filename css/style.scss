@@ -51,13 +51,14 @@ header{
     }
 }
 
-section.skill-wrap{
+section.banner{
     .banner-wrap{
         overflow: hidden;
+        position: relative;
     }
     .banner-box{
         display: flex;
-        width: 300%;
+        width: 100%;
     }
     .banner-list{
         display: flex;
@@ -67,9 +68,8 @@ section.skill-wrap{
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
         width: 100%;
-        background-color: #9100FF30;
+        border: 1px solid #000;
     }
     .banner-link:after{
         display: block;
@@ -78,20 +78,57 @@ section.skill-wrap{
     }
     .banner-description{
         display: flex;
+        align-items: center;
         gap: 20px;
         position: absolute;
         bottom: 20px;
         left: 20px;
-        span{
+        .description{
             padding: 10px 20px;
             border: 1px solid #000;
-            border-radius: 20px;
-            background-color: #fff;
-            font-size: 1.25rem;
-            font-weight: bold;
+            background: #fff;
+        }
+    }
+    .banner-button-box{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        .banner-button{
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        .banner-button.active{
+            background: #000;
+            color: #fff;
         }
     }
 }
-section.skill-wrap .banner-wrap .banner-box .banner-list .banner-link svg{
 
+section.skill{
+    margin-top: 40px;
+    .skill-box{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 45px 4%;
+    }
+    .skill-list{
+        position: relative;
+        width: 22%;
+        svg{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60%;
+            height: 60%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .skill-list:after{
+        display: block;
+        padding-top: 100%;
+        content: "";
+    }
 }

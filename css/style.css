@@ -53,42 +53,82 @@ header .btn-menu {
   display: block;
 }
 
-section.skill-wrap .banner-wrap {
+section.banner .banner-wrap {
   overflow: hidden;
+  position: relative;
 }
-section.skill-wrap .banner-box {
-  display: flex;
-  width: 300%;
-}
-section.skill-wrap .banner-list {
+section.banner .banner-box {
   display: flex;
   width: 100%;
 }
-section.skill-wrap .banner-link {
+section.banner .banner-list {
+  display: flex;
+  width: 100%;
+}
+section.banner .banner-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   width: 100%;
-  background-color: rgba(145, 0, 255, 0.1882352941);
+  border: 1px solid #000;
 }
-section.skill-wrap .banner-link:after {
+section.banner .banner-link:after {
   display: block;
   padding-top: 60%;
   content: "";
 }
-section.skill-wrap .banner-description {
+section.banner .banner-description {
   display: flex;
+  align-items: center;
   gap: 20px;
   position: absolute;
   bottom: 20px;
   left: 20px;
 }
-section.skill-wrap .banner-description span {
+section.banner .banner-description .description {
   padding: 10px 20px;
   border: 1px solid #000;
-  border-radius: 20px;
-  background-color: #fff;
-  font-size: 1.25rem;
-  font-weight: bold;
+  background: #fff;
+}
+section.banner .banner-button-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+section.banner .banner-button-box .banner-button {
+  padding: 10px;
+  border: 1px solid #000;
+}
+section.banner .banner-button-box .banner-button.active {
+  background: #000;
+  color: #fff;
+}
+
+section.skill {
+  margin-top: 40px;
+}
+section.skill .skill-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px 4%;
+}
+section.skill .skill-list {
+  position: relative;
+  width: 22%;
+}
+section.skill .skill-list svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+}
+section.skill .skill-list:after {
+  display: block;
+  padding-top: 100%;
+  content: "";
 }/*# sourceMappingURL=style.css.map */
