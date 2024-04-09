@@ -53,6 +53,11 @@ header .btn-menu {
   display: block;
 }
 
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 section.banner .banner-wrap {
   overflow: hidden;
   position: relative;
@@ -77,7 +82,7 @@ section.banner .banner-link:after {
   padding-top: 60%;
   content: "";
 }
-section.banner .banner-description {
+section.banner .banner-descript-box {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -85,7 +90,7 @@ section.banner .banner-description {
   bottom: 20px;
   left: 20px;
 }
-section.banner .banner-description .description {
+section.banner .banner-descript-box .banner-descript {
   padding: 10px 20px;
   border: 1px solid #000;
   background: #fff;
@@ -110,6 +115,9 @@ section.banner .banner-button-box .banner-button.active {
 section.skill {
   margin-top: 40px;
 }
+section.skill .skill-wrap {
+  margin-top: 20px;
+}
 section.skill .skill-box {
   display: flex;
   flex-wrap: wrap;
@@ -127,7 +135,63 @@ section.skill .skill-list svg {
   height: 60%;
   transform: translate(-50%, -50%);
 }
+section.skill .skill-list .text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 section.skill .skill-list:after {
+  display: block;
+  padding-top: 100%;
+  content: "";
+}
+
+section.function {
+  margin-top: 40px;
+}
+section.function .function-wrap {
+  margin-top: 20px;
+}
+section.function .function-box {
+  display: flex;
+}
+section.function .function-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}
+section.function .function-detail-box {
+  display: flex;
+  align-items: center;
+}
+
+section.project {
+  margin-top: 40px;
+}
+section.project .project-wrap {
+  margin-top: 20px;
+}
+section.project .project-box {
+  display: flex;
+  gap: 2%;
+}
+section.project .project-list {
+  width: 32%;
+}
+section.project .project-image-box {
+  position: relative;
+}
+section.project .project-image-box svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+}
+section.project .project-image-box:after {
   display: block;
   padding-top: 100%;
   content: "";

@@ -51,6 +51,11 @@ header{
     }
 }
 
+.section-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 section.banner{
     .banner-wrap{
         overflow: hidden;
@@ -76,14 +81,14 @@ section.banner{
         padding-top: 60%;
         content: "";
     }
-    .banner-description{
+    .banner-descript-box{
         display: flex;
         align-items: center;
         gap: 20px;
         position: absolute;
         bottom: 20px;
         left: 20px;
-        .description{
+        .banner-descript{
             padding: 10px 20px;
             border: 1px solid #000;
             background: #fff;
@@ -109,6 +114,9 @@ section.banner{
 
 section.skill{
     margin-top: 40px;
+    .skill-wrap{
+        margin-top: 20px;
+    }
     .skill-box{
         display: flex;
         flex-wrap: wrap;
@@ -125,8 +133,64 @@ section.skill{
             height: 60%;
             transform: translate(-50%, -50%);
         }
+        .text{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
     .skill-list:after{
+        display: block;
+        padding-top: 100%;
+        content: "";
+    }
+}
+
+section.function{
+    margin-top: 40px;
+    .function-wrap{
+        margin-top: 20px;
+    }
+    .function-box{
+        display: flex;
+    }
+    .function-list{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 50%;
+    }
+    .function-detail-box{
+        display: flex;
+        align-items: center;
+    }
+}
+
+section.project{
+    margin-top: 40px;
+    .project-wrap{
+        margin-top: 20px;
+    }
+    .project-box{
+        display: flex;
+        gap: 2%;
+    }
+    .project-list{
+        width: 32%;
+    }
+    .project-image-box{
+        position: relative;
+        svg{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60%;
+            height: 60%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .project-image-box:after{
         display: block;
         padding-top: 100%;
         content: "";
