@@ -165,6 +165,7 @@ section.function .function-list {
 section.function .function-detail-box {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 section.project {
