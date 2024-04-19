@@ -64,9 +64,12 @@ section.banner{
     .banner-box{
         display: flex;
         width: 100%;
+        transition: .3s;
     }
     .banner-list{
         display: flex;
+        flex-shrink: 0;
+        position: relative;
         width: 100%;
     }
     .banner-link{
