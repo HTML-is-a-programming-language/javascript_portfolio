@@ -65,7 +65,7 @@ section.banner .banner-wrap {
 section.banner .banner-box {
   display: flex;
   width: 100%;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 section.banner .banner-list {
   display: flex;
