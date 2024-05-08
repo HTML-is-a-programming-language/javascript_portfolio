@@ -1,42 +1,57 @@
 // banner slider
 document.addEventListener('DOMContentLoaded', function () {
-    const bannerBox = document.querySelector('.banner-box');
-    //console.log(bannerBox);
-    const bannerList = document.querySelectorAll('.banner-list');
-    //console.log(bannerList);
-    const bannerButton = document.querySelectorAll('.banner-button');
-    //console.log(bannerButton);
-    const bannerWidth = bannerBox.getBoundingClientRect().width;
-    //console.log(bannerWidth);
-    const bannerLength = bannerList.length;
-    //console.log(bannerLength);
-    let currentBanner = 0;
-    let auto = setInterval(autoSlide,1000);;
+    const slideBox = document.querySelector('.slide-box');
+    //console.log('slideBox', slideBox);
+    const slideList = document.querySelectorAll('.slide-list');
+    //console.log('slideList', slideList);
+    const slidePrevButton = document.querySelector('.slide-prev-button');
+    //console.log('slidePrevButton', slidePrevButton);
+    const slidePageButton = document.querySelectorAll('.slide-page-button');
+    //console.log('slidePageButton', slidePageButton);
+    const slideWidth = slideBox.getBoundingClientRect().width;
+    //console.log('slideWidth', slideWidth);
+    const slideLength = slideList.length;
+    //console.log('slideLength', slideLength);
+    let currentSlideIndex = 0;
+    let auto = setInterval(autoSlide,4000);
+
+    function prevSlide(){
+        currentSlideIndex--;
+        slideBox.style.transform = `translateX(${-slideWidth * currentSlideIndex}px)`;
+    }
+
+    slidePrevButton.addEventListener('click', function(){
+        prevSlide();
+    });
 
     function autoSlide(){
-        if (currentBanner == (bannerLength - 1)){
-            currentBanner = 0;
-            bannerBox.style.transform = `translateX(-${bannerWidth * currentBanner}px)`;
+        if (currentSlideIndex == (slideLength - 1)){
+            currentSlideIndex = 0;
+            slideBox.style.transform = `translateX(-${slideWidth * currentSlideIndex}px)`;
         } else {
-            currentBanner = currentBanner + 1;
-            bannerBox.style.transform = `translateX(-${bannerWidth * currentBanner}px)`;
+            currentSlideIndex = currentSlideIndex + 1;
+            slideBox.style.transform = `translateX(-${slideWidth * currentSlideIndex}px)`;
         }
-        bannerButton.forEach(function(button) {
+        slidePageButton.forEach(function(button) {
             button.classList.remove('active');
         });
-        bannerButton[currentBanner].classList.add('active');
-        //console.log(currentBanner);
+
+        slidePageButton[currentSlideIndex].classList.add('active');
+        //console.log('currentSlideIndex', currentSlideIndex);
     }
 
 
-    bannerButton.forEach(function(button, index) {
+    slidePageButton.forEach(function(button, index) {
         button.addEventListener('click', function(){
-            bannerBox.style.transform = `translateX(-${bannerWidth * index}px)`;
-            console.log(button);
-            bannerButton[index].classList.add('active');
-            currentBanner = index;
+            slideBox.style.transform = `translateX(-${slideWidth * index}px)`;
+            console.log('button', button);
+            slidePageButton.forEach(function(button) {
+                button.classList.remove('active');
+            });
+            slidePageButton[index].classList.add('active');
+            currentSlideIndex = index;
             clearInterval(auto);
-            auto = setInterval(autoSlide, 1000);
+            auto = setInterval(autoSlide, 4000);
             //console.log(index);
         });
     });

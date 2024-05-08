@@ -6,6 +6,7 @@
 
 /* common */
 body{
+    position: relative;
     font-family: 'Noto Sans Korean', sans-serif;
     font-size: 16px;
     color: #000;
@@ -18,8 +19,57 @@ a{
     text-decoration: none;
 }
 .page-wrap{
-    padding: 0 20%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    max-width: 1152px;
+    transform: translateX(-50%);
 }
+
+.slide-wrap{
+    overflow: hidden;
+    position: relative;
+    .slide-box{
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        transition: .4s;
+    }
+    .slide-list{
+        display: flex;
+        flex-shrink: 0;
+        position: relative;
+        width: 100%;
+    }
+    .slide-prev-button{
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+    }
+    .slide-next-button{
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+    .slide-page-button-box{
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        position: absolute;
+        .slide-page-button{
+            padding: 10px;
+            border: 2px solid #000;
+        }
+        .slide-page-button.active{
+            background: #000;
+            color: #fff;
+        }
+    }
+}
+
 
 /* header */
 header{
@@ -57,27 +107,12 @@ header{
 }
 
 section.banner{
-    .banner-wrap{
-        overflow: hidden;
-        position: relative;
-    }
-    .banner-box{
-        display: flex;
-        width: 100%;
-        transition: .5s;
-    }
-    .banner-list{
-        display: flex;
-        flex-shrink: 0;
-        position: relative;
-        width: 100%;
-    }
     .banner-link{
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-        border: 1px solid #000;
+        border: 2px solid #000;
     }
     .banner-link:after{
         display: block;
@@ -93,25 +128,13 @@ section.banner{
         left: 20px;
         .banner-descript{
             padding: 10px 20px;
-            border: 1px solid #000;
+            border: 2px solid #000;
             background: #fff;
         }
     }
     .banner-button-box{
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        position: absolute;
         right: 20px;
         bottom: 20px;
-        .banner-button{
-            padding: 10px;
-            border: 1px solid #000;
-        }
-        .banner-button.active{
-            background: #000;
-            color: #fff;
-        }
     }
 }
 
@@ -123,7 +146,7 @@ section.skill{
     .skill-box{
         display: flex;
         flex-wrap: wrap;
-        gap: 45px 4%;
+        gap: 44px 4%;
     }
     .skill-list{
         position: relative;

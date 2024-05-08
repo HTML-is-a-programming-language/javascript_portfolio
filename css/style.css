@@ -5,6 +5,7 @@
 }
 /* common */
 body {
+  position: relative;
   font-family: "Noto Sans Korean", sans-serif;
   font-size: 16px;
   color: #000;
@@ -20,7 +21,55 @@ a {
 }
 
 .page-wrap {
-  padding: 0 20%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 1152px;
+  transform: translateX(-50%);
+}
+
+.slide-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.slide-wrap .slide-box {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+.slide-wrap .slide-list {
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+}
+.slide-wrap .slide-prev-button {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+.slide-wrap .slide-next-button {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.slide-wrap .slide-page-button-box {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: absolute;
+}
+.slide-wrap .slide-page-button-box .slide-page-button {
+  padding: 10px;
+  border: 2px solid #000;
+}
+.slide-wrap .slide-page-button-box .slide-page-button.active {
+  background: #000;
+  color: #fff;
 }
 
 /* header */
@@ -58,27 +107,12 @@ header .btn-menu {
   font-weight: bold;
 }
 
-section.banner .banner-wrap {
-  overflow: hidden;
-  position: relative;
-}
-section.banner .banner-box {
-  display: flex;
-  width: 100%;
-  transition: 0.5s;
-}
-section.banner .banner-list {
-  display: flex;
-  flex-shrink: 0;
-  position: relative;
-  width: 100%;
-}
 section.banner .banner-link {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  border: 1px solid #000;
+  border: 2px solid #000;
 }
 section.banner .banner-link:after {
   display: block;
@@ -95,24 +129,12 @@ section.banner .banner-descript-box {
 }
 section.banner .banner-descript-box .banner-descript {
   padding: 10px 20px;
-  border: 1px solid #000;
+  border: 2px solid #000;
   background: #fff;
 }
 section.banner .banner-button-box {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  position: absolute;
   right: 20px;
   bottom: 20px;
-}
-section.banner .banner-button-box .banner-button {
-  padding: 10px;
-  border: 1px solid #000;
-}
-section.banner .banner-button-box .banner-button.active {
-  background: #000;
-  color: #fff;
 }
 
 section.skill {
@@ -124,7 +146,7 @@ section.skill .skill-wrap {
 section.skill .skill-box {
   display: flex;
   flex-wrap: wrap;
-  gap: 45px 4%;
+  gap: 44px 4%;
 }
 section.skill .skill-list {
   position: relative;
