@@ -1,11 +1,15 @@
-// banner slider
+// 슬라이드
 document.addEventListener('DOMContentLoaded', function () {
+    const slideWrap = document.querySelector('.slide-wrap');
+    //console.log('slideWrap', slideWrap);
     const slideBox = document.querySelector('.slide-box');
     //console.log('slideBox', slideBox);
     const slideList = document.querySelectorAll('.slide-list');
     //console.log('slideList', slideList);
     const slidePrevButton = document.querySelector('.slide-prev-button');
     //console.log('slidePrevButton', slidePrevButton);
+    const slideNextButton = document.querySelector('.slide-next-button');
+    //console.log('slideNextButton', slideNextButton);
     const slidePageButton = document.querySelectorAll('.slide-page-button');
     //console.log('slidePageButton', slidePageButton);
     const slideWidth = slideBox.getBoundingClientRect().width;
@@ -13,15 +17,93 @@ document.addEventListener('DOMContentLoaded', function () {
     const slideLength = slideList.length;
     //console.log('slideLength', slideLength);
     let currentSlideIndex = 0;
-    let auto = setInterval(autoSlide,4000);
+    //let auto = setInterval(autoSlide,4000);
+    let dragStartX = 0;
+    let dragEndX = 0;
+    let dragStartY = 0;
+    let dragEndY = 0;
+    let dragLength = 0;
+
+    slideWrap.addEventListener('dragstart', (e) => {
+        dragStartX = e.pageX;
+        console.log('dragStartX', dragStartX);
+        dragStartY = e.pageY;
+        console.log('dragStartY', dragStartY);
+    });
+
+    slideWrap.addEventListener('dragend', (e) => {
+        dragEndX = e.pageX;
+        console.log('dragEndX', dragEndX);
+        dragEndY = e.pageY;
+        console.log('dragEndY', dragEndY);
+        dragLength = dragEndX - dragStartX;
+        slideBox.style.transition = '0.4s';
+
+        if(dragLength >= 100){
+            prevSlide();
+        } else if(dragLength <= -100) {
+            nextSlide();
+        } else {
+            slideBox.style.transform = `translateX(0px)`;
+        }
+        console.log('dragLength', dragLength);
+    });
+
+    slideWrap.addEventListener('drag', (e) => {
+        dragX = e.pageX;
+        console.log('dragX', dragX);
+        dragY = e.pageY;
+        console.log('dragY', dragY);
+        dragLength = dragX - dragStartX;
+
+        slideBox.style.transition = 'none';
+        slideBox.style.transform = `translateX(${dragLength}px)`;
+        console.log('dragLength', dragLength);
+    });
 
     function prevSlide(){
         currentSlideIndex--;
-        slideBox.style.transform = `translateX(${-slideWidth * currentSlideIndex}px)`;
+        slideBox.style.transform = `translateX(${slideWidth * -currentSlideIndex}px)`;
+    }
+
+    function nextSlide(){
+        currentSlideIndex++;
+        slideBox.style.transform = `translateX(${slideWidth * -currentSlideIndex}px)`;
     }
 
     slidePrevButton.addEventListener('click', function(){
         prevSlide();
+
+        slidePageButton.forEach(function(button) {
+            button.classList.remove('active');
+        });
+
+        if (currentSlideIndex < 0){
+            currentSlideIndex = (slideLength - 1);
+            console.log(currentSlideIndex);
+            slideBox.style.transform = `translateX(-${slideWidth * currentSlideIndex}px)`;
+            slidePageButton[currentSlideIndex].classList.add('active');
+        } else {
+            slideBox.style.transform = `translateX(-${slideWidth * currentSlideIndex}px)`;
+            slidePageButton[currentSlideIndex].classList.add('active');
+        }
+    });
+
+    slideNextButton.addEventListener('click', function(){
+        nextSlide();
+
+        slidePageButton.forEach(function(button) {
+            button.classList.remove('active');
+        });
+
+        if (currentSlideIndex == slideLength){
+            currentSlideIndex = 0;
+            slideBox.style.transform = `translateX(-${slideWidth * currentSlideIndex}px)`;
+            slidePageButton[currentSlideIndex].classList.add('active');
+        } else {
+            slideBox.style.transform = `translateX(-${slideWidth * currentSlideIndex}px)`;
+            slidePageButton[currentSlideIndex].classList.add('active');
+        }
     });
 
     function autoSlide(){
@@ -32,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
             currentSlideIndex = currentSlideIndex + 1;
             slideBox.style.transform = `translateX(-${slideWidth * currentSlideIndex}px)`;
         }
+
         slidePageButton.forEach(function(button) {
             button.classList.remove('active');
         });
@@ -50,9 +133,11 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             slidePageButton[index].classList.add('active');
             currentSlideIndex = index;
-            clearInterval(auto);
+            clearInterval(autoSlide);
             auto = setInterval(autoSlide, 4000);
             //console.log(index);
         });
     });
 });
+
+// 모달 창

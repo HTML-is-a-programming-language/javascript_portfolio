@@ -21,12 +21,13 @@ a {
 }
 
 .page-wrap {
-  position: absolute;
-  top: 0;
-  left: 50%;
   width: 100%;
   max-width: 1152px;
-  transform: translateX(-50%);
+  margin: 0 auto;
+}
+
+.container {
+  padding: 0 16px;
 }
 
 .slide-wrap {
@@ -49,12 +50,14 @@ a {
   position: absolute;
   top: 50%;
   left: 20px;
+  border: 2px solid #000;
   transform: translateY(-50%);
 }
 .slide-wrap .slide-next-button {
   position: absolute;
   top: 50%;
   right: 20px;
+  border: 2px solid #000;
   transform: translateY(-50%);
 }
 .slide-wrap .slide-page-button-box {
@@ -70,6 +73,10 @@ a {
 .slide-wrap .slide-page-button-box .slide-page-button.active {
   background: #000;
   color: #fff;
+}
+
+.block-click {
+  pointer-events: none;
 }
 
 /* header */
@@ -149,10 +156,14 @@ section.skill .skill-box {
   gap: 44px 4%;
 }
 section.skill .skill-list {
-  position: relative;
   width: 22%;
 }
-section.skill .skill-list svg {
+section.skill .skill-list .skill-button {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+section.skill .skill-list .skill-button svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -160,13 +171,13 @@ section.skill .skill-list svg {
   height: 60%;
   transform: translate(-50%, -50%);
 }
-section.skill .skill-list .text {
+section.skill .skill-list .skill-button .text {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
-section.skill .skill-list:after {
+section.skill .skill-list .skill-button:after {
   display: block;
   padding-top: 100%;
   content: "";
@@ -221,4 +232,24 @@ section.project .project-image-box:after {
   display: block;
   padding-top: 100%;
   content: "";
+}
+
+section.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+section.modal-overlay .modal-window-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1120px;
+  background: #fff;
 }/*# sourceMappingURL=style.css.map */
