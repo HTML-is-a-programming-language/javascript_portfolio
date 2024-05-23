@@ -44,6 +44,9 @@ a{
         width: 100%;
     }
     .slide-prev-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: absolute;
         top: 50%;
         left: 20px;
@@ -51,6 +54,9 @@ a{
         transform: translateY(-50%);
     }
     .slide-next-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: absolute;
         top: 50%;
         right: 20px;
@@ -80,12 +86,14 @@ a{
 
 /* header */
 header{
-    display: flex;
-    flex-flow: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
+    padding: 20px 0;
+    .header-wrap{
+        display: flex;
+        flex-flow: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
     .left-box{
         display: flex;
         align-items: center;
@@ -249,7 +257,7 @@ section.modal-overlay{
         left: 50%;
         z-index: 1000;
         transform: translate(-50%, -50%);
-        width: 100%;
+        width: calc(100% - 32px);
         max-width: 1120px;
         background: #fff;
     }
