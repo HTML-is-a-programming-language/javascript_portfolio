@@ -244,6 +244,7 @@ section.project{
 }
 
 section.modal-overlay{
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -261,4 +262,7 @@ section.modal-overlay{
         max-width: 1120px;
         background: #fff;
     }
+}
+section.modal-overlay.active{
+    display: block;
 }

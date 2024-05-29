@@ -243,6 +243,7 @@ section.project .project-image-box:after {
 }
 
 section.modal-overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -260,4 +261,8 @@ section.modal-overlay .modal-window-wrap {
   width: calc(100% - 32px);
   max-width: 1120px;
   background: #fff;
+}
+
+section.modal-overlay.active {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

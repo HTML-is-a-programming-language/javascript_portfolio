@@ -141,3 +141,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // 모달 창
+document.querySelector('.modal-overlay').addEventListener('click', function(){
+    document.querySelector('.modal-overlay').classList.remove('active');
+})
+
+function modalWindowOpen(skill){
+    const modalWindow = document.querySelector('.modal-window-wrap[data-modal]="'+skill+'"')
+    document.querySelector('.modal-overlay').classList.add('active');
+    modalWindow.classList.add('active')
+    console.log(skill);
+}
