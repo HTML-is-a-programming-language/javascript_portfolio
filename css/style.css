@@ -253,6 +253,7 @@ section.modal-overlay {
   background: rgba(0, 0, 0, 0.5);
 }
 section.modal-overlay .modal-window-wrap {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -261,6 +262,9 @@ section.modal-overlay .modal-window-wrap {
   width: calc(100% - 32px);
   max-width: 1120px;
   background: #fff;
+}
+section.modal-overlay .modal-window-wrap.active {
+  display: block;
 }
 
 section.modal-overlay.active {

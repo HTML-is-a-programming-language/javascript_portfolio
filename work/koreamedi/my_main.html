@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코리아메디 - 마이페이지</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div id="mobile_wrap">
+        <div class="subTopDOM sub-header-wrap color">
+            <div class="btnLeft">
+                <a href="javascript:history.go(-1)" class="btn_back_pst"></a>
+            </div>
+            <h1 class="sub_title">마이페이지</h1>
+            <div class="rgt_btn">
+                <a href="javascript:void(0)" class="edit-link">
+                    <img src="./images/btn_edit.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div id="content" class="na_bg content-mypage">
+            <div class="totar_width nop">
+                <section class="sectorDOM-noBD">
+                    <div class="sectionBodyDOM mt0">
+                        <ul>
+                            <li class="sectionList">
+                                <div class="my_page_profile">
+                                    <div class="filebox preview-image file_box">
+                                        <div class="upload_po_box">
+                                            <div class="upload-display">
+                                                <div class="upload-thumb-wrap">
+                                                    <img src="./images/ico_profile.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <label for="workerPhoto" class="imgroad"></label>
+                                            <input type="file" id="workerPhoto" name="workerPhoto" class="upload-hidden" accept="image/gif, image/jpeg, image/png" onchange="myImgUpload();">
+                                        </div>
+                                    </div>
+                                    <div class="user-detail-box">
+                                        <div class="user-detail">
+                                            <span class="rating">회원등급</span>
+                                            <span class="user-id">userID님</span>
+                                        </div>
+                                        <a href="javascript:void(0)" class="logout-link">로그아웃</a>
+                                    </div>
+                                </div>
+
+                                <div class="count-box">
+                                    <div class="order-amount-box">
+                                        <span class="text">총 주문금액</span>
+                                        <span class="count">100,000원</span>
+                                    </div>
+                                    <div class="cart-box">
+                                        <span class="text">장바구니</span>
+                                        <span class="count">0</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="schedule-wrap">
+                                <div class="schedule-container swiper swiper-container-horizontal">
+                                    <div class="title-box">
+                                        <h2 class="title">다가오는 일정</h2>
+                                        <a href="javascript:void(0)" class="view-link">전체보기</a>
+                                    </div>
+                                    <ul class="schedule-box swiper-wrapper">
+                                        <li class="schedule-list swiper-slide swiper-slide-active" style="margin-right: 16px;">
+                                            <a href="./mediGoods_content.html" class="schedule-link">
+                                                <div class="number-box">
+                                                    <span class="reserve-number">
+                                                        <span class="text">예약번호</span>
+                                                        <span class="number">123456789</span>
+                                                    </span>
+                                                    <span class="reserve-time">2024.05.01(토) 13:50</span>
+                                                </div>
+                                                <div class="name-box">
+                                                    <dl class="hospital-name-box">
+                                                        <dt class="title">병원명</dt>
+                                                        <dd class="hospital-detail">
+                                                            <span class="name">에이탑성형외과</span>
+                                                            <button type="button" class="link-button hospital-link">병원정보</button>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="clinic-name-box">
+                                                        <dt class="title">진료명</dt>
+                                                        <dd class="clinic-detail">
+                                                            <span class="name">진료명진료명진료명진료명진료명진료명진료명</span>
+                                                        </dd>
+                                                    </dl>
+                                                    <span class="line"></span>
+                                                    <dl class="amount-payment-box">
+                                                        <dt class="title">결제금액</dt>
+                                                        <dd class="amount-payment-detail">
+                                                            <span class="amount-payment">2,500,000원</span>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="reserve-link-box">
+                                                    <button type="button" class="link-button change-link">예약 변경</button>
+                                                    <button type="button" class="link-button cancel-link">예약 취소</button>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="schedule-list swiper-slide swiper-slide-next" style="margin-right: 16px;">
+                                            <a href="./mediGoods_content.html" class="schedule-link">
+                                                <div class="number-box">
+                                                    <span class="reserve-number">
+                                                        <span class="text">예약번호</span>
+                                                        <span class="number">123456789</span>
+                                                    </span>
+                                                    <span class="reserve-time">2024.05.01(토) 13:50</span>
+                                                </div>
+                                                <div class="name-box">
+                                                    <dl class="hospital-name-box">
+                                                        <dt class="title">병원명</dt>
+                                                        <dd class="hospital-detail">
+                                                            <span class="name">에이탑성형외과</span>
+                                                            <button type="button" class="link-button hospital-link">병원정보</button>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="clinic-name-box">
+                                                        <dt class="title">진료명</dt>
+                                                        <dd class="clinic-detail">
+                                                            <span class="name">진료명진료명진료명진료명진료명진료명진료명</span>
+                                                        </dd>
+                                                    </dl>
+                                                    <span class="line"></span>
+                                                    <dl class="amount-payment-box">
+                                                        <dt class="title">결제금액</dt>
+                                                        <dd class="amount-payment-detail">
+                                                            <span class="amount-payment">2,500,000원</span>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="reserve-link-box">
+                                                    <button type="button" class="link-button change-link">예약 변경</button>
+                                                    <button type="button" class="link-button cancel-link">예약 취소</button>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="sectionList">
+                                <div class="my-menu-wrap">
+                                    <ul class="my-menu-box">
+                                        <li class="my-menu-list">
+                                            <a href="javascript:void(0)" class="my-menu-link">
+                                                <img src="./images/btn_calendar.png" alt="">
+                                                <span class="text">예약 내역 조회</span>
+                                            </a>
+                                        </li>
+                                        <li class="my-menu-list">
+                                            <a href="javascript:void(0)" class="my-menu-link">
+                                                <img src="./images/btn_like_black.png" alt="">
+                                                <span class="text">좋아요 상품</span>
+                                            </a>
+                                        </li>
+                                        <li class="my-menu-list">
+                                            <a href="javascript:void(0)" class="my-menu-link">
+                                                <img src="./images/btn_inquiry.png" alt="">
+                                                <span class="text">1:1 문의</span>
+                                            </a>
+                                        </li>
+                                        <li class="my-menu-list">
+                                            <a href="javascript:void(0)" class="my-menu-link">
+                                                <img src="./images/btn_review.png" alt="">
+                                                <span class="text">나의 상품평</span>
+                                            </a>
+                                        </li>
+                                        <li class="my-menu-list">
+                                            <a href="javascript:void(0)" class="my-menu-link">
+                                                <img src="./images/btn_qna.png" alt="">
+                                                <span class="text">상품 Q&amp;A</span>
+                                            </a>
+                                        </li>
+                                        <li class="my-menu-list">
+                                            <a href="javascript:void(0)" class="my-menu-link">
+                                                <img src="./images/btn_post.png" alt="">
+                                                <span class="text">내가 쓴 게시물</span>
+                                            </a>
+                                        </li>
+                                        <li class="my-menu-list">
+                                            <a href="javascript:void(0)" class="my-menu-link">
+                                                <img src="./images/btn_service_center.png" alt="">
+                                                <span class="text">고객센터</span>
+                                            </a>
+                                        </li>
+                                        <li class="my-menu-list">
+                                            <a href="javascript:void(0)" class="my-menu-link">
+                                                <span class="text withdrawal">회원 탈퇴</span>
+                                            </a>
+                                        </li>
+                                        <li class="my-menu-list">
+                                            <a href="javascript:void(0)" class="my-menu-link">
+                                                <img src="./images/btn_link.png" alt="">
+                                                <span class="text">초대 구매좌표&amp;리워드</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코리아메디 - 리뷰 작성</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="header-wrap border">
+        <div class="left-button-box">
+            <a href="javascript:history.back()" class="back-link">
+                <img src="./images/btn_back_black.png" alt="" >
+            </a>
+        </div>
+        <div class="header-title-box">
+            <h2 class="header-title">예약 변경</h2>
+        </div>
+        <div class="right-button-box"></div>
+    </div>
+
+    <form name="Frm" id="Frm" method="post">
+        <div id="content" class="content-edit-order">
+            <dl class="product-box">
+                <div class="image-box">
+                   <img src="./images/imsi_before_after_2.png" alt="">
+                </div>
+                <div class="detail-box">
+                    <div class="title-box">
+                        <span class="title">하루만에 끝나는 임플란트</span>
+                    </div>
+                    <span class="area">서울 강남역 · 연세치과</span>
+                    <span class="price-box">
+                        <span class="price">100,000원</span>
+                    </span>
+                </div>
+            </dl>
+            <div class="reserve-wrap">
+                <h2 class="wrap-title">예약자 정보 변경</h2>
+                <div class="reserve-box">
+                    <span class="box-title">이름</span>
+                    <div class="detail">
+                        <input type="text" id="name" name="name" value="홍길동">
+                    </div>
+                </div>
+                <div class="reserve-box">
+                    <span class="box-title">영문 이름</span>
+                    <div class="detail">
+                        <input type="text" id="englishName" name="englishName" value="Hong Kildong">
+                    </div>
+                </div>
+                <div class="reserve-box">
+                    <span class="box-title">전화번호</span>
+                    <div class="detail">
+                        <input type="text" id="phoneNumber" name="phoneNumber" value="010-1234-5678">
+                    </div>
+                </div>
+                <div class="reserve-box">
+                    <span class="box-title">여권사진</span>
+                    <div class="detail">
+                        <label for="passportPhoto" class="label-style file-name-preview">
+                            <input type="file" id="passportPhoto" name="passportPhoto" accept=".png, .jpg">
+                            <span class="label-icon">파일선택</span>
+                            <span class="text">선택된 파일 없음</span>
+                        </label>
+                    </div>
+                </div>
+                <p class="notice">* png, jpg의 파일 형식만 첨부해주세요.</p>
+            </div>
+            <div class="reserve-wrap">
+                <h2 class="wrap-title">예약 일시 변경</h2>
+                <div class="reserve-box">
+                    <span class="box-title">날짜</span>
+                    <div class="detail">
+                        <input type="hidden" id="selectDateHidden" name="selectDateHidden">
+                        <input type="text" id="selectDate" name="selectDate">
+                    </div>
+                </div>
+                <div class="reserve-box">
+                    <span class="box-title">희망시간</span>
+                    <div class="detail">
+                        <select id="desireTime" name="desireTime" class="select-style">
+                            <option value="">00:00</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-button-box">
+                <button type="button" class="edit-button">수정하기</button>
+            </div>
+        </div>
+    </form>
+    <script src="./js/script.js"></script>
+</body>
+</html>

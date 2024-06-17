@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코리아메디 - 병원상품 상세페이지</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="header-wrap fixed goods">
+        <div class="left-button-box">
+            <a href="javascript:history.back()" class="back-link">
+                <img src="./images/btn_back.png" alt="" >
+            </a>
+        </div>
+        <div class="right-button-box">
+            <button type="button" class="search-button" onclick="open_pop()">
+                <img src="./images/btn_search.png" alt="">
+            </button>
+            <a href="javascript:void(0)" class="home-link">
+                <img src="./images/btn_home.png" alt="">
+            </a>
+            <a href="javascript:void(0)" class="cart-link">
+                <img src="./images/btn_cart.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <form name="Frm" id="Frm" method="post"><!-- #frm -->
+        <div id="content" class="content-product-detail"><!-- #content -->
+            <div class="main-visual-wrap swiper">
+                <ul class="main-visual-box swiper-wrapper">
+                    <li class="main-visual-list swiper-slide">
+                        <img src="./images/imsi_hospital_content_1.png" alt="">
+                    </li>
+                    <li class="main-visual-list swiper-slide">
+                        <img src="./images/imsi_hospital_content_1.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="hospital-inform-wrap">
+                <div class="hospital-name-box">
+                    <span class="hospital-name">매주 월요일 출발(국내/해외 랜덤 월~일요일 오후 6시까지 주문순 월요일 출발)</span>
+                    <button type="button" class="link-share-button SNSLayerIcon" onclick="linkShareButton(this)">
+                        <img src="./images/btn_link_share.png" alt="">
+                    </button>
+                </div>
+                <div class="hospital-keyword-box">
+                    <span class="keyword">#눈</span>
+                    <span class="keyword">#코</span>
+                    <span class="keyword">#리프팅</span>
+                </div>
+                <div class="price-box">1,000,000원</div>
+                <div class="fee-box">
+                    <img src="./images/ico_fee.png" alt="">
+                    <span class="text">예상 수수료</span>
+                    <span class="fee">100,000</span>
+                </div>
+                <div class="hospital-review-wrap">
+                    <div class="star-rate-box">
+                        <img src="./images/ico_star_rate.png" alt="">
+                        <span class="star-rate">6.5</span>
+                    </div>
+                    <div class="review-count-box">
+                        <span class="count">후기 74</span>
+                    </div>
+                </div>
+                <div class="hospital-hour-wrap">
+                    <button type="button" class="unfold-button" onclick="hospitalHour(this)">
+                        <div class="hospital-hour-box">
+                            <div class="hour-box">
+                                <span class="hospital">연세치과</span>
+                                <div class="detail">
+                                    <img src="./images/ico_hour.png" class="icon-hour">
+                                    <span class="day">화 <span class="hour">10:00 ~ 19:00</span></span>
+                                    <img src="./images/btn_arrow_down_gray.png" alt="" class="button-arrow-down">
+                                </div>
+                            </div>
+                            <a href="./hospital_content.html" class="hospital-link">병원정보</a>
+                        </div>
+                    </button>
+                    <button type="button" class="fold-button" onclick="hospitalHour(this)">
+                        <div class="hospital-title-box">
+                            <span class="hospital">연세치과</span>
+                            <a href="./hospital_content.html" class="hospital-link">병원정보</a>
+                        </div>
+                        <ul class="all-day-box">
+                            <li class="all-day-list">
+                                <img src="./images/ico_hour.png" class="icon-hour">
+                                <span class="day">월 <span class="hour">10:00 ~ 19:00</span></span>
+                                <img src="./images/btn_arrow_up_gray.png" alt="" class="button-arrow-up">
+                            </li>
+                            <li class="all-day-list">
+                                <span class="day">화 <span class="hour">10:00 ~ 19:00</span></span>
+                            </li>
+                            <li class="all-day-list">
+                                <span class="day">수 <span class="hour">10:00 ~ 19:00</span></span>
+                            </li>
+                            <li class="all-day-list">
+                                <span class="day">목 <span class="hour">10:00 ~ 19:00</span></span>
+                            </li>
+                            <li class="all-day-list">
+                                <span class="day">금 <span class="hour">10:00 ~ 19:00</span></span>
+                            </li>
+                            <li class="all-day-list">
+                                <span class="day">토 <span class="hour">10:00 ~ 19:00</span></span>
+                            </li>
+                            <li class="all-day-list">
+                                <span class="day">일 <span class="hour closed">휴진</span></span>
+                            </li>
+                        </ul>
+                    </button>
+                </div>
+            </div>
+            <div class="tab-menu-wrap">
+                <ul class="tab-menu-box">
+                    <li class="tab-menu-list">
+                        <button type="button" class="tab-menu-button active" onclick="tabMenu(this)">상세정보</button>
+                    </li>
+                    <li class="tab-menu-list">
+                        <button type="button" class="tab-menu-button" onclick="tabMenu(this)">리뷰</button>
+                    </li>
+                    <li class="tab-menu-list">
+                        <button type="button" class="tab-menu-button" onclick="tabMenu(this)">문의</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="more-inform-wrap active">
+                <div class="original-box">
+                    <a href="javascript:void(0)" class="orginal-link">원본 내용 보기</a>
+                </div>
+                <div class="more-inform-box">
+                    <img src="./images/imsi_more_inform_1.png" alt="">
+                    <img src="./images/imsi_more_inform_1.png" alt="">
+                </div>
+                <div class="unfold-box">
+                    <button type="button" class="unfold-button" onclick="moreInformButton(this)">
+                        <span class="text">상품 상세정보 펼쳐보기</span>
+                        <img src="./images/btn_arrow_down_color.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="review-wrap">
+                <div class="sort-box">
+                    <button type="button" class="sort-button active" data-val="best_desc" onclick="sortButton(this)">베스트순</button>
+                    <button type="button" class="sort-button" data-val="write_desc" onclick="sortButton(this)">최신순</button>
+                    <button type="button" class="sort-button" data-val="point_asc" onclick="sortButton(this)">낮은평점순</button>
+                </div>
+                <ul class="review-box">
+                    <li class="review-list">
+                        <div class="star-rate-box">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_rate.png" alt="">
+                        </div>
+                        <div class="review-detail">
+                            <span class="review-title">상품평</span>
+                            <p class="review">아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약 간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산 발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니 나 귀엽고 이뻐요</p>
+                        </div>
+                        <div class="review-image-wrap swiper">
+                            <ul class="review-image-box swiper-wrapper">
+                                <li class="review-image-list swiper-slide">
+                                    <img src="" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="help-button-box">
+                            <button type="button" class="help-button">
+                                <img src="./images/helpful.png" alt="">
+                                <span class="text">도움이 됐어요.</span>
+                            </button>
+                            <span class="help-count">1명에게 도움이 되었습니다.</span>
+                        </div>
+                        <div class="id-date-box">
+                            <span class="user-id">haem***</span>
+                            <span class="date">2024-04-04</span>
+                        </div>
+                    </li>
+                    <li class="review-list">
+                        <div class="star-rate-box">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_rate.png" alt="">
+                        </div>
+                        <div class="review-detail">
+                            <span class="review-title">상품평</span>
+                            <p class="review">아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약 간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산 발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니 나 귀엽고 이뻐요</p>
+                        </div>
+                        <div class="review-image-wrap swiper">
+                            <ul class="review-image-box swiper-wrapper">
+                                <li class="review-image-list swiper-slide">
+                                    <img src="" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="help-button-box">
+                            <button type="button" class="help-button">
+                                <img src="./images/helpful.png" alt="">
+                                <span class="text">도움이 됐어요.</span>
+                            </button>
+                            <span class="help-count">1명에게 도움이 되었습니다.</span>
+                        </div>
+                        <div class="id-date-box">
+                            <span class="user-id">haem***</span>
+                            <span class="date">2024-04-04</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="before-after-wrap swiper">
+                <span class="sub-title">직접 시술받고 작성한</span>
+                <h2 class="content-title">Before / After</h2>
+                <ul class="before-after-box swiper-wrapper">
+                    <li class="before-after-list swiper-slide">
+                        <div class="user-id-box">
+                            <span class="user-id">ab**님</span>
+                            <div class="star-rate-box">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <span class="count">5</span>
+                            </div>
+                        </div>
+                        <div class="image-box">
+                            <div class="before-image">
+                                <img src="./images/imsi_before_after_1.png" alt="">
+                                <span class="text">Before</span>
+                            </div>
+                            <div class="after-image">
+                                <img src="./images/imsi_before_after_2.png" alt="">
+                                <span class="text">After</span>
+                            </div>
+                            <div class="before-image">
+                                <img src="./images/imsi_before_after_3.png" alt="">
+                                <span class="text">Before</span>
+                            </div>
+                        </div>
+                        <div class="review-box">
+                            <p class="review">후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다</p>
+                        </div>
+                        <div class="keyword-box">
+                            <span class="keyword">#시술이름</span>
+                        </div>
+                    </li>
+                    <li class="before-after-list swiper-slide">
+                        <div class="user-id-box">
+                            <span class="user-id">ab**님</span>
+                            <div class="star-rate-box">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <span class="count">5</span>
+                            </div>
+                        </div>
+                        <div class="image-box">
+                            <div class="before-image">
+                                <img src="./images/imsi_before_after_1.png" alt="">
+                            </div>
+                            <div class="after-image">
+                                <img src="./images/imsi_before_after_2.png" alt="">
+                            </div>
+                            <div class="before-image">
+                                <img src="./images/imsi_before_after_3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="review-box">
+                            <p class="review">후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다</p>
+                        </div>
+                        <div class="keyword-box">
+                            <span class="keyword">#시술이름</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="middle-banner-wrap swiper hide">
+                <ul class="middle-banner-box swiper-wrapper">
+                    <li class="middle-banner-list swiper-slide">
+                        <img src="./images/imsi_middle_banner_1.png" alt="">
+                    </li>
+                    <li class="middle-banner-list swiper-slide">
+                        <img src="./images/imsi_middle_banner_1.png" alt="">
+                    </li>
+                    <li class="middle-banner-list swiper-slide">
+                        <img src="./images/imsi_middle_banner_1.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="service-swiper-wrap swiper">
+                <h2 class="content-title">같은 카테고리 인기 서비스</h2>
+                <ul class="service-swiper-box swiper-wrapper">
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_1.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_2.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_3.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_1.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_2.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_3.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                     <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_1.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_2.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_3.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="service-swiper-wrap swiper">
+                <h2 class="content-title">함께 보면 좋은 서비스</h2>
+                <ul class="service-swiper-box swiper-wrapper">
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_1.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_2.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_3.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_1.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_2.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_3.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                     <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_1.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_2.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="service-swiper-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="service-swiper-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_3.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="bottom-menu-wrap">
+                <div class="bottom-menu-box">
+                    <button type="button" class="like-button" onclick="likeButton(event)">
+                        <img src="./images/btn_like.png" alt="">
+                    </button>
+                    <a href="./hospital_content.html" class="hospital-link">병원정보</a>
+                    <button type="button" class="payment-button" onclick="paymentModalOpen(this)">예약 결제하기</button>
+                </div>
+            </div>
+        </div><!-- #content end -->
+    </form><!-- #frm end -->
+
+    <div class="payment-modal-wrap">
+        <div class="payment-modal-box">
+            <div class="close-button-box">
+                <button type="button" class="close-button" onclick="paymentModalClose(this)">
+                    <img src="./images/btn_arrow_down_white.png" alt="">
+                </button>
+            </div>
+            <div class="select-wrap">
+                <dl class="select-box">
+                    <dt class="title">날짜 선택</dt>
+                    <dd class="select-list">
+                        <input type="hidden" id="selectDateHidden" name="selectDateHidden">
+                        <input type="text" id="selectDate" name="selectDate">
+                    </dd>
+                </dl>
+                <dl class="select-box">
+                    <dt class="title">희망 시간</dt>
+                    <dd class="select-list">
+                        <select id="desireTime" name="desireTime" class="select-style">
+                            <option value="">09:30</option>
+                        </select>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="bottom-menu-box">
+            <button type="button" class="like-button" onclick="likeButton(event)">
+                <img src="./images/btn_like.png" alt="">
+            </button>
+            <a href="./hospital_content.html" class="hospital-link">병원정보</a>
+            <a href="javascript:void(0)" class="payment-link">예약 결제하기</a>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

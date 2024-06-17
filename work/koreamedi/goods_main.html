@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코리아메디 - 상품리스트 (상품)</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div id="mobile_wrap" class="mainPageWrap content-product-list">
+        <div class="top_fix_head sitebg2 sub_top_head sub-header-wrap">
+            <a href="javascript:history.go(-1)" class="btn_back_pst iconfont ftic-back sub_back"></a>
+            <h1 class="sub_title">
+                <li class="swiper-slide">
+                    <a href="main.asp?cate=151160" class="text">안티에이징</a>
+                </li>
+            </h1>
+            <div class="search_box" onclick="open_pop()">
+                <span class="search_btn iconfont ftic-search"></span>
+            </div>
+        </div>
+        <div class="catePosition swiper-container swiper-initialized swiper-horizontal">
+            <ul class="swiper-wrapper" id="swiper-wrapper-83c03197273c9ab3" aria-live="polite">
+                <li class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 15">
+                    <a href="javascript:void(0)" class="active" onclick="categoryActive(this)">안티에이징</a>
+                </li>
+                <li class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 15">
+                    <a href="javascript:void(0)" onclick="categoryActive(this)">VIP종합검진</a>
+                </li>
+                <li class="swiper-slide" role="group" aria-label="3 / 15">
+                    <a href="javascript:void(0)" onclick="categoryActive(this)">성형외과</a>
+                </li>
+                <li class="swiper-slide" role="group" aria-label="4 / 15">
+                    <a href="javascript:void(0)" onclick="categoryActive(this)">피부과</a>
+                </li>
+                <li class="swiper-slide" role="group" aria-label="5 / 15">
+                    <a href="javascript:void(0)" onclick="categoryActive(this)">산부인과</a>
+                </li>
+                <li class="swiper-slide" role="group" aria-label="6 / 15">
+                    <a href="javascript:void(0)" onclick="categoryActive(this)">안과</a>
+                </li>
+                <li class="swiper-slide" role="group" aria-label="7 / 15">
+                    <a href="javascript:void(0)" onclick="categoryActive(this)">치과</a>
+                </li>
+                <li class="swiper-slide" role="group" aria-label="8 / 15">
+                    <a href="javascript:void(0)" onclick="categoryActive(this)">종합병원</a>
+                </li>
+                <li class="swiper-slide" role="group" aria-label="9 / 15">
+                    <a href="javascript:void(0)" onclick="categoryActive(this)">의원</a>
+                </li>
+                <li class="swiper-slide" role="group" aria-label="10 / 15">
+                    <a href="javascript:void(0)" onclick="categoryActive(this)">대장/항문과</a>
+                </li>
+                <li class="swiper-slide" role="group" aria-label="11 / 15">
+                    <a href="javascript:void(0)" onclick="categoryActive(this)">비뇨기과</a>
+                </li>
+                <li class="swiper-slide" role="group" aria-label="12 / 15">
+                    <a href="javascript:void(0)" onclick="categoryActive(this)">신경외과</a>
+                </li>
+                <li class="swiper-slide" role="group" aria-label="13 / 15">
+                    <a href="javascript:void(0)" onclick="categoryActive(this)">정형외과</a>
+                </li>
+                <li class="swiper-slide" role="group" aria-label="14 / 15">
+                    <a href="javascript:void(0)" onclick="categoryActive(this)">한방병원</a>
+                </li>
+                <li class="swiper-slide" role="group" aria-label="15 / 15">
+                    <a href="javascript:void(0)" onclick="categoryActive(this)">줄기세포</a>
+                </li>
+            </ul>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+
+        <form name="Frm" method="post" action="main.asp" class="goods_height" style="margin:0">
+            <input type="hidden" id="pcate" name="pcate" value="151160">
+            <input type="hidden" id="cate" name="cate" value="151160">
+            <input type="hidden" id="scate" name="scate" value="151160">
+            <input type="hidden" id="listsort" name="listsort" value="new">
+            <input type="hidden" id="listsize" name="listsize" value="10">
+            <input type="hidden" id="pStart" name="pStart" value="">
+            <input type="hidden" id="oribranduid" name="oribranduid" value="">
+            <input type="hidden" id="branduid" name="branduid" value="">
+            <input type="hidden" id="branduids" name="branduids" value="">
+            <input type="hidden" id="searchcateuid" name="searchcateuid" value="">
+            <input type="hidden" id="couponuid" name="couponuid" value="0">
+            <input type="hidden" id="couponkind" name="couponkind" value="">
+
+            <div class="tab-menu-wrap">
+                <div class="tab-menu-box">
+                    <a href="./goods_main.html" class="tab-menu goods-link active">상품</a>
+                    <a href="./hospital_list.html" class="tab-menu hospital-link">병원</a>
+                </div>
+            </div>
+            <div class="fix_gnbmenu">
+                <div class="seltype_wrap goods">
+                    <div class="pd_wrap">
+                        <span class="sc_dtl" onclick="fnSearchView()">상세검색</span>
+                    </div>
+                    <select class="select1">
+                        <option value="">기본</option>
+                        <option value="" selected="">신상품</option>
+                        <option value="">조회순</option>
+                        <option value="">가격 높은 순</option>
+                        <option value="">가격 낮은 순</option>
+                        <option value="">판매수량순</option>
+                        <option value="">종합점수순</option>
+                    </select>
+                </div>
+                <div class="list_view_type">
+                    <a href="javascript:void(0)" class="one-line on" onclick="viewChange(this)"></a>
+                    <a href="javascript:void(0)" class="two-line iconfont ftic-list2" onclick="viewChange(this)"></a>
+                </div>
+            </div>
+            <div class="sc_dtl_wrap">
+                <div class="dtlsc_box">
+                    <dl>
+                        <dt>가격</dt>
+                        <dd>
+                            <div class="inwrap">
+                                <input type="text" class="text" placeholder="최저가" name="sprice" maxlength="8" onkeyup="numberOnly(this)" onblur="numberOnly(this)" value="">
+                            </div>
+                            <div>~</div>
+                            <div class="inwrap">
+                                <input type="text" class="text" placeholder="최고가" name="eprice" maxlength="8" onkeyup="numberOnly(this)" onblur="numberOnly(this)" value="">
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>상품명</dt>
+                        <dd>
+                            <div class="inwrap">
+                                <input type="text" class="text" placeholder="상품명" name="sword" value="">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="btn_dtlsc">
+                    <input type="submit" value="검색">
+                </div>
+            </div>
+            <ul class="cont_list D active">
+                <li>
+                    <div class="positionWrap type-sqre">
+                        <dl>
+                            <dt>
+                                <a href="./mediGoods_content.html" class="color_rel cls_imgfast">
+                                    <img src="./images/imsi_before_after_2.png" alt="" class="prodImg">
+                                </a>
+                            </dt>
+                            <dd>
+                                <div class="textWrap">
+                                    <div>
+                                        <span class="tit airplane_wrap">
+                                            <a href="./mediGoods_content.html">하루만에 끝나는 임플란트</a>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </span>
+                                        <span class="keyword-box">
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                        </span>
+                                        <span class="area">서울 강남역 · 연세치과</span>
+                                        <span class="location-box">
+                                            <span class="location">서울 강남역</span>
+                                            <span class="address">서울특별시 강남구 케이스퀘어 빌딩 4, 5층</span>
+                                        </span>
+                                        <div class="btm_wrap">
+                                            <div class="price_wrap">
+                                                <div class="pricebox">
+                                                    <div class="prcStyleBox priceStyle2">78,000원</div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <div class="positionWrap type-sqre">
+                        <dl>
+                            <dt>
+                                <a href="./mediGoods_content.html" class="color_rel cls_imgfast">
+                                    <img src="./images/imsi_more_inform_1.png" alt="" class="prodImg">
+                                </a>
+                            </dt>
+                            <dd>
+                                <div class="textWrap">
+                                    <div>
+                                        <span class="tit airplane_wrap">
+                                            <a href="./mediGoods_content.html">하루만에 끝나는 임플란트</a>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </span>
+                                        <span class="keyword-box">
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                        </span>
+                                        <span class="area">서울 강남역 · 연세치과</span>
+                                        <span class="location-box">
+                                            <span class="location">서울 강남역</span>
+                                            <span class="address">서울특별시 강남구 케이스퀘어 빌딩 4, 5층</span>
+                                        </span>
+                                        <div class="btm_wrap">
+                                            <div class="price_wrap">
+                                                <div class="pricebox">
+                                                    <div class="prcStyleBox priceStyle2">78,000원</div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <div class="positionWrap type-sqre">
+                        <dl>
+                            <dt>
+                                <a href="./mediGoods_content.html" class="color_rel cls_imgfast">
+                                    <img src="./images/imsi_before_after_1.png" alt="" class="prodImg">
+                                </a>
+                            </dt>
+                            <dd>
+                                <div class="textWrap">
+                                    <div>
+                                        <span class="tit airplane_wrap">
+                                            <a href="./mediGoods_content.html">하루만에 끝나는 임플란트</a>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </span>
+                                        <span class="keyword-box">
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                        </span>
+                                        <span class="area">서울 강남역 · 연세치과</span>
+                                        <span class="location-box">
+                                            <span class="location">서울 강남역</span>
+                                            <span class="address">서울특별시 강남구 케이스퀘어 빌딩 4, 5층</span>
+                                        </span>
+                                        <div class="btm_wrap">
+                                            <div class="price_wrap">
+                                                <div class="pricebox">
+                                                    <div class="prcStyleBox priceStyle2">78,000원</div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <div class="positionWrap type-sqre">
+                        <dl>
+                            <dt>
+                                <a href="./mediGoods_content.html" class="color_rel cls_imgfast">
+                                    <img src="./images/imsi_need_service_2.png" alt="" class="prodImg">
+                                </a>
+                            </dt>
+                            <dd>
+                                <div class="textWrap">
+                                    <div>
+                                        <span class="tit airplane_wrap">
+                                            <a href="./mediGoods_content.html">하루만에 끝나는 임플란트</a>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </span>
+                                        <span class="keyword-box">
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                        </span>
+                                        <span class="area">서울 강남역 · 연세치과</span>
+                                        <span class="location-box">
+                                            <span class="location">서울 강남역</span>
+                                            <span class="address">서울특별시 강남구 케이스퀘어 빌딩 4, 5층</span>
+                                        </span>
+                                        <div class="btm_wrap">
+                                            <div class="price_wrap">
+                                                <div class="pricebox">
+                                                    <div class="prcStyleBox priceStyle2">78,000원</div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <div class="positionWrap type-sqre">
+                        <dl>
+                            <dt>
+                                <a href="./mediGoods_content.html" class="color_rel cls_imgfast">
+                                    <img src="./images/imsi_need_service_1.png" alt="" class="prodImg">
+                                </a>
+                            </dt>
+                            <dd>
+                                <div class="textWrap">
+                                    <div>
+                                        <span class="tit airplane_wrap">
+                                            <a href="./mediGoods_content.html">하루만에 끝나는 임플란트</a>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </span>
+                                        <span class="keyword-box">
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                        </span>
+                                        <span class="area">서울 강남역 · 연세치과</span>
+                                        <span class="location-box">
+                                            <span class="location">서울 강남역</span>
+                                            <span class="address">서울특별시 강남구 케이스퀘어 빌딩 4, 5층</span>
+                                        </span>
+                                        <div class="btm_wrap">
+                                            <div class="price_wrap">
+                                                <div class="pricebox">
+                                                    <div class="prcStyleBox priceStyle2">78,000원</div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <div class="positionWrap type-sqre">
+                        <dl>
+                            <dt>
+                                <a href="./mediGoods_content.html" class="color_rel cls_imgfast">
+                                    <img src="./images/imsi_before_after_3.png" alt="" class="prodImg">
+                                </a>
+                            </dt>
+                            <dd>
+                                <div class="textWrap">
+                                    <div>
+                                        <span class="tit airplane_wrap">
+                                            <a href="./mediGoods_content.html">하루만에 끝나는 임플란트</a>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </span>
+                                        <span class="keyword-box">
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                        </span>
+                                        <span class="area">서울 강남역 · 연세치과</span>
+                                        <span class="location-box">
+                                            <span class="location">서울 강남역</span>
+                                            <span class="address">서울특별시 강남구 케이스퀘어 빌딩 4, 5층</span>
+                                        </span>
+                                        <div class="btm_wrap">
+                                            <div class="price_wrap">
+                                                <div class="pricebox">
+                                                    <div class="prcStyleBox priceStyle2">78,000원</div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <div class="positionWrap type-sqre">
+                        <dl>
+                            <dt>
+                                <a href="./mediGoods_content.html" class="color_rel cls_imgfast">
+                                    <img src="./images/imsi_need_service_3.png" alt="" class="prodImg">
+                                </a>
+                            </dt>
+                            <dd>
+                                <div class="textWrap">
+                                    <div>
+                                        <span class="tit airplane_wrap">
+                                            <a href="./mediGoods_content.html">하루만에 끝나는 임플란트</a>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </span>
+                                        <span class="keyword-box">
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                        </span>
+                                        <span class="area">서울 강남역 · 연세치과</span>
+                                        <span class="location-box">
+                                            <span class="location">서울 강남역</span>
+                                            <span class="address">서울특별시 강남구 케이스퀘어 빌딩 4, 5층</span>
+                                        </span>
+                                        <div class="btm_wrap">
+                                            <div class="price_wrap">
+                                                <div class="pricebox">
+                                                    <div class="prcStyleBox priceStyle2">78,000원</div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li>
+                    <div class="positionWrap type-sqre">
+                        <dl>
+                            <dt>
+                                <a href="./mediGoods_content.html" class="color_rel cls_imgfast">
+                                    <img src="./images/imsi_before_after_2.png" alt="" class="prodImg">
+                                </a>
+                            </dt>
+                            <dd>
+                                <div class="textWrap">
+                                    <div>
+                                        <span class="tit airplane_wrap">
+                                            <a href="./mediGoods_content.html">하루만에 끝나는 임플란트</a>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </span>
+                                        <span class="keyword-box">
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                            <span class="keyword">#키워드</span>
+                                        </span>
+                                        <span class="area">서울 강남역 · 연세치과</span>
+                                        <span class="location-box">
+                                            <span class="location">서울 강남역</span>
+                                            <span class="address">서울특별시 강남구 케이스퀘어 빌딩 4, 5층</span>
+                                        </span>
+                                        <div class="btm_wrap">
+                                            <div class="price_wrap">
+                                                <div class="pricebox">
+                                                    <div class="prcStyleBox priceStyle2">78,000원</div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="like-button" onclick="likeButton(event)">
+                                                <img src="./images/btn_like.png" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+            </ul>
+            <div class="newList">
+                <ul class="new cont_list _1st">
+                    <li class="">
+                        <div class="positionWrap type-sqre">
+                            <dl>
+                                <dt>
+                                    <a href="./mediGoods_content.html" class="color_rel cls_imgfast">
+                                        <img src="./images/imsi_more_inform_1.png" alt="" class="prodImg">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <div class="textWrap">
+                                        <div>
+                                            <span class="tit airplane_wrap">
+                                                <a href="./mediGoods_content.html">임플란트를 하루만에 끝내세요! 치료 비용 무조건 39만원 부터</a>
+                                                <button type="button" class="like-button" onclick="likeButton(event)">
+                                                    <img src="./images/btn_like.png" alt="">
+                                                </button>
+                                            </span>
+                                            <span class="keyword-box">
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                            </span>
+                                            <span class="area">서울 강남역 · 연세치과</span>
+                                            <span class="location-box">
+                                                <span class="location">서울 강남역</span>
+                                                <span class="address">서울특별시 강남구 케이스퀘어 빌딩 4, 5층</span>
+                                            </span>
+                                            <div class="btm_wrap">
+                                                <div class="price_wrap" style="display:block;">
+                                                    <div class="per sitecolor1">
+                                                        <em>50</em>
+                                                        <span class="per_icon"> %</span>
+                                                    </div>
+                                                    <div class="pricebox">
+                                                        <div class="prcStyleBox priceStyle2 ">78,000원</div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="like-button" onclick="likeButton(event)">
+                                                    <img src="./images/btn_like.png" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="positionWrap type-sqre">
+                            <dl>
+                                <dt>
+                                    <a href="./mediGoods_content.html" class="color_rel cls_imgfast">
+                                        <img src="./images/imsi_need_service_2.png" alt="" class="prodImg">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <div class="textWrap">
+                                        <div>
+                                            <span class="tit airplane_wrap">
+                                                <a href="./mediGoods_content.html">임플란트를 하루만에 끝내세요! 치료 비용 무조건 39만원 부터</a>
+                                                <button type="button" class="like-button" onclick="likeButton(event)">
+                                                    <img src="./images/btn_like.png" alt="">
+                                                </button>
+                                            </span>
+                                            <span class="keyword-box">
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                            </span>
+                                            <span class="area">서울 강남역 · 연세치과</span>
+                                            <span class="location-box">
+                                                <span class="location">서울 강남역</span>
+                                                <span class="address">서울특별시 강남구 케이스퀘어 빌딩 4, 5층</span>
+                                            </span>
+                                            <div class="btm_wrap">
+                                                <div class="price_wrap" style="display:block;">
+                                                    <div class="per sitecolor1">
+                                                        <em>50</em>
+                                                        <span class="per_icon"> %</span>
+                                                    </div>
+                                                    <div class="pricebox">
+                                                        <div class="prcStyleBox priceStyle2 ">78,000원</div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="like-button" onclick="likeButton(event)">
+                                                    <img src="./images/btn_like.png" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="positionWrap type-sqre">
+                            <dl>
+                                <dt>
+                                    <a href="./mediGoods_content.html" class="color_rel cls_imgfast">
+                                        <img src="./images/imsi_more_inform_1.png" alt="" class="prodImg">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <div class="textWrap">
+                                        <div>
+                                            <span class="tit airplane_wrap">
+                                                <a href="./mediGoods_content.html">임플란트를 하루만에 끝내세요! 치료 비용 무조건 39만원 부터</a>
+                                                <button type="button" class="like-button" onclick="likeButton(event)">
+                                                    <img src="./images/btn_like.png" alt="">
+                                                </button>
+                                            </span>
+                                            <span class="keyword-box">
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                            </span>
+                                            <span class="area">서울 강남역 · 연세치과</span>
+                                            <span class="location-box">
+                                                <span class="location">서울 강남역</span>
+                                                <span class="address">서울특별시 강남구 케이스퀘어 빌딩 4, 5층</span>
+                                            </span>
+                                            <div class="btm_wrap">
+                                                <div class="price_wrap" style="display:block;">
+                                                    <div class="per sitecolor1">
+                                                        <em>50</em>
+                                                        <span class="per_icon"> %</span>
+                                                    </div>
+                                                    <div class="pricebox">
+                                                        <div class="prcStyleBox priceStyle2 ">78,000원</div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="like-button" onclick="likeButton(event)">
+                                                    <img src="./images/btn_like.png" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="new cont_list _2nd">
+                    <li class="">
+                        <div class="positionWrap type-sqre">
+                            <dl>
+                                <dt>
+                                    <a href="./mediGoods_content.html" class="color_rel cls_imgfast">
+                                        <img src="./images/imsi_need_service_2.png" alt="" class="prodImg">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <div class="textWrap">
+                                        <div>
+                                            <span class="tit airplane_wrap">
+                                                <a href="./mediGoods_content.html">임플란트를 하루만에 끝내세요! 치료 비용 무조건 39만원 부터</a>
+                                                <button type="button" class="like-button" onclick="likeButton(event)">
+                                                    <img src="./images/btn_like.png" alt="">
+                                                </button>
+                                            </span>
+                                            <span class="keyword-box">
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                            </span>
+                                            <span class="area">서울 강남역 · 연세치과</span>
+                                            <span class="location-box">
+                                                <span class="location">서울 강남역</span>
+                                                <span class="address">서울특별시 강남구 케이스퀘어 빌딩 4, 5층</span>
+                                            </span>
+                                            <div class="btm_wrap">
+                                                <div class="price_wrap" style="display:block;">
+                                                    <div class="pricebox">
+                                                        <div class="prcStyleBox priceStyle2 ">78,000원</div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="like-button" onclick="likeButton(event)">
+                                                    <img src="./images/btn_like.png" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="positionWrap type-sqre">
+                            <dl>
+                                <dt>
+                                    <a href="./mediGoods_content.html" class="color_rel cls_imgfast">
+                                        <img src="./images/imsi_more_inform_1.png" alt="" class="prodImg">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <div class="textWrap">
+                                        <div>
+                                            <span class="tit airplane_wrap">
+                                                <a href="./mediGoods_content.html">임플란트를 하루만에 끝내세요! 치료 비용 무조건 39만원 부터</a>
+                                                <button type="button" class="like-button" onclick="likeButton(event)">
+                                                    <img src="./images/btn_like.png" alt="">
+                                                </button>
+                                            </span>
+                                            <span class="keyword-box">
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                            </span>
+                                            <span class="area">서울 강남역 · 연세치과</span>
+                                            <span class="location-box">
+                                                <span class="location">서울 강남역</span>
+                                                <span class="address">서울특별시 강남구 케이스퀘어 빌딩 4, 5층</span>
+                                            </span>
+                                            <div class="btm_wrap">
+                                                <div class="price_wrap" style="display:block;">
+                                                    <div class="pricebox">
+                                                        <div class="prcStyleBox priceStyle2 ">78,000원</div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="like-button" onclick="likeButton(event)">
+                                                    <img src="./images/btn_like.png" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="positionWrap type-sqre">
+                            <dl>
+                                <dt>
+                                    <a href="./mediGoods_content.html" class="color_rel cls_imgfast">
+                                        <img src="./images/imsi_need_service_2.png" alt="" class="prodImg">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <div class="textWrap">
+                                        <div>
+                                            <span class="tit airplane_wrap">
+                                                <a href="./mediGoods_content.html">임플란트를 하루만에 끝내세요! 치료 비용 무조건 39만원 부터</a>
+                                                <button type="button" class="like-button" onclick="likeButton(event)">
+                                                    <img src="./images/btn_like.png" alt="">
+                                                </button>
+                                            </span>
+                                            <span class="keyword-box">
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                                <span class="keyword">#키워드</span>
+                                            </span>
+                                            <span class="area">서울 강남역 · 연세치과</span>
+                                            <span class="location-box">
+                                                <span class="location">서울 강남역</span>
+                                                <span class="address">서울특별시 강남구 케이스퀘어 빌딩 4, 5층</span>
+                                            </span>
+                                            <div class="btm_wrap">
+                                                <div class="price_wrap" style="display:block;">
+                                                    <div class="pricebox">
+                                                        <div class="prcStyleBox priceStyle2 ">78,000원</div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="like-button" onclick="likeButton(event)">
+                                                    <img src="./images/btn_like.png" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

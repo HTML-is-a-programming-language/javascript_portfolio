@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코리아메디 - 상품 상세페이지</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="header-wrap fixed goods">
+        <div class="left-button-box">
+            <a href="javascript:history.back()" class="back-link">
+                <img src="./images/btn_back.png" alt="" >
+            </a>
+        </div>
+        <div class="right-button-box">
+            <button type="button" class="search-button" onclick="open_pop()">
+                <img src="./images/btn_search.png" alt="">
+            </button>
+            <a href="javascript:void(0)" class="home-link">
+                <img src="./images/btn_home.png" alt="">
+            </a>
+            <a href="javascript:void(0)" class="cart-link">
+                <img src="./images/btn_cart.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <form name="Frm" id="Frm" method="post"><!-- #frm -->
+        <div id="content" class="content-product-detail"><!-- #content -->
+            <div class="main-visual-wrap swiper">
+                <ul class="main-visual-box swiper-wrapper">
+                    <li class="main-visual-list swiper-slide">
+                        <img src="./images/imsi_hospital_content_1.png" alt="">
+                    </li>
+                    <li class="main-visual-list swiper-slide">
+                        <img src="./images/imsi_hospital_content_1.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="hospital-inform-wrap">
+                <div class="hospital-name-box">
+                    <span class="hospital-name">에이탑 성형외과의원</span>
+                    <button type="button" class="link-share-button SNSLayerIcon" onclick="linkShareButton(this)">
+                        <img src="./images/btn_link_share.png" alt="">
+                    </button>
+                </div>
+                <div class="hospital-keyword-box">
+                    <span class="keyword">#눈</span>
+                    <span class="keyword">#코</span>
+                    <span class="keyword">#리프팅</span>
+                </div>
+                <div class="hospital-review-wrap">
+                    <div class="star-rate-box">
+                        <img src="./images/ico_star_rate.png" alt="">
+                        <span class="star-rate">6.5</span>
+                    </div>
+                    <div class="review-count-box">
+                        <span class="count">후기 74</span>
+                    </div>
+                </div>
+                <div class="hospital-hour-wrap">
+                    <button type="button" class="unfold-button" onclick="hospitalHour(this)">
+                        <img src="./images/ico_hour.png" class="icon-hour">
+                        <span class="day">화
+                            <span class="hour">10:00 ~ 19:00</span>
+                        </span>
+                        <img src="./images/btn_arrow_down_gray.png" alt="" class="button-arrow-down">
+                    </button>
+                    <button type="button" class="fold-button" onclick="hospitalHour(this)">
+                        <div class="all-day-list">
+                            <img src="./images/ico_hour.png" class="icon-hour">
+                            <span class="day">월
+                                <span class="hour">10:00 ~ 19:00</span>
+                            </span>
+                        </div>
+                        <div class="all-day-list">
+                            <span class="day">화
+                                <span class="hour">10:00 ~ 19:00</span>
+                            </span>
+                        </div>
+                        <div class="all-day-list">
+                            <span class="day">수
+                                <span class="hour">10:00 ~ 19:00</span>
+                            </span>
+                        </div>
+                        <div class="all-day-list">
+                            <span class="day">목
+                                <span class="hour">10:00 ~ 19:00</span>
+                            </span>
+                        </div>
+                        <div class="all-day-list">
+                            <span class="day">금
+                                <span class="hour">10:00 ~ 19:00</span>
+                            </span>
+                        </div>
+                        <div class="all-day-list">
+                            <span class="day">토
+                                <span class="hour closed">휴진</span>
+                            </span>
+                        </div>
+                        <div class="all-day-list">
+                            <span class="day">일
+                                <span class="hour closed">휴진</span>
+                            </span>
+                            <img src="./images/btn_arrow_up_gray.png" alt="" class="button-arrow-up">
+                        </div>
+                    </button>
+                </div>
+                <div class="hospital-address-wrap">
+                    <div class="address-box">
+                        <img src="./images/ico_address.png" alt="">
+                        <span class="address">서울특별시 금천구 디지털로9길 99</span>
+                    </div>
+                    <div class="address-button-box">
+                        <button type="button" class="copy-address-button" onclick="copyAddress()">주소복사</button>
+                        <a href="javascript:viewMap()" class="view-map-link">지도보기</a>
+                    </div>
+                </div>
+                <dl class="hospital-introduce-box">
+                    <dt class="title-introduce">병원소개</dt>
+                    <dd class="hospital-introduce">1999년부터 지금까지 23년! 서울대 성형외과박사 전문의 김준호 원장의 유캔비 성형외과/피부과입니다.</dt>
+                </dl>
+                <div class="service-provide-wrap swiper">
+                    <ul class="service-provide-box swiper-wrapper">
+                        <li class="service-provide-list swiper-slide">
+                            <img src="./images/ico_emergency.png" alt="">
+                            <span class="service">응급시스템</span>
+                        </li>
+                        <li class="service-provide-list swiper-slide">
+                            <img src="./images/ico_anesthesia.png" alt="">
+                            <span class="service">마취통증의학과 전문의 상주</span>
+                        </li>
+                        <li class="service-provide-list swiper-slide">
+                            <img src="./images/ico_room.png" alt="">
+                            <span class="service">입원실</span>
+                        </li>
+                        <li class="service-provide-list swiper-slide">
+                            <img src="./images/ico_vigilance.png" alt="">
+                            <span class="service">사후관리</span>
+                        </li>
+                        <li class="service-provide-list swiper-slide">
+                            <img src="./images/ico_recovery.png" alt="">
+                            <span class="service">전담회복실</span>
+                        </li>
+                        <li class="service-provide-list swiper-slide">
+                            <img src="./images/ico_female.png" alt="">
+                            <span class="service">여의사 진료</span>
+                        </li>
+                        <li class="service-provide-list swiper-slide">
+                            <img src="./images/ico_cctv.png" alt="">
+                            <span class="service">cctv 설치</span>
+                        </li>
+                        <li class="service-provide-list swiper-slide">
+                            <img src="./images/ico_parking.png" alt="">
+                            <span class="service">주차가능</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="need-service-wrap swiper">
+                <h2 class="content-title">나에게 필요한 서비스</h2>
+                <ul class="need-service-box swiper-wrapper">
+                    <li class="need-service-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="need-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_1.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="need-service-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="need-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_2.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="need-service-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="need-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_3.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="need-service-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="need-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_1.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="need-service-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="need-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_2.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="need-service-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="need-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_3.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                     <li class="need-service-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="need-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_1.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="need-service-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="need-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_2.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="need-service-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="need-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_3.png" alt="">
+                            </div>
+                            <div class="service-detail-box">
+                                <p class="service-name">[브랜드] 상품 TITLE 상품 TITLE상품 TITLE</p>
+                                <div class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="doctor-inform-wrap">
+                <h2 class="content-title">의사 정보</h2>
+                <ul class="doctor-inform-box">
+                    <li class="doctor-inform-list">
+                        <div class="image-box">
+                            <img src="./images/imsi_doctor_inform_1.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <span class="name">홍길동 대표원장</span>
+                            <span class="bailiwick">성형외과 전문의</span>
+                            <span class="hospital">에이탑성형외과의원</span>
+                            <span class="review">시술후기
+                                <span class="number">833</span>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="doctor-inform-list">
+                        <div class="image-box">
+                            <img src="./images/imsi_doctor_inform_1.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <span class="name">홍길동 대표원장</span>
+                            <span class="bailiwick">성형외과 전문의</span>
+                            <span class="hospital">에이탑성형외과의원</span>
+                            <span class="review">시술후기
+                                <span class="number">833</span>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="doctor-inform-list">
+                        <div class="image-box">
+                            <img src="./images/imsi_doctor_inform_1.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <span class="name">홍길동 대표원장</span>
+                            <span class="bailiwick">성형외과 전문의</span>
+                            <span class="hospital">에이탑성형외과의원</span>
+                            <span class="review">시술후기
+                                <span class="number">833</span>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="doctor-inform-list">
+                        <div class="image-box">
+                            <img src="./images/imsi_doctor_inform_1.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <span class="name">홍길동 대표원장</span>
+                            <span class="bailiwick">성형외과 전문의</span>
+                            <span class="hospital">에이탑성형외과의원</span>
+                            <span class="review">시술후기
+                                <span class="number">833</span>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="middle-banner-wrap swiper hide">
+                <ul class="middle-banner-box swiper-wrapper">
+                    <li class="middle-banner-list swiper-slide">
+                        <img src="./images/imsi_middle_banner_1.png" alt="">
+                    </li>
+                    <li class="middle-banner-list swiper-slide">
+                        <img src="./images/imsi_middle_banner_1.png" alt="">
+                    </li>
+                    <li class="middle-banner-list swiper-slide">
+                        <img src="./images/imsi_middle_banner_1.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="review-wrap active">
+                <div class="sort-box">
+                    <button type="button" class="sort-button active" data-val="best_desc" onclick="sortButton(this)">베스트순</button>
+                    <button type="button" class="sort-button" data-val="write_desc" onclick="sortButton(this)">최신순</button>
+                </div>
+                <ul class="review-box">
+                    <li class="review-list">
+                        <div class="star-rate-box">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_rate.png" alt="">
+                        </div>
+                        <div class="review-detail">
+                            <span class="review-title">상품평</span>
+                            <p class="review">아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약 간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산 발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니 나 귀엽고 이뻐요</p>
+                        </div>
+                        <div class="review-image-wrap swiper">
+                            <ul class="review-image-box swiper-wrapper">
+                                <li class="review-image-list swiper-slide">
+                                    <img src="" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="help-button-box">
+                            <button type="button" class="help-button" onclick="helpButton(this)">
+                                <img src="./images/helpful.png" alt="">
+                                <span class="text">도움이 됐어요.</span>
+                            </button>
+                            <span class="help-count">1명에게 도움이 되었습니다.</span>
+                        </div>
+                        <div class="id-date-box">
+                            <span class="user-id">haem***</span>
+                            <span class="date">2024-04-04</span>
+                        </div>
+                    </li>
+                    <li class="review-list">
+                        <div class="star-rate-box">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_rate.png" alt="">
+                            <img src="./images/ico_star_off.png" alt="">
+                        </div>
+                        <div class="review-detail">
+                            <span class="review-title">상품평</span>
+                            <p class="review">아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약 간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산 발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니나 귀엽고 이뻐요 아주 약간 넉넉해요 뒷부분이 좀 높아 걸을때 약간 불편한 감은 있지만 괜찮고 푹신한 느낌의 산발은 아니 나 귀엽고 이뻐요</p>
+                        </div>
+                        <div class="review-image-wrap swiper">
+                            <ul class="review-image-box swiper-wrapper">
+                                <li class="review-image-list swiper-slide">
+                                    <img src="" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="help-button-box">
+                            <button type="button" class="help-button" onclick="helpButton(this)">
+                                <img src="./images/helpful.png" alt="">
+                                <span class="text">도움이 됐어요.</span>
+                            </button>
+                            <span class="help-count">0명에게 도움이 되었습니다.</span>
+                        </div>
+                        <div class="id-date-box">
+                            <span class="user-id">haem***</span>
+                            <span class="date">2024-04-05</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="before-after-wrap swiper">
+                <span class="sub-title">직접 시술받고 작성한</span>
+                <h2 class="content-title">Before / After</h2>
+                <ul class="before-after-box swiper-wrapper">
+                    <li class="before-after-list swiper-slide">
+                        <div class="user-id-box">
+                            <span class="user-id">ab**님</span>
+                            <div class="star-rate-box">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <span class="count">5</span>
+                            </div>
+                        </div>
+                        <div class="image-box">
+                            <div class="before-image">
+                                <img src="./images/imsi_before_after_1.png" alt="">
+                                <span class="text">Before</span>
+                            </div>
+                            <div class="after-image">
+                                <img src="./images/imsi_before_after_2.png" alt="">
+                                <span class="text">After</span>
+                            </div>
+                            <div class="before-image">
+                                <img src="./images/imsi_before_after_3.png" alt="">
+                                <span class="text">Before</span>
+                            </div>
+                        </div>
+                        <div class="review-box">
+                            <p class="review">후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다</p>
+                        </div>
+                        <div class="keyword-box">
+                            <span class="keyword">#시술이름</span>
+                        </div>
+                    </li>
+                    <li class="before-after-list swiper-slide">
+                        <div class="user-id-box">
+                            <span class="user-id">ab**님</span>
+                            <div class="star-rate-box">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <img src="./images/ico_star_rate.png" alt="">
+                                <span class="count">5</span>
+                            </div>
+                        </div>
+                        <div class="image-box">
+                            <div class="before-image">
+                                <img src="./images/imsi_before_after_1.png" alt="">
+                            </div>
+                            <div class="after-image">
+                                <img src="./images/imsi_before_after_2.png" alt="">
+                            </div>
+                            <div class="before-image">
+                                <img src="./images/imsi_before_after_3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="review-box">
+                            <p class="review">후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다 후기 내용입니다</p>
+                        </div>
+                        <div class="keyword-box">
+                            <span class="keyword">#시술이름</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="like-service-wrap">
+                <h2 class="content-title">좋아요 많은 서비스</h2>
+                <ul class="like-service-box">
+                    <li class="like-service-list">
+                        <a href="./mediGoods_content.html" class="like-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_hospital_content_1.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <div class="title-box">
+                                    <span class="title">하루만에 끝나는 임플란트</span>
+                                    <span class="keyword-box">
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                    </span>
+                                </div>
+                                <span class="area">서울 강남역 · 연세치과</span>
+                                <span class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="like-service-list">
+                        <a href="./mediGoods_content.html" class="like-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_2.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <div class="title-box">
+                                    <span class="title">하루만에 끝나는 임플란트</span>
+                                    <span class="keyword-box">
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                    </span>
+                                </div>
+                                <span class="area">서울 강남역 · 연세치과</span>
+                                <span class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="like-service-list">
+                        <a href="./mediGoods_content.html" class="like-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_hospital_content_1.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <div class="title-box">
+                                    <span class="title">하루만에 끝나는 임플란트</span>
+                                    <span class="keyword-box">
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                    </span>
+                                </div>
+                                <span class="area">서울 강남역 · 연세치과</span>
+                                <span class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="like-service-list">
+                        <a href="./mediGoods_content.html" class="like-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_2.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <div class="title-box">
+                                    <span class="title">하루만에 끝나는 임플란트</span>
+                                    <span class="keyword-box">
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                    </span>
+                                </div>
+                                <span class="area">서울 강남역 · 연세치과</span>
+                                <span class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="like-service-list">
+                        <a href="./mediGoods_content.html" class="like-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_hospital_content_1.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <div class="title-box">
+                                    <span class="title">하루만에 끝나는 임플란트</span>
+                                    <span class="keyword-box">
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                    </span>
+                                </div>
+                                <span class="area">서울 강남역 · 연세치과</span>
+                                <span class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="like-service-list">
+                        <a href="./mediGoods_content.html" class="like-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_2.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <div class="title-box">
+                                    <span class="title">하루만에 끝나는 임플란트</span>
+                                    <span class="keyword-box">
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                    </span>
+                                </div>
+                                <span class="area">서울 강남역 · 연세치과</span>
+                                <span class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="like-service-list">
+                        <a href="./mediGoods_content.html" class="like-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_hospital_content_1.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <div class="title-box">
+                                    <span class="title">하루만에 끝나는 임플란트</span>
+                                    <span class="keyword-box">
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                    </span>
+                                </div>
+                                <span class="area">서울 강남역 · 연세치과</span>
+                                <span class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="like-service-list">
+                        <a href="./mediGoods_content.html" class="like-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_2.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <div class="title-box">
+                                    <span class="title">하루만에 끝나는 임플란트</span>
+                                    <span class="keyword-box">
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                    </span>
+                                </div>
+                                <span class="area">서울 강남역 · 연세치과</span>
+                                <span class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="like-service-list">
+                        <a href="./mediGoods_content.html" class="like-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_hospital_content_1.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <div class="title-box">
+                                    <span class="title">하루만에 끝나는 임플란트</span>
+                                    <span class="keyword-box">
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                    </span>
+                                </div>
+                                <span class="area">서울 강남역 · 연세치과</span>
+                                <span class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="like-service-list">
+                        <a href="./mediGoods_content.html" class="like-service-link">
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_2.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <div class="title-box">
+                                    <span class="title">하루만에 끝나는 임플란트</span>
+                                    <span class="keyword-box">
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                        <span class="keyword">#키워드</span>
+                                    </span>
+                                </div>
+                                <span class="area">서울 강남역 · 연세치과</span>
+                                <span class="price-box">
+                                    <span class="price">78,000원</span>
+                                    <button type="button" class="like-button" onclick="likeButton(event)">
+                                        <img src="./images/btn_like.png" alt="">
+                                    </button>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-menu-wrap">
+                <div class="bottom-menu-box">
+                    <button type="button" class="like-button" onclick="likeButton(event)">
+                        <img src="./images/btn_like.png" alt="">
+                    </button>
+                    <a href="javascript:void(0)" class="chat-link">병원 상담신청</a>
+                </div>
+            </div>
+        </div><!-- #content end -->
+    </form><!-- #frm end -->
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

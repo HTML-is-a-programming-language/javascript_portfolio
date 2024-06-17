@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코리아메디 - 예약 내역</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div id="mobile_wrap">
+        <div class="subTopDOM sub-header-wrap border">
+            <div class="btnLeft">
+                <a href="javascript:history.go(-1)" class="btn_back_pst"></a>
+            </div>
+            <h1 class="sub_title FS_pageTitle">예약 내역</h1>
+            <div class="rgt_btn FS_sectionTitle"></div>
+        </div>
+
+        <div id="content" class="content-order-total">
+            <div class="totar_width nop">
+                <section class="sectorDOM">
+                    <div class="sectionInner">
+                        <article class="categoryDOM">
+                            <div class="listDate">
+                                <ul>
+                                    <li class="active">
+                                        <a href="./order_total.html">2주일</a>
+                                    </li>
+                                    <li>
+                                        <a href="./order_total.html">1개월</a>
+                                    </li>
+                                    <li>
+                                        <a href="./order_total.html">3개월</a>
+                                    </li>
+                                    <li>
+                                        <a href="./order_total.html">6개월</a>
+                                    </li>
+                                    <li>
+                                        <a href="./order_total.html">12개월</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <div class="order-total-wrap">
+                    <div class="no-order-box">
+                        <img src="./images/ico_no_order.png">
+                        <span class="text">주문 내역이 없습니다.</span>
+                    </div>
+                    <ul class="order-total-box">
+                        <li class="order-total-list">
+                            <div class="order-date-box">
+                                <span class="date">2024.06.02</span>
+                            </div>
+                            <ul class="order-box">
+                                <li class="order-list">
+                                    <div class="reserve-number-box">
+                                        <span class="reserve-number">예약번호 : 20240613ABC</span>
+                                        <a href="./mediGoods_content.html" class="view-link">
+                                            <span class="text">상세보기</span>
+                                            <img src="./images/btn_arrow_right_gray.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product-box">
+                                        <div class="image-box">
+                                        <img src="./images/imsi_before_after_2.png" alt="">
+                                        </div>
+                                        <div class="detail-box">
+                                            <div class="title-box">
+                                                <span class="title">하루만에 끝나는 임플란트</span>
+                                            </div>
+                                            <span class="area">서울 강남역 · 연세치과</span>
+                                            <span class="price-box">
+                                                <span class="price">100,000원</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="button-box">
+                                        <a href="./edit_order.html" class="change-link">예약 변경</a>
+                                        <button type="button" class="cancel-button">예약 취소
+                                    </button></div>
+                                </li>
+                                <li class="order-list">
+                                    <div class="reserve-number-box">
+                                        <span class="reserve-number">예약번호 : 20240613ABC</span>
+                                        <a href="./mediGoods_content.html" class="view-link">
+                                            <span class="text">상세보기</span>
+                                            <img src="./images/btn_arrow_right_gray.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product-box">
+                                        <div class="image-box">
+                                        <img src="./images/imsi_before_after_2.png" alt="">
+                                        </div>
+                                        <div class="detail-box">
+                                            <div class="title-box">
+                                                <span class="title">하루만에 끝나는 임플란트</span>
+                                            </div>
+                                            <span class="area">서울 강남역 · 연세치과</span>
+                                            <span class="price-box">
+                                                <span class="price">100,000원</span>
+                                            </span>
+                                            <span class="status">이용완료</span>
+                                        </div>
+                                    </div>
+                                    <div class="button-box">
+                                        <a href="./write_review.html" class="review-link">리뷰 작성</a>
+                                    </div>
+                                </li>
+                                <li class="order-list">
+                                    <div class="reserve-number-box">
+                                        <span class="reserve-number">예약번호 : 20240613ABC</span>
+                                        <a href="./mediGoods_content.html" class="view-link">
+                                            <span class="text">상세보기</span>
+                                            <img src="./images/btn_arrow_right_gray.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product-box">
+                                        <div class="image-box">
+                                        <img src="./images/imsi_before_after_2.png" alt="">
+                                        </div>
+                                        <div class="detail-box">
+                                            <div class="title-box">
+                                                <span class="title">하루만에 끝나는 임플란트</span>
+                                            </div>
+                                            <span class="area">서울 강남역 · 연세치과</span>
+                                            <span class="price-box">
+                                                <span class="price">100,000원</span>
+                                            </span>
+                                            <span class="status cancel">예약취소완료</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="order-total-list">
+                            <div class="order-date-box">
+                                <span class="date">2024.04.26</span>
+                            </div>
+                            <ul class="order-box">
+                                <li class="order-list">
+                                    <div class="reserve-number-box">
+                                        <span class="reserve-number">예약번호 : 20240613ABC</span>
+                                        <a href="./mediGoods_content.html" class="view-link">
+                                            <span class="text">상세보기</span>
+                                            <img src="./images/btn_arrow_right_gray.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product-box">
+                                        <div class="image-box">
+                                        <img src="./images/imsi_before_after_2.png" alt="">
+                                        </div>
+                                        <div class="detail-box">
+                                            <div class="title-box">
+                                                <span class="title">하루만에 끝나는 임플란트</span>
+                                            </div>
+                                            <span class="area">서울 강남역 · 연세치과</span>
+                                            <span class="price-box">
+                                                <span class="price">100,000원</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="button-box">
+                                        <a href="./edit_order.html" class="change-link">예약 변경</a>
+                                        <button type="button" class="cancel-button">예약 취소</button>
+                                    </div>
+                                </li>
+                                <li class="order-list">
+                                    <div class="reserve-number-box">
+                                        <span class="reserve-number">예약번호 : 20240613ABC</span>
+                                        <a href="./mediGoods_content.html" class="view-link">
+                                            <span class="text">상세보기</span>
+                                            <img src="./images/btn_arrow_right_gray.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product-box">
+                                        <div class="image-box">
+                                        <img src="./images/imsi_before_after_2.png" alt="">
+                                        </div>
+                                        <div class="detail-box">
+                                            <div class="title-box">
+                                                <span class="title">하루만에 끝나는 임플란트</span>
+                                            </div>
+                                            <span class="area">서울 강남역 · 연세치과</span>
+                                            <span class="price-box">
+                                                <span class="price">100,000원</span>
+                                            </span>
+                                            <span class="status">이용완료</span>
+                                        </div>
+                                    </div>
+                                    <div class="button-box">
+                                        <a href="./write_review.html" class="review-link">리뷰 작성</a>
+                                    </div>
+                                </li>
+                                <li class="order-list">
+                                    <div class="reserve-number-box">
+                                        <span class="reserve-number">예약번호 : 20240613ABC</span>
+                                        <a href="./mediGoods_content.html" class="view-link">
+                                            <span class="text">상세보기</span>
+                                            <img src="./images/btn_arrow_right_gray.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product-box">
+                                        <div class="image-box">
+                                        <img src="./images/imsi_before_after_2.png" alt="">
+                                        </div>
+                                        <div class="detail-box">
+                                            <div class="title-box">
+                                                <span class="title">하루만에 끝나는 임플란트</span>
+                                            </div>
+                                            <span class="area">서울 강남역 · 연세치과</span>
+                                            <span class="price-box">
+                                                <span class="price">100,000원</span>
+                                            </span>
+                                            <span class="status">예약취소완료</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
