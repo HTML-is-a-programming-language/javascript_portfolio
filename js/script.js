@@ -164,6 +164,11 @@ document.querySelectorAll('.slide-prev-button, .slide-next-button').forEach(func
 
 function modalWindowOpen(skill){
     const modalWindow = document.querySelector('.modal-window-wrap[data-modal="'+skill+'"]')
-    document.querySelector('.modal-overlay').classList.add('active');
-    modalWindow.classList.add('active')
+
+    if(modalWindow){
+        document.querySelector('.modal-overlay').classList.add('active');
+        modalWindow.classList.add('active');
+    } else {
+        alert('준비중입니다.');
+    }
 }
