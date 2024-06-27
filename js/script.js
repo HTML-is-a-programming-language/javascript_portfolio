@@ -1,8 +1,7 @@
-// 슬라이드
 document.addEventListener('DOMContentLoaded', () => {
-    const slideWrap = document.querySelectorAll('.slide-wrap');
+    const slideWraps = document.querySelectorAll('.slide-wrap');
 
-    slideWrap.forEach((slider) => {
+    slideWraps.forEach((slider) => {
         const slideBox = slider.querySelector('.slide-box');
         let slideList = slider.querySelectorAll('.slide-list');
         const slidePrevButton = slider.querySelector('.slide-prev-button');
@@ -130,7 +129,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function restartAutoSlide() {
             pauseAutoSlide();
-            autoSlideInterval = setInterval(showNextSlide, 4000);
+            if (slider.dataset.autoSlide === "true") {
+                autoSlideInterval = setInterval(showNextSlide, 4000);
+            }
         }
 
         cloneSlides();
@@ -147,17 +148,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
 // 모달 창
 document.querySelector('.modal-overlay').addEventListener('click', function(){
     document.querySelector('.modal-overlay').classList.remove('active');
-    document.querySelector('.modal-window-wrap').classList.remove('active');
+    document.querySelectorAll('.modal-window-wrap').forEach(function(modal) {
+        modal.classList.remove('active');
+    });
 })
+
+document.querySelectorAll('.slide-prev-button, .slide-next-button').forEach(function(button) {
+    button.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+});
 
 function modalWindowOpen(skill){
     const modalWindow = document.querySelector('.modal-window-wrap[data-modal="'+skill+'"]')
     document.querySelector('.modal-overlay').classList.add('active');
     modalWindow.classList.add('active')
-    console.log(skill);
 }

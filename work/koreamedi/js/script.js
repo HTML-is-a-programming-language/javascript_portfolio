@@ -134,7 +134,7 @@ function hospitalHour(e){
 }
 
 // 2024-06-10 ssj 상세정보/리뷰/문의 탭 메뉴
-function tabMenu(e){
+function goodsTabMenu(e){
     const index = $(e).closest('.tab-menu-list').index();
 
     $(e).addClass('active').closest('.tab-menu-list').siblings().find('.tab-menu-button').removeClass('active');
@@ -346,7 +346,7 @@ function reserveLink(event){
     } else if(name.includes('change-link')){
         location.href = '../edit_order.html';
     } else if(name.includes('cancel-link')){
-        location.href = '../mediGoods_content.html';
+        location.href = '../edit_order.html';
     }
 }
 
@@ -610,4 +610,240 @@ $(document).ready(function() {
 
     // 기본적으로 2주일 필터 적용
     filterOrders(14);
+});
+
+// 2024-06-18 ssj 탭 메뉴
+function favoriteTabMenu(e){
+    const index = $(e).closest('.tab-menu-list').index();
+    $('.tab-menu-link').removeClass('active');
+    $(e).addClass('active');
+
+    if(index == 0){
+        $('.like-service-wrap').removeClass('hide');
+        $('.cont_list').addClass('hide');
+    } else {
+        $('.cont_list').removeClass('hide');
+        $('.like-service-wrap').addClass('hide');
+    }
+}
+
+// 2024-06-20 ssj 검색 모달 창
+function open_pop(){
+    $('body', document).css({'overflow':'hidden', 'height':'98%'});
+    go_topFast();
+    $('.search_pop_new').fadeIn().css({'position':'fixed','height':'100vh','overflow':'auto'});
+    $('.search_pop_new').addClass('_active');
+
+    $('.popularSearchBox > li:first .goodsListWrap, .popularSearchBox > li:first .downArr').addClass('active');
+
+    $('.downArr').on('click',function(){
+        if($(this).hasClass('active')){
+            $('.downArr').removeClass('active');
+        } else{
+            $('.downArr').removeClass('active');
+            $(this).addClass('active');
+        }
+
+        if($(this).closest('li').find('.goodsListWrap').hasClass('active')){
+            $('.goodsListWrap').removeClass('active');
+        } else {
+            $('.goodsListWrap').removeClass('active');
+            $(this).closest('li').find('.goodsListWrap').addClass('active');
+        }
+    });
+}
+
+function srchClose_pop(){
+    $('.search_pop_new').removeClass('_active');
+    $('.search_pop_new').fadeOut().css({'position':'fixed','height':'100vh','overflow':'auto'});
+    $('body', document).css({'overflow':'auto'});
+
+}
+
+function go_topFast(){
+    $('html,body', document).stop().scrollTop(0);
+}
+
+// 2024-06-20 ssj 검색 모달 창 인기 키워드 스와이퍼
+const popularKeywordSwiper = new Swiper('.popular-keyword-wrap',{
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    observer: true,
+    observerParents: true,
+});
+
+// 2024-06-20 ssj 인기검색어 리스트 내부 스와이퍼 추가
+const popularSwiper = new Swiper('.goodsListWrap', {
+    slidesPerView: 'auto',
+    observer: true,
+    observeParents: true,
+    spaceBetween: 16,
+});
+
+// 2024-06-20 ssj 언어설정 모달 창
+function openSetting (){
+    $('.languageSettingWrap').addClass('on');
+}
+
+function closeSetting (){
+    $('.languageSettingWrap').removeClass('on');
+}
+
+function openSubSet (obj){
+    var chkKind = $(obj).attr('data-kind');
+
+    $('.settingSubWrap').addClass('on');
+
+    if(chkKind == 'country'){
+        $('.ssSelectWrap').removeClass('on');
+        $('.settingSub .ssTit .topTitle').text('Country/Region');
+        $('.countryBox').addClass('on');
+    }else if(chkKind == 'language'){
+        $('.ssSelectWrap').removeClass('on');
+        $('.settingSub .ssTit .topTitle').text('Language');
+        $('.languageBox').addClass('on');
+    }else if(chkKind == 'money'){
+        $('.ssSelectWrap').removeClass('on');
+        $('.settingSub .ssTit .topTitle').text('Currency');
+        $('.moneyBox').addClass('on');
+    }
+
+}
+
+function closeSubSet (){
+    $('.settingSubWrap').removeClass('on');
+}
+
+function saveSubSet (obj){
+    $('.lsSelectWrap div[data-kind='+$(obj).data('kind')+']').html($(obj).find('span:not(:empty)').clone());
+    $('.settingSubWrap').removeClass('on');
+}
+
+// 2024-06-20 ssj 메인 배너 스와이퍼
+const bannerSwiper = new Swiper('.banner-wrap', {
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+    },
+    autoplay: {
+        delay: 4000,
+    },
+    loop: true,
+});
+
+// 2024-06-20 ssj 카테고리 펼쳐보기/접기
+document.addEventListener('DOMContentLoaded', () => {
+    const moreButton = document.querySelector('.more-button');
+
+    if (moreButton) {
+        function categoryFolding(){
+            const categoryListHeight = document.querySelector('.category-icon-list').getBoundingClientRect().height;
+            const collapseHeight = categoryListHeight * 2 + 32 + 'px';
+            const expandHeight = categoryListHeight * 4 + 64 + 'px';
+            document.documentElement.style.setProperty('--category-icon-padding-top', collapseHeight);
+            const categoryWrapHeight = document.querySelector('.category-icon-wrap .container').getBoundingClientRect().height + 'px';
+
+            if(categoryWrapHeight === collapseHeight){
+                document.documentElement.style.setProperty('--category-icon-padding-top', expandHeight);
+                document.documentElement.style.setProperty('--more-button-rotate', 'rotate(225deg)');
+                document.documentElement.style.setProperty('--more-button-top', '14px');
+            } else {
+                document.documentElement.style.setProperty('--category-icon-padding-top', collapseHeight);
+                document.documentElement.style.setProperty('--more-button-rotate', 'rotate(45deg)');
+                document.documentElement.style.setProperty('--more-button-top', '8px');
+            }
+        }
+        categoryFolding();
+        window.addEventListener('resize', categoryFolding);
+        moreButton.addEventListener('click', categoryFolding);
+    }
+});
+
+// 2024-06-20 ssj 추천 서비스 스와이퍼
+const eventSwiper = new Swiper('.recommend-service-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+});
+
+// 2024-06-20 ssj 주목해야할 카테고리 스와이퍼
+function progressbar(){
+    const length = $('.attention-category-list').length;
+
+    $('.attention-category-wrap').find('.swiper-pagination').width((length - 1) * 16);
+}
+progressbar()
+
+const attentionCategorySwiper = new Swiper('.attention-category-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+    },
+    on: {
+        init: function () {
+            updateProgressbar(this);
+        },
+        slideChange: function () {
+            updateProgressbar(this);
+        },
+        resize: function () {
+            updateProgressbar(this);
+        }
+    }
+});
+
+function updateProgressbar(swiper) {
+    const progressbarFill = swiper.pagination.el.querySelector('.swiper-pagination-progressbar-fill');
+    if (progressbarFill) {
+        const progress = (swiper.activeIndex + 1) / (swiper.slides.length - 1);
+        progressbarFill.style.width = (progress * 100) + '%';
+    }
+}
+
+// 2024-06-20 ssj 지금 많이 찾는 병원 스와이퍼
+const tabMenuSwiper = new Swiper('.tab-menu-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+});
+
+// 2024-06-20 ssj 지금 많이 찾는 병원 탭메뉴 / 스와이퍼
+function mainTabMenu(e){
+    const tabMenuIndex = $(e).index();
+
+    $(e).addClass('active').siblings().removeClass('active');
+    $('.tab-category-wrap').removeClass('active');
+    $('.tab-category-wrap.category' + tabMenuIndex).addClass('active');
+
+    const tabCategorySwiper = new Swiper('.tab-category-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+        observer : true,
+        observeParents : true,
+    });
+}
+
+// 2024-06-20 ssj 지금 많이 찾는 병원 탭메뉴 / 스와이퍼
+const tabCategorySwiper = new Swiper('.tab-category-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    observer : true,
+    observeParents : true,
+});
+
+// 2024-06-26 ssj 좋아요 버튼
+function wishlistButton(e){
+    $(e).toggleClass('active');
+}
+
+// 2024-06-26 ssj 사업자 정보 확인
+function onopen(){
+    var url = "http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no="+frm1.wrkr_no.value.replace(/-/g,"");
+    window.open(url, "communicationViewPopup", "width=750, height=700;");
+}
+
+// 2024-06-26 ssj 푸터 메뉴 스와이퍼
+const footerLinkSwiper = new Swiper('.footer-link-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 8,
 });

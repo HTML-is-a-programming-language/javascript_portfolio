@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코리아메디 - 메인페이지</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="main-header-wrap">
+        <div class="container">
+            <div class="content-header">
+                <div class="logo-box">
+                    <a href="./default.html" class="logo-link">
+                        <img src="./images/btn_logo.png">
+                    </a>
+                </div>
+                <div class="search-box">
+                    <button type="button" class="search-button" onclick="open_pop()">
+                        <img src="./images/btn_search_color.png" alt="">
+                    </button>
+                </div>
+                <div class="button-box">
+                    <div class="language-button-box">
+                        <button type="button" class="language-button" onclick="openSetting()">
+                            <img src="./images/btn_language.png" alt="">
+                        </button>
+                    </div>
+                    <div class="wishlist-link-box">
+                        <a href="./favorite.html" class="wishlist-link">
+                            <img src="./images/btn_like_black_full.png" alt="">
+                        </a>
+                        <span class="count">12</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-height"></div>
+
+    <div class="search_pop_new">
+        <form name="searchFrm" id="searchFrm" method="get" action="./search.html">
+        <input type="hidden" id="pcate" name="pcate" value="">
+        <input type="hidden" id="cate" name="cate" value="">
+        <input type="hidden" id="scate" name="scate" value="">
+            <div class="searchTop">
+                <div class="search_area">
+                    <a href="javascript:srchClose_pop();" class="btn_back"><img src="./images/btn_back_black_full.png" alt="back"></a>
+                    <div class="search_pop_inner">
+                        <fieldset>
+                            <legend>검색</legend>
+                            <input type="text" id="searchStr" name="sword" placeholder="검색어를 입력해주세요." onkeyup="check_gubun();" onclick="check_gubun();">
+                            <button class="btn_search" data-role="none"><img src="./images/btn_search_black_full.png" alt="search"></button>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popular-keyword">
+                <h2 class="search-title">인기 키워드</h2>
+                <div class="popular-keyword-wrap swiper">
+                    <ul class="popular-keyword-box swiper-wrapper">
+                        <li class="popular-keyword-list swiper-slide">
+                            <a href="./search.html" class="keyword">#안티에이징</a>
+                        </li>
+                        <li class="popular-keyword-list swiper-slide">
+                            <a href="./search.html" class="keyword">#VIP종합검진</a>
+                        </li>
+                        <li class="popular-keyword-list swiper-slide">
+                            <a href="./search.html" class="keyword">#성형외과</a>
+                        </li>
+                        <li class="popular-keyword-list swiper-slide">
+                            <a href="./search.html" class="keyword">#피부과</a>
+                        </li>
+                        <li class="popular-keyword-list swiper-slide">
+                            <a href="./search.html" class="keyword">#산부인과</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popularSearchWrap">
+                <div class="container">
+                    <h2 class="search-title">인기 검색어</h2>
+                    <div class="subTit hide">가장 많이 검색한 상품!</div>
+                </div>
+                <div class="popularSearchList">
+                    <ul class="popularSearchBox">
+                        <li>
+                            <div class="bd-top">
+                                <span class="index bolder">1</span>
+                                <a href="./search.html?sword=눈">눈</a>
+                                <span class="downArr">
+                                    <img src="./images/btn_arrow_down_gray_full.png" alt="리스트 활성화 버튼">
+                                </span>
+                            </div>
+                            <div class="goodsListWrap swiper-container">
+                                <ul class="goodsList swiper-wrapper">
+                                    <li class="goodsBox swiper-slide">
+                                        <div class="imgWrap">
+                                            <a href="./mediGoods_content.html">
+                                                <img src="./images/imsi_before_after_2.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goodsInfo">
+                                            <div class="tit">
+                                                <a href="./mediGoods_content.html">쌍꺼풀매몰 + 눈매교정</a>
+                                            </div>
+                                            <div class="priceWrap">
+                                                <div class="goodsPrice">2,440,000
+                                                    <span class="mwon">원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="goodsBox swiper-slide">
+                                        <div class="imgWrap">
+                                            <a href="./mediGoods_content.html">
+                                                <img src="./images/imsi_before_after_2.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goodsInfo">
+                                            <div class="tit">
+                                                <a href="./mediGoods_content.html">쌍꺼풀매몰 + 눈매교정</a>
+                                            </div>
+                                            <div class="priceWrap">
+                                                <div class="goodsPrice">3,600,000
+                                                    <span class="mwon">원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="goodsBox swiper-slide">
+                                        <div class="imgWrap">
+                                            <a href="./mediGoods_content.html">
+                                                <img src="./images/imsi_before_after_2.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goodsInfo">
+                                            <div class="tit">
+                                                <a href="./mediGoods_content.html">쌍꺼풀매몰 + 눈매교정</a>
+                                            </div>
+                                            <div class="priceWrap">
+                                                <div class="goodsPrice">3,600,000
+                                                    <span class="mwon">원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bd-top">
+                                <span class="index bolder">2</span>
+                                <a href="./search.html?sword=성형">성형</a>
+                                <span class="downArr">
+                                    <img src="./images/btn_arrow_down_gray_full.png" alt="리스트 활성화 버튼">
+                                </span>
+                            </div>
+                            <div class="goodsListWrap swiper-container">
+                                <ul class="goodsList swiper-wrapper">
+                                    <li class="goodsBox swiper-slide">
+                                        <div class="imgWrap">
+                                            <a href="./mediGoods_content.html">
+                                                <img src="./images/imsi_before_after_2.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goodsInfo">
+                                            <div class="tit">
+                                                <a href="./mediGoods_content.html">웨딩질성형</a>
+                                            </div>
+                                            <div class="priceWrap">
+                                                <div class="goodsPrice">4,550,000<span class="mwon">원</span></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="goodsBox swiper-slide">
+                                        <div class="imgWrap">
+                                            <a href="./mediGoods_content.html">
+                                                <img src="./images/imsi_before_after_2.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goodsInfo">
+                                            <div class="tit">
+                                                <a href="./mediGoods_content.html">Twin~O 질성형 (임플란트질성형)</a>
+                                            </div>
+                                            <div class="priceWrap">
+                                                <div class="goodsPrice">3,900,000
+                                                    <span class="mwon">원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="goodsBox swiper-slide">
+                                        <div class="imgWrap">
+                                            <a href="./mediGoods_content.html">
+                                                <img src="./images/imsi_before_after_2.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goodsInfo">
+                                            <div class="tit">
+                                                <a href="./mediGoods_content.html">엠보질성형(실리콘볼) 1ea</a>
+                                            </div>
+                                            <div class="priceWrap">
+                                                <div class="goodsPrice">910,000
+                                                    <span class="mwon">원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="goodsBox swiper-slide">
+                                        <div class="imgWrap">
+                                            <a href="./mediGoods_content.html">
+                                                <img src="./images/imsi_before_after_2.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goodsInfo">
+                                            <div class="tit">
+                                                <a href="./mediGoods_content.html">질성형 재수술클리닉</a>
+                                            </div>
+                                            <div class="priceWrap">
+                                                <div class="goodsPrice">5,200,000
+                                                    <span class="mwon">원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bd-top">
+                                <span class="index bolder">3</span>
+                                <a href="./search.html?sword=필러">필러</a>
+                                <span class="downArr">
+                                    <img src="./images/btn_arrow_down_gray_full.png" alt="리스트 활성화 버튼">
+                                </span>
+                            </div>
+                            <div class="goodsListWrap swiper-container">
+                                <ul class="goodsList swiper-wrapper">
+                                    <li class="goodsBox swiper-slide">
+                                        <div class="imgWrap">
+                                            <a href="./mediGoods_content.html">
+                                                <img src="./images/imsi_before_after_2.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goodsInfo">
+                                            <div class="tit">
+                                                <a href="./mediGoods_content.html">질필러</a>
+                                            </div>
+                                            <div class="priceWrap">
+                                                <div class="goodsPrice">350,000
+                                                    <span class="mwon">원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="goodsBox swiper-slide">
+                                        <div class="imgWrap">
+                                            <a href="./mediGoods_content.html">
+                                                <img src="./images/imsi_before_after_2.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="goodsInfo">
+                                            <div class="tit">
+                                                <a href="./mediGoods_content.html">대음순필러 (1ml)</a>
+                                            </div>
+                                            <div class="priceWrap">
+                                                <div class="goodsPrice">350,000
+                                                    <span class="mwon">원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="languageSettingWrap">
+        <div class="languageSetting">
+            <h1 class="lsTit">Settings</h1>
+            <div class="lsTextBpx">
+                <div class="lsSelectWrap">
+                    <div class="lsSelect" onclick="openSubSet(this);" data-kind="country">
+                        <span class="ctSmall">
+                            <img src="./images/ico_korea.png">
+                        </span>
+                        <span class="country">Korea</span>
+                    </div>
+                    <div class="lsSelect" onclick="openSubSet(this);" data-kind="language">
+                        <span class="language">한국어</span>
+                    </div>
+                    <div class="lsSelect" onclick="openSubSet(this);" data-kind="money">
+                        <span class="money">KRW</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lsBtnWrap">
+                <span class="confirmBtn" onclick="setPreference()">Save</span>
+                <span class="cancleBtn" onclick="closeSetting();">Cancel</span>
+            </div>
+        </div>
+    </div>
+    <div class="settingSubWrap">
+        <div class="settingSub">
+            <h1 class="ssTit">
+                <span class="ssCloseBtn" onclick="closeSubSet();">
+                    <img src="./images/btn_back.png" alt="closeBTN">
+                </span>
+                <span class="topTitle">Country/Region</span>
+            </h1>
+            <div class="ssBox">
+                <div class="ssSelectWrap countryBox on">
+                    <div class="ssSelect" onclick="saveSubSet(this);" data-kind="country">
+                        <label for="chkcountry1" data-role="none">
+                            <span class="ctSmall">
+                                <img src="./images/ico_korea.png">
+                            </span>
+                            <span class="country">Korea</span>
+                            <input type="radio" name="chkcountry" id="chkcountry1" value="KR" checked="" data-role="none">
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="ssSelectWrap languageBox">
+                    <div class="ssSelect" onclick="saveSubSet(this);" data-kind="language">
+                        <label for="chklang1">
+                            <span class="language">한국어</span>
+                            <input type="radio" name="chklang" id="chklang1" value="KR" checked="" data-role="none">
+                            <span></span>
+                        </label>
+                    </div>
+                    <div class="ssSelect" onclick="saveSubSet(this);" data-kind="language">
+                        <label for="chklang2">
+                            <span class="language">日本語</span>
+                            <input type="radio" name="chklang" id="chklang2" value="JP" data-role="none">
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="ssSelectWrap moneyBox">
+                    <div class="ssSelect" onclick="saveSubSet(this);" data-kind="money">
+                        <label for="chkmoney1">
+                            <span class="money">KRW(₩)</span>
+                            <input type="radio" name="chkmoney" id="chkmoney1" value="KRW" checked="" data-role="none">
+                            <span></span>
+                        </label>
+                    </div>
+                    <div class="ssSelect" onclick="saveSubSet(this);" data-kind="money">
+                        <label for="chkmoney2">
+                            <span class="money">JPY(¥)</span>
+                            <input type="radio" name="chkmoney" id="chkmoney2" value="JPY" data-role="none">
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-main">
+        <div class="main-banner-wrap">
+            <div class="banner-wrap swiper">
+                <ul class="banner-box swiper-wrapper">
+                    <li class="banner-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="banner-link">
+                            <img src="./images/imsi_main_banner.png" alt="">
+                        </a>
+                    </li>
+                    <li class="banner-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="banner-link">
+                            <img src="./images/imsi_main_banner.png" alt="">
+                        </a>
+                    </li>
+                    <li class="banner-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="banner-link">
+                            <img src="./images/imsi_main_banner.png" alt="">
+                        </a>
+                    </li>
+                    <li class="banner-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="banner-link">
+                            <img src="./images/imsi_main_banner.png" alt="">
+                        </a>
+                    </li>
+                    <li class="banner-list swiper-slide">
+                        <a href="./mediGoods_content.html" class="banner-link">
+                            <img src="./images/imsi_main_banner.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="category-icon-wrap">
+            <div class="container">
+                <ul class="category-icon-box">
+                    <li class="category-icon-list">
+                        <a href="./goods_main.html" class="category-icon-link"></a>
+                        <div class="icon-box">
+                            <a href="./goods_main.html">
+                                <img src="./images/btn_anti_aging.png" alt="">
+                            </a>
+                        </div>
+                        <span class="icon-title">안티에이징</span>
+                    </li>
+                    <li class="category-icon-list">
+                        <a href="./goods_main.html" class="category-icon-link"></a>
+                        <div class="icon-box">
+                            <a href="./goods_main.html">
+                                <img src="./images/btn_comprehensive_checkup.png" alt="">
+                            </a>
+                        </div>
+                        <span class="icon-title">VIP 종합검진</span>
+                    </li>
+                    <li class="category-icon-list">
+                        <a href="./goods_main.html" class="category-icon-link"></a>
+                        <div class="icon-box">
+                            <a href="./goods_main.html">
+                                <img src="./images/btn_plastic_surgery.png" alt="">
+                            </a>
+                        </div>
+                        <span class="icon-title">성형외과</span>
+                    </li>
+                    <li class="category-icon-list">
+                        <a href="./goods_main.html" class="category-icon-link"></a>
+                        <div class="icon-box">
+                            <a href="./goods_main.html">
+                                <img src="./images/btn_dermatology.png" alt="">
+                            </a>
+                        </div>
+                        <span class="icon-title">피부과</span>
+                    </li>
+                    <li class="category-icon-list">
+                        <a href="./goods_main.html" class="category-icon-link"></a>
+                        <div class="icon-box">
+                            <a href="./goods_main.html">
+                                <img src="./images/btn_obstetrics_gynecology.png" alt="">
+                            </a>
+                        </div>
+                        <span class="icon-title">산부인과</span>
+                    </li>
+                    <li class="category-icon-list">
+                        <a href="./goods_main.html" class="category-icon-link"></a>
+                        <div class="icon-box">
+                            <a href="./goods_main.html">
+                                <img src="./images/btn_ophthalmology.png" alt="">
+                            </a>
+                        </div>
+                        <span class="icon-title">안과</span>
+                    </li>
+                    <li class="category-icon-list">
+                        <a href="./goods_main.html" class="category-icon-link"></a>
+                        <div class="icon-box">
+                            <a href="./goods_main.html">
+                                <img src="./images/btn_dentist.png" alt="">
+                            </a>
+                        </div>
+                        <span class="icon-title">치과</span>
+                    </li>
+                    <li class="category-icon-list">
+                        <a href="./goods_main.html" class="category-icon-link"></a>
+                        <div class="icon-box">
+                            <a href="./goods_main.html">
+                                <img src="./images/btn_general_hospital.png" alt="">
+                            </a>
+                        </div>
+                        <span class="icon-title">종합병원</span>
+                    </li>
+                    <li class="category-icon-list">
+                        <a href="./goods_main.html" class="category-icon-link"></a>
+                        <div class="icon-box">
+                            <a href="./goods_main.html">
+                                <img src="./images/btn_clinic.png" alt="">
+                            </a>
+                        </div>
+                        <span class="icon-title">의원</span>
+                    </li>
+                    <li class="category-icon-list">
+                        <a href="./goods_main.html" class="category-icon-link"></a>
+                        <div class="icon-box">
+                            <a href="./goods_main.html">
+                                <img src="./images/btn_colon_proctology.png" alt="">
+                            </a>
+                        </div>
+                        <span class="icon-title">대장/항문과</span>
+                    </li>
+                    <li class="category-icon-list">
+                        <a href="./goods_main.html" class="category-icon-link"></a>
+                        <div class="icon-box">
+                            <a href="./goods_main.html">
+                                <img src="./images/btn_urology.png" alt="">
+                            </a>
+                        </div>
+                        <span class="icon-title">비뇨기과</span>
+                    </li>
+                    <li class="category-icon-list">
+                        <a href="./goods_main.html" class="category-icon-link"></a>
+                        <div class="icon-box">
+                            <a href="./goods_main.html">
+                                <img src="./images/btn_neurosurgery.png" alt="">
+                            </a>
+                        </div>
+                        <span class="icon-title">신경외과</span>
+                    </li>
+                    <li class="category-icon-list">
+                        <a href="./goods_main.html" class="category-icon-link"></a>
+                        <div class="icon-box">
+                            <a href="./goods_main.html">
+                                <img src="./images/btn_orthopedics.png" alt="">
+                            </a>
+                        </div>
+                        <span class="icon-title">정형외과</span>
+                    </li>
+                    <li class="category-icon-list">
+                        <a href="./goods_main.html" class="category-icon-link"></a>
+                        <div class="icon-box">
+                            <a href="./goods_main.html">
+                                <img src="./images/btn_oriental_medicine_hospital.png" alt="">
+                            </a>
+                        </div>
+                        <span class="icon-title">한방병원</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="more-button-box">
+                <button type="button" class="more-button"></button>
+            </div>
+        </div>
+        <div class="recommend-service-wrap">
+            <div class="container">
+                <h2 class="content-title">추천 서비스</h2>
+                <div class="recommend-service-container swiper">
+                    <ul class="recommend-service-box swiper-wrapper">
+                        <li class="recommend-service-list swiper-slide">
+                            <a href="./mediGoods_content.html" class="recommend-service-link"></a>
+                            <div class="thumbnail-box">
+                                <a href="./mediGoods_content.html">
+                                    <img src="./images/imsi_before_after_1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="recommend-service-descript-box">
+                                <div class="recommend-service-title-box">
+                                    <span class="title">
+                                        <a href="./mediGoods_content.html">
+                                            <span>4D 완전 골반 재건술(질전체)</span>
+                                        </a>
+                                    </span>
+                                    <span class="area">서울 신사역 · 병원</span>
+                                </div>
+                                <div class="recommend-service-price-box">
+                                    <span class="discount-price">
+                                        ₩ 6,500,000
+                                    </span>
+                                    <span class="discount-rate">
+                                        <span class="per on">50%</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="recommend-service-list swiper-slide">
+                            <a href="./mediGoods_content.html" class="recommend-service-link"></a>
+                            <div class="thumbnail-box">
+                                <a href="./mediGoods_content.html">
+                                    <img src="./images/imsi_before_after_1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="recommend-service-descript-box">
+                                <div class="recommend-service-title-box">
+                                    <span class="title">
+                                        <a href="/m/goods/content.asp?guid=2021674">
+                                            <span>항아리교정술(질안쪽2/3만)</span>
+                                        </a>
+                                    </span>
+                                    <span class="area">서울 신사역 · 병원</span>
+                                </div>
+                                <div class="recommend-service-price-box">
+                                    <span class="discount-price">
+                                        ₩ 3,900,000
+                                    </span>
+                                    <span class="discount-rate">
+                                        <span class="per  on">50%</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="recommend-service-list swiper-slide">
+                            <a href="/m/goods/content.asp?guid=2021675" class="recommend-service-link"></a>
+                            <div class="thumbnail-box">
+                                <a href="./mediGoods_content.html">
+                                    <img src="./images/imsi_before_after_1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="recommend-service-descript-box">
+                                <div class="recommend-service-title-box">
+                                    <span class="title">
+                                        <a href="/m/goods/content.asp?guid=2021675">
+                                            <span>이쁜이수술(질입구+회음부)</span>
+                                        </a>
+                                    </span>
+                                    <span class="area">서울 신사역 · 병원</span>
+                                </div>
+                                <div class="recommend-service-price-box">
+                                    <span class="discount-price">
+                                        ₩ 3,250,000
+                                    </span>
+                                    <span class="discount-rate">
+                                        <span class="per  on">50%</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="recommend-service-list swiper-slide">
+                            <a href="/m/goods/content.asp?guid=2021676" class="recommend-service-link"></a>
+                            <div class="thumbnail-box">
+                                <a href="./mediGoods_content.html">
+                                    <img src="./images/imsi_before_after_1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="recommend-service-descript-box">
+                                <div class="recommend-service-title-box">
+                                    <span class="title">
+                                        <a href="/m/goods/content.asp?guid=2021676">
+                                            <span>회음부 수술</span>
+                                        </a>
+                                    </span>
+                                    <span class="area">서울 신사역 · 병원</span>
+                                </div>
+                                <div class="recommend-service-price-box">
+                                    <span class="discount-price">
+                                        ₩ 1,300,000
+                                    </span>
+                                    <span class="discount-rate">
+                                        <span class="per  on">50%</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="more-link-box">
+                    <a href="javascript:void(0)" class="more-link">추천 서비스 더보기</a>
+                </div>
+            </div>
+            <div class="attention-category-wrap">
+                <div class="container">
+                    <h2 class="content-title">주목해야할 카테고리</h2>
+                    <div class="attention-category-container swiper">
+                        <ul class="attention-category-box swiper-wrapper">
+                            <li class="attention-category-list swiper-slide">
+                                <a href="./goods_main.html" class="attention-category-link"></a>
+                                <div class="icon-box">
+                                    <a href="./goods_main.html">
+                                        <img src="./images/btn_stem_cells_category.png" alt="">
+                                    </a>
+                                </div>
+                                <span class="icon-title">줄기세포</span>
+                            </li>
+                            <li class="attention-category-list swiper-slide">
+                                <a href="./goods_main.html" class="attention-category-link"></a>
+                                <div class="icon-box">
+                                    <a href="./goods_main.html">
+                                        <img src="./images/btn_anti_aging_category.png" alt="">
+                                    </a>
+                                </div>
+                                <span class="icon-title">안티에이징</span>
+                            </li>
+                            <li class="attention-category-list swiper-slide">
+                                <a href="./goods_main.html" class="attention-category-link"></a>
+                                <div class="icon-box">
+                                    <a href="./goods_main.html">
+                                        <img src="./images/btn_comprehensive_checkup_category.png" alt="">
+                                    </a>
+                                </div>
+                                <span class="icon-title">VIP종합검진</span>
+                            </li>
+                            <li class="attention-category-list swiper-slide">
+                                <a href="./goods_main.html" class="attention-category-link"></a>
+                                <div class="icon-box">
+                                    <a href="./goods_main.html">
+                                        <img src="./images/btn_plastic_surgery_category.png" alt="">
+                                    </a>
+                                </div>
+                                <span class="icon-title">성형외과</span>
+                            </li>
+                            <li class="attention-category-list swiper-slide">
+                                <a href="./goods_main.html" class="attention-category-link"></a>
+                                <div class="icon-box">
+                                    <a href="./goods_main.html">
+                                        <img src="./images/btn_dermatology_category.png" alt="">
+                                    </a>
+                                </div>
+                                <span class="icon-title">피부과</span>
+                            </li>
+                            <li class="attention-category-list swiper-slide">
+                                <a href="./goods_main.html" class="attention-category-link"></a>
+                                <div class="icon-box">
+                                    <a href="./goods_main.html">
+                                        <img src="./images/btn_obstetrics_gynecology_category.png" alt="">
+                                    </a>
+                                </div>
+                                <span class="icon-title">산부인과</span>
+                            </li>
+                            <li class="attention-category-list swiper-slide">
+                                <a href="./goods_main.html" class="attention-category-link"></a>
+                                <div class="icon-box">
+                                    <a href="./goods_main.html">
+                                        <img src="./images/btn_ophthalmology_category.png" alt="">
+                                    </a>
+                                </div>
+                                <span class="icon-title">안과</span>
+                            </li>
+                            <li class="attention-category-list swiper-slide">
+                                <a href="./goods_main.html" class="attention-category-link"></a>
+                                <div class="icon-box">
+                                    <a href="./goods_main.html">
+                                        <img src="./images/btn_dentist_category.png" alt="">
+                                    </a>
+                                </div>
+                                <span class="icon-title">치과</span>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-menu-wrap">
+            <div class="container">
+                <h2 class="content-title">지금 많이 찾는 병원</h2>
+                <div class="tab-menu-container swiper">
+                    <ul class="tab-menu-box swiper-wrapper">
+                        <li class="tab-menu-list swiper-slide active" onclick="mainTabMenu(this)">안티에이징</li>
+                        <li class="tab-menu-list swiper-slide" onclick="mainTabMenu(this)">VIP종합검진</li>
+                        <li class="tab-menu-list swiper-slide" onclick="mainTabMenu(this)">성형외과/뷰티</li>
+                        <li class="tab-menu-list swiper-slide" onclick="mainTabMenu(this)">산부인과</li>
+                        <li class="tab-menu-list swiper-slide" onclick="mainTabMenu(this)">안과</li>
+                        <li class="tab-menu-list swiper-slide" onclick="mainTabMenu(this)">치과</li>
+                        <li class="tab-menu-list swiper-slide" onclick="mainTabMenu(this)">종합병원</li>
+                        <li class="tab-menu-list swiper-slide" onclick="mainTabMenu(this)">의원</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-category-wrap category0 active">
+            <div class="container">
+                <div class="tab-category-container swiper">
+                    <ul class="tab-category-box swiper-wrapper">
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-category-wrap category1">
+            <div class="container">
+                <div class="tab-category-container swiper">
+                    <ul class="tab-category-box swiper-wrapper">
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-category-wrap category2">
+            <div class="container">
+                <div class="tab-category-container swiper">
+                    <ul class="tab-category-box swiper-wrapper">
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-category-wrap category3">
+            <div class="container">
+                <div class="tab-category-container swiper">
+                    <ul class="tab-category-box swiper-wrapper">
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-category-wrap category4">
+            <div class="container">
+                <div class="tab-category-container swiper">
+                    <ul class="tab-category-box swiper-wrapper">
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-category-wrap category5">
+            <div class="container">
+                <div class="tab-category-container swiper">
+                    <ul class="tab-category-box swiper-wrapper">
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-category-wrap category6">
+            <div class="container">
+                <div class="tab-category-container swiper">
+                    <ul class="tab-category-box swiper-wrapper">
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-category-wrap category7">
+            <div class="container">
+                <div class="tab-category-container swiper">
+                    <ul class="tab-category-box swiper-wrapper">
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_3.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_4.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_5.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_1.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                        <li class="tab-category-list swiper-slide">
+                            <a href="./hospital_content.html" class="tab-category-link"></a>
+                            <a href="./hospital_content.html">
+                                <img src="./images/imsi_hospital_2.png" alt="">
+                            </a>
+                            <span class="tab-category-name">연세 치과</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="service-wrap">
+            <div class="container">
+                <h2 class="content-title">지금 많이 찾는 인기 서비스</h2>
+                <div class="service-container">
+                    <h3 class="category-title">#안티에이징</h3>
+                    <ul class="service-box">
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_2.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_more_inform_1.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_1.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="service-container">
+                    <h3 class="category-title">#VIP종합검진</h3>
+                    <ul class="service-box">
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_3.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_2.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_hospital_content_1.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="service-container">
+                    <h3 class="category-title">#성형외과/피부과</h3>
+                    <ul class="service-box">
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_2.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_1.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_3.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="service-container">
+                    <h3 class="category-title">#산부인과</h3>
+                    <ul class="service-box">
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_3.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_2.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_hospital_content_1.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="service-container">
+                    <h3 class="category-title">#안과</h3>
+                    <ul class="service-box">
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_2.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_need_service_1.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_3.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="service-container">
+                    <h3 class="category-title">#치과</h3>
+                    <ul class="service-box">
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_2.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_more_inform_1.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_1.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="service-container">
+                    <h3 class="category-title">#종합병원</h3>
+                    <ul class="service-box">
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_2.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_more_inform_1.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_1.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="service-container">
+                    <h3 class="category-title">#의원</h3>
+                    <ul class="service-box">
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_2.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_more_inform_1.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="service-list">
+                            <a href="./mediGoods_content.html" class="service-link"></a>
+                            <div class="image-box">
+                                <img src="./images/imsi_before_after_1.png" alt="">
+                            </div>
+                            <div class="service-detail">
+                                <div class="service-title-box">
+                                    <span class="service-title">하루만에 끝나는 임플란트</span>
+                                    <span class="service-keyword">#키워드 #키워드 #키워드</span>
+                                </div>
+                                <span class="service-area">서울 강남역 · 연세치과</span>
+                                <span class="service-price">
+                                    <span>78,000원</span>
+                                    <button type="button" class="service-wishlist-button" onclick="wishlistButton(this)"></button>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="agent-wrap">
+            <h2 class="agent-title">지금 바로 코리아메디에서 에이전트로 활동하세요!</h2>
+            <div class="agent-box">
+                <div class="step-box">
+                    <img src="./images/ico_pencil.png" alt="">
+                    <span class="step">STEP 1</span>
+                    <span class="text">회원가입</span>
+                </div>
+                <div class="arrow-box">
+                    <img src="./images/ico_arrow_right_white.png" alt="">
+                </div>
+                <div class="step-box">
+                    <img src="./images/ico_pencil.png" alt="">
+                    <span class="step">STEP 2</span>
+                    <span class="text">심사(미정)</span>
+                </div>
+                <div class="arrow-box">
+                    <img src="./images/ico_arrow_right_white.png" alt="">
+                </div>
+                <div class="step-box">
+                    <img src="./images/ico_pencil.png" alt="">
+                    <span class="step">STEP 3</span>
+                    <span class="text">등록 완료</span>
+                </div>
+            </div>
+            <div class="link-box">
+                <a href="javascript:void(0)" class="link">바로 시작하기</a>
+            </div>
+        </div>
+        <div class="footer-wrap">
+            <form name="frm1">
+                <input name="wrkr_no" type="hidden" value="{{BIZ_NO}}">
+                <div class="footer-link-container swiper">
+                    <ul class="footer-link-box swiper-wrapper">
+                        <li class="footer-link-list swiper-slide">
+                            <a href="/m/other/licensing.asp" class="footer-link">이용약관</a>
+                        </li>
+                        <li class="footer-link-list swiper-slide">
+                            <a href="/m/other/privacy.asp" class="footer-link">개인정보처리방침</a>
+                        </li>
+                        <li class="footer-link-list swiper-slide">
+                            <a href="javascript:void(0)" class="footer-link">제휴문의</a>
+                        </li>
+                        <li class="footer-link-list swiper-slide">
+                            <a href="javascript:void(0)" class="footer-link">입점신청</a>
+                        </li>
+                        <li class="footer-link-list swiper-slide">
+                            <a href="/m/my/consult.asp" class="footer-link">1:1문의</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <div class="footer-address-box">
+                        <div class="logo-box">
+                            <a href="./default.html">
+                                <img src="./images/ico_logo.png" alt="">
+                            </a>
+                        </div>
+                        <address>
+                            <span>대표 : 최통주</span>
+                            <span>전화 : 1670-0582</span>
+                            <span>팩스 : 02-779-7831</span>
+                            <span>주소 : 서울 중구 장충단로 166 5층</span>
+                            <span>사업자등록번호 : 597-82-00266</span>
+                            <a href="javascript:void(0);" onclick="onopen();">사업자정보확인</a>
+                            <span>개인정보책임관리자 : 최통주(help@ koreamedi.or.kr)</span>
+                            <span>통신판매업신고 : 2020-서울중구-1031</span>
+                        </address>
+                    </div>
+                    <ul class="footer-menu-box">
+                        <li class="footer-menu-list">
+                            <a href="/m/customercenter/guide.asp?code=InformationUse" class="footer-menu-link">
+                                <span class="text">이용안내</span>
+                                <img src="./images/btn_arrow_right_gray.png" alt="">
+                            </a>
+                        </li>
+                        <li class="footer-menu-list">
+                            <a href="/m/customercenter/cscenter_main.asp" class="footer-menu-link">
+                                <span class="text">고객센터</span>
+                                <img src="./images/btn_arrow_right_gray.png" alt="">
+                            </a>
+                        </li>
+                        <li class="footer-menu-list">
+                            <a href="https://ecrm.police.go.kr/minwon/main" class="footer-menu-link">
+                                <span class="text">사이버신고센터</span>
+                                <img src="./images/btn_arrow_right_gray.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-copyright-box">
+                        <p class="copyright">Copyright ⓒ 2023  koreamedi All rights reserved.</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
