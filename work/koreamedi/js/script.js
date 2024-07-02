@@ -490,6 +490,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fileInput.addEventListener('change', () => {
             const fileNameSpan = fileInput.closest('label').querySelector('.text');
             const file = fileInput.files[0];
+            console.log('aaa');
 
             if (file) {
                 const fileType = file.type;
@@ -846,4 +847,13 @@ function onopen(){
 const footerLinkSwiper = new Swiper('.footer-link-container', {
     slidesPerView: 'auto',
     spaceBetween: 8,
+});
+
+// 2024-07-02 ssj 무통장입금 시 입금자 정보 입력
+$('input[name="payway"]').on('change',function(){
+    if($(this).val() == 'ONLINE'){
+        $('.depo').css({'display':'block'});
+    } else {
+        $('.depo').css({'display':'none'});
+    }
 });

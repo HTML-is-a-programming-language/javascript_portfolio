@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코리아메디 - 예약 결제</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="top_fix_head sitebg2 sub-header-wrap border">
+		<a href="javascript:history.go(-1)" class="btn_back_pst iconfont ftic-back"></a>
+		<h1 class="sub_title">예약 결제</h1>
+		<div class="iconfont ftic-allmenu" onclick="cateClick()"></div>
+	</div>
+    <form id="Frm" name="Frm" method="post">
+        <div id="content" class="content-order">
+            <h2 class="title">예약 상품</h2>
+            <div class="view">
+                <div class="img">
+                    <a href="./mediGoods_content.html">
+                        <img src="./images/imsi_before_after_2.png" alt="">
+                    </a>
+                </div>
+                <div class="text">
+                    <a href="./mediGoods_content.html">
+                        <strong>시력교정의 정점, 스마일프로</strong>
+                    </a>
+                    <span class="area">서울 강남역 · 연세치과</span>
+                    <span class="prc">₩ 5,000,000</span>
+                    <div class="reserve-box">
+                        <span class="date-box">
+                            <span class="date">날짜</span>
+                            <span class="text">2024.05.08</span>
+                        </span>
+                        <span class="hour-box">
+                            <span class="hour">희망시간</span>
+                            <span class="text">13:00</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="pay-instruct-wrap">
+                <div class="pay-instruct-box">
+                    <h3 class="title">결제 안내 사항</h3>
+                    <div class="text-box">
+                        <p class="text">예약금만 결제하시면 예약이 완료됩니다.</p>
+                        <p class="text">추후 추가비용은 현장 결제로 진행됩니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reserve-wrap">
+                <h2 class="wrap-title">예약자 정보</h2>
+                <label for="sameInform" class="label-style">
+                    <input type="checkbox" id="sameInform" name="sameInform">
+                    <span class="label-icon"></span>
+                    <span class="text">기본 정보와 동일</span>
+                </label>
+                <div class="reserve-box">
+                    <span class="box-title">이름</span>
+                    <div class="detail">
+                        <input type="text" id="name" name="name" value="홍길동">
+                    </div>
+                </div>
+                <div class="reserve-box">
+                    <span class="box-title">영문 이름</span>
+                    <div class="detail">
+                        <input type="text" id="englishName" name="englishName" value="Hong Kildong">
+                    </div>
+                </div>
+                <div class="reserve-box">
+                    <span class="box-title">전화번호</span>
+                    <div class="detail">
+                        <input type="text" id="phoneNumber" name="phoneNumber" value="010-1234-5678">
+                    </div>
+                </div>
+                <div class="reserve-box">
+                    <span class="box-title">여권사진</span>
+                    <div class="detail">
+                        <label for="passportPhoto" class="label-style file-name-preview">
+                            <input type="file" id="passportPhoto" name="passportPhoto" accept=".png, .jpg">
+                            <span class="label-icon">파일선택</span>
+                            <span class="text">선택된 파일 없음</span>
+                        </label>
+                    </div>
+                </div>
+                <p class="notice">*png, jpg의 파일 형식만 첨부해주세요.</p>
+            </div>
+            <div class="add-service-wrap hide">
+                <h2 class="title">추가 서비스</h2>
+                <ul class="add-service-box">
+                    <li class="add-service-list">
+                        <span class="list-title">호텔 선택</span>
+                        <div class="radio-box">
+                            <label for="serviceA" class="label-style radio">
+                                <input type="radio" id="serviceA" name="service1" checked="">
+                                <span class="label-icon"></span>
+                                <span class="text">5성급 (+10,000)</span>
+                            </label>
+                            <label for="serviceB" class="label-style radio">
+                                <input type="radio" id="serviceB" name="service1">
+                                <span class="label-icon"></span>
+                                <span class="text">4성급 (+10,000)</span>
+                            </label>
+                            <label for="serviceC" class="label-style radio">
+                                <input type="radio" id="serviceC" name="service1">
+                                <span class="label-icon"></span>
+                                <span class="text">3성급 (+10,000)</span>
+                            </label>
+                            <label for="serviceD" class="label-style radio">
+                                <input type="radio" id="serviceD" name="service1">
+                                <span class="label-icon"></span>
+                                <span class="text">선택안함</span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="add-service-list">
+                        <span class="list-title">공항 픽업 서비스</span>
+                        <div class="radio-box">
+                            <label for="serviceE" class="label-style radio">
+                                <input type="radio" id="serviceE" name="service2" checked="">
+                                <span class="label-icon"></span>
+                                <span class="text">선택함 (+10,000)</span>
+                            </label>
+                            <label for="serviceF" class="label-style radio">
+                                <input type="radio" id="serviceF" name="service2">
+                                <span class="label-icon"></span>
+                                <span class="text">선택안함</span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="add-service-list">
+                        <span class="list-title">공항 픽업 서비스</span>
+                        <div class="radio-box">
+                            <label for="serviceG" class="label-style radio">
+                                <input type="radio" id="serviceG" name="service3" checked="">
+                                <span class="label-icon"></span>
+                                <span class="text">선택함 (+10,000)</span>
+                            </label>
+                            <label for="serviceH" class="label-style radio">
+                                <input type="radio" id="serviceH" name="service3">
+                                <span class="label-icon"></span>
+                                <span class="text">선택안함</span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="add-service-list">
+                        <span class="list-title">공항 픽업 서비스</span>
+                        <div class="radio-box">
+                            <label for="serviceI" class="label-style radio">
+                                <input type="radio" id="serviceI" name="service4" checked="">
+                                <span class="label-icon"></span>
+                                <span class="text">선택함 (+10,000)</span>
+                            </label>
+                            <label for="serviceJ" class="label-style radio">
+                                <input type="radio" id="serviceJ" name="service4">
+                                <span class="label-icon"></span>
+                                <span class="text">선택안함</span>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="pay-amount-wrap">
+                <div class="pay-amount-box">
+                    <span class="text">결제금액</span>
+                    <span class="pay-amount">10,000원</span>
+                </div>
+            </div>
+            <div id="payway_id">
+                <div class="wi_bg">
+                    <h3 class="h3-1">
+                        <span class="textIn">결제방법</span>
+                    </h3>
+                </div>
+                <div class="wi_bg pay-method-box">
+                    <div class="pay_ul">
+                        <div class="on payCont">
+                            <label for="p_21" class="label-style pay">
+                                <input type="radio" id="p_21" name="payway" value="CBT" class="pay_radio" checked data-role="none">
+                                <span class="label-icon">
+                                    <span class="text">카드결제</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="payCont">
+                            <label for="p_4" class="label-style pay">
+                                <input type="radio" name="payway" value="ONLINE" id="p_4" class="pay_radio" data-role="none">
+                                <span class="label-icon">
+                                    <span class="text">무통장입금</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="wi_bg depo" id="BankPay" style="display:none;">
+                    <div class="receipt">
+                        <p>입금자명</p>
+                        <div class="member_input">
+                            <input type="text" name="onlineDepositor" class="text" value="">
+                        </div>
+                        <p>입금계좌</p>
+                        <div class="member_input">
+                            <select id="onlineBank" name="onlineBank" class="select1 select-style">
+                                <option value="">국민은행 111-111111 예금주</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wi_bg agree-terms-wrap">
+                <div class="receipt_btn">
+                    <div class="clauseSvcWrap">
+                        <label class="label-style none">
+                            <input type="checkbox" data-role="none" name="agreeLicensing">
+                            <span class="label-icon"></span>
+                            <span class="text">약관동의</span>
+                        </label>
+                        <button type="button" class="openClause">[보기]</button>
+                    </div>
+                    <a href="javascript:void(0);" class="btn_style3 sitebg1">
+                        <span class="paytxt">결제 진행</span>
+                    </a>
+                </div>
+            </div>
+            <div class="notice-wrap">
+                <div class="notice-box">
+                    <h3 class="title">
+                        <img src="./images/ico_notice.png" alt="">
+                        <span class="text">유의사항</span>
+                    </h3>
+                    <p class="text">3일 이내에 무료 취소가 가능합니다.</p>
+                    <p class="text">취소 및 환불규정에 따라 수수료가 발생할 수 있습니다.</p>
+                    <p class="text">3일 이내에 무료 취소가 가능합니다.</p>
+                    <p class="text">취소 및 환불규정에 따라 수수료가 발생할 수 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="./js/script.js"></script>
+</body>
+</html>
