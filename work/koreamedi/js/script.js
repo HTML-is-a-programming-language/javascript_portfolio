@@ -467,7 +467,7 @@ $(document).ready(function() {
 // 2024-06-17 ssj input 커서 활성화 시 value 값 삭제, 입력 안하면 다시 원래 value 값으로 설정
 const inputDefaultValues = {};
 
-document.querySelectorAll('input[type="text"]').forEach(input => {
+document.querySelectorAll('.content-edit-order input[type="text"]').forEach(input => {
     const id = input.id;
     inputDefaultValues[id] = input.value;
 
@@ -855,5 +855,267 @@ $('input[name="payway"]').on('change',function(){
         $('.depo').css({'display':'block'});
     } else {
         $('.depo').css({'display':'none'});
+    }
+});
+
+// 2024-07-03 ssj 체크박스 전체선택/해제
+document.addEventListener('DOMContentLoaded', function() {
+    const allCheck = document.getElementById('allCheck');
+
+    if (allCheck) {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(#allCheck)');
+
+        allCheck.addEventListener('change', function() {
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = allCheck.checked;
+            });
+        });
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                if (!checkbox.checked) {
+                    allCheck.checked = false;
+                } else {
+                    const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+                    allCheck.checked = allChecked;
+                }
+            });
+        });
+    }
+});
+
+// 2024-07-04 ssj 회원가입 유효성 검사
+document.addEventListener("DOMContentLoaded", function() {
+    var registForm = document.getElementById('registForm');
+    if (registForm) {
+        function validateId(id) {
+            return /^[a-zA-Z0-9]{4,}$/.test(id);
+        }
+
+        function validatePassword(password) {
+            return /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password);
+        }
+
+        function validatePhoneNumber(phone) {
+            return /^[0-9]{11}$/.test(phone);
+        }
+
+        function togglePasswordVisibility(button) {
+            var input = button.previousElementSibling;
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        }
+
+        function clearInput(button) {
+            var input = button.previousElementSibling;
+            var text = button.nextElementSibling;
+            input.value = "";
+            input.classList.remove('active');
+            if (text) {
+                text.classList.remove('active');
+            }
+            input.dispatchEvent(new Event('input'));
+        }
+
+        function registButtonActive() {
+            var allFilled = true;
+
+            var idElement = document.getElementById('id');
+            var id = document.getElementById('id').value;
+            var idCheck = document.querySelector('.id-check-text');
+            if (id != '') {
+                idElement.nextElementSibling.classList.add('active');
+                if (!validateId(id)) {
+                    allFilled = false;
+                    idCheck.textContent = '*아이디는 최소 4자 이상, 영문자와 숫자만 가능합니다.';
+                    idCheck.classList.remove('success');
+                    idCheck.classList.add('active', 'error');
+                    idElement.classList.add('error');
+                } else {
+                    idCheck.textContent = '*사용 가능한 아이디입니다.';
+                    idCheck.classList.remove('error');
+                    idCheck.classList.add('active', 'success');
+                    idElement.classList.remove('error');
+                }
+            } else {
+                idElement.nextElementSibling.classList.remove('active');
+            }
+
+            var passwordElement = document.getElementById('password');
+            var password = document.getElementById('password').value;
+            var passwordCheck = document.querySelector('.password-check-text');
+            if (password != '') {
+                passwordElement.nextElementSibling.classList.add('active');
+                if (!validatePassword(password)) {
+                    allFilled = false;
+                    passwordCheck.textContent = '*비밀번호는 최소 8자 이상, 영문자와 숫자가 포함되어야 합니다.';
+                    passwordCheck.classList.remove('success');
+                    passwordCheck.classList.add('active', 'error');
+                    passwordElement.classList.add('error');
+                } else {
+                    passwordCheck.textContent = '*사용 가능합니다.';
+                    passwordCheck.classList.remove('error');
+                    passwordCheck.classList.add('active', 'success');
+                    passwordElement.classList.remove('error');
+                }
+            } else {
+                passwordElement.nextElementSibling.classList.remove('active');
+            }
+
+            var reEnterPasswordElement = document.getElementById('reEnterPassword');
+            var reEnterPassword = document.getElementById('reEnterPassword').value;
+            var reEnterPasswordCheck = document.querySelector('.reEnterPassword-check-text');
+            if (reEnterPassword != '') {
+                reEnterPasswordElement.nextElementSibling.classList.add('active');
+                if (password !== reEnterPassword || reEnterPassword === '') {
+                    allFilled = false;
+                    reEnterPasswordCheck.textContent = '비밀번호가 일치하지 않습니다.';
+                    reEnterPasswordCheck.classList.remove('success');
+                    reEnterPasswordCheck.classList.add('active', 'error');
+                    reEnterPasswordElement.classList.add('error');
+                } else {
+                    reEnterPasswordCheck.textContent = '*일치합니다.';
+                    reEnterPasswordCheck.classList.remove('error');
+                    reEnterPasswordCheck.classList.add('active', 'success');
+                    reEnterPasswordElement.classList.remove('error');
+                }
+            } else {
+                reEnterPasswordElement.nextElementSibling.classList.remove('active');
+            }
+
+            var nameElement = document.getElementById('name');
+            var name = document.getElementById('name').value.trim();
+            if (name === "") {
+                allFilled = false;
+                nameElement.nextElementSibling.classList.remove('active');
+            } else {
+                nameElement.nextElementSibling.classList.add('active');
+            }
+
+            var phoneNumberElement = document.getElementById('phoneNumber');
+            var phoneNumber = document.getElementById('phoneNumber').value.trim();
+            if (!validatePhoneNumber(phoneNumber)) {
+                allFilled = false;
+            }
+
+            if (phoneNumber === "") {
+                allFilled = false;
+                phoneNumberElement.nextElementSibling.classList.remove('active');
+            } else {
+                phoneNumberElement.nextElementSibling.classList.add('active');
+            }
+
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(function(checkbox) {
+                if (!checkbox.checked) {
+                    allFilled = false;
+                }
+            });
+
+            var submitButton = document.querySelector('.regist-button');
+            if (allFilled) {
+                submitButton.classList.add('active');
+            } else {
+                submitButton.classList.remove('active');
+            }
+        }
+
+        document.querySelectorAll('input').forEach(function(input) {
+            input.addEventListener('keyup', registButtonActive);
+        });
+
+        document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
+            checkbox.addEventListener('change', registButtonActive);
+        });
+
+        var deleteButtons = document.querySelectorAll('.delete-button');
+        deleteButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                clearInput(button);
+            });
+        });
+
+        var viewButtons = document.querySelectorAll('.view-button');
+        viewButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                togglePasswordVisibility(button);
+            });
+        });
+    }
+});
+
+// 2024-07-04 ssj 로그인
+document.addEventListener("DOMContentLoaded", function() {
+    var loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        function validateId(id) {
+            return /^[a-zA-Z0-9]{4,}$/.test(id);
+        }
+
+        function validatePassword(password) {
+            return /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password);
+        }
+
+        function togglePasswordVisibility(button) {
+            var input = button.previousElementSibling;
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        }
+
+        function clearInput(button) {
+            var input = button.previousElementSibling;
+            var text = button.nextElementSibling;
+            input.value = "";
+            input.classList.remove('active');
+            if (text) {
+                text.classList.remove('active');
+            }
+            input.dispatchEvent(new Event('input'));
+        }
+
+        function registButtonActive() {
+            var allFilled = true;
+
+            var id = document.getElementById('id').value;
+            if (id != '') {
+                allFilled = false;
+            }
+
+            var password = document.getElementById('password').value;
+            if (password != '') {
+                allFilled = false;
+            }
+
+            var submitButton = document.querySelector('.loginBtn');
+            if (allFilled) {
+                submitButton.classList.add('active');
+            } else {
+                submitButton.classList.remove('active');
+            }
+        }
+
+        document.querySelectorAll('input').forEach(function(input) {
+            input.addEventListener('keyup', registButtonActive);
+        });
+
+        var deleteButtons = document.querySelectorAll('.delete-button');
+        deleteButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                clearInput(button);
+            });
+        });
+
+        var viewButtons = document.querySelectorAll('.view-button');
+        viewButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                togglePasswordVisibility(button);
+            });
+        });
     }
 });

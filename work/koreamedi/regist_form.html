@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코리아메디 - 회원가입</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <form id="registForm" name="registForm">
+        <div class="subTopDOM sub-header-wrap border">
+            <div class="btnLeft">
+                <a href="javascript:history.go(-1)" class="btn_back_pst"></a>
+            </div>
+            <h1 class="sub_title">회원가입</h1>
+            <div class="rgt_btn"></div>
+        </div>
+        <div class="content-regist-form">
+            <div class="member_form">
+                <dl class="member_input">
+                    <dt>아이디</dt>
+                    <dd>
+                        <input type="text" id="id" name="id" maxlength="20" placeholder="아이디">
+                        <button type="button" class="delete-button">
+                            <img src="./images/btn_delete_gray.png" alt="">
+                        </button>
+                        <span class="id-check-text"></span>
+                    </dd>
+                </dl>
+                <dl class="member_input">
+                    <dt>비밀번호</dt>
+                    <dd>
+                        <input type="password" id="password" name="password" maxlength="15" placeholder="비밀번호" autocomplete="new-password">
+                        <button type="button" class="view-button">
+                            <img src="./images/btn_view.png" alt="">
+                        </button>
+                        <span class="password-check-text"></span>
+                    </dd>
+                    <dd>
+                        <input type="password" id="reEnterPassword" name="reEnterPassword" maxlength="15" placeholder="비밀번호 재입력">
+                        <button type="button" class="view-button">
+                            <img src="./images/btn_view.png" alt="">
+                        </button>
+                        <span class="reEnterPassword-check-text"></span>
+                    </dd>
+                </dl>
+                <dl class="member_input">
+                    <dt>이름</dt>
+                    <dd>
+                        <input type="text" id="name" name="name" placeholder="이름">
+                        <button type="button" class="delete-button">
+                            <img src="./images/btn_delete_gray.png" alt="">
+                        </button>
+                    </dd>
+                </dl>
+                <dl class="member_input">
+                    <dt>전화번호</dt>
+                    <dd>
+                        <input type="text" id="phoneNumber" name="phoneNumber" maxlength="11" placeholder="전화번호">
+                        <button type="button" class="delete-button">
+                            <img src="./images/btn_delete_gray.png" alt="">
+                        </button>
+                    </dd>
+                </dl>
+                <dl class="joinPop_textInfo pt10">
+                    <dt>
+                        <span class="title">약관동의</span>
+                        <div class="join_allChkBox pb10">
+                            <label for="allCheck" data-role="none" class="label-style">
+                                <input type="checkbox" data-role="none" name="agree_all" value="T" id="allCheck">
+                                <span class="label-icon"></span>
+                                <span class="text">내용 확인 및 전체동의</span>
+                            </label>
+                        </div>
+                    </dt>
+                    <dd>
+                        <div class="joinPop_textWrap">
+                            <ul class="joinPop_infoCont" style="padding:0 10px;box-sizing:border-box;">
+                                <li class="on infoTextArea pt5 pb5 " id="tabInfo-0">
+                                    <label for="join_detailChkBox3" data-role="none" class="label-style">
+                                        <input type="checkbox" data-role="none" name="agree_age" value="T" id="join_detailChkBox3">
+                                        <span class="label-icon"></span>
+                                        <span class="text">만 14세 이상입니다</span>
+                                    </label>
+                                </li>
+                                <li id="tabInfo-1" class="on infoTextArea pt5 pb5">
+                                    <label for="join_detailChkBox1" data-role="none" class="label-style">
+                                        <input type="checkbox" name="agreeLicensing" value="T" id="join_detailChkBox1" data-role="none">
+                                        <span class="label-icon"></span>
+                                        <span class="text">서비스 이용약관 동의</span>
+                                    </label>
+                                    <button type="button" class="viewDetail">[보기]</button>
+                                </li>
+
+                                <li id="tabInfo-2" class="on infoTextArea pt5 pb5">
+                                    <label for="join_detailChkBox2" data-role="none" class="label-style">
+                                        <input type="checkbox" name="agree_po" value="T" id="join_detailChkBox2" data-role="none">
+                                        <span class="label-icon"></span>
+                                        <span class="text">개인정보 수집 및 이용 동의</span>
+                                    </label>
+                                    <button type="button" class="viewDetail">[보기]</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </dd>
+                </dl>
+                <div class="member_btn">
+                    <button type="submit" class="regist-button">회원가입</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사운드랭크 - main</title>
+    <style>
+        body{margin: 0;}
+        button{padding: 0;border: none;background: none;cursor: pointer;}
+        .container{padding: 0 20px;}
+
+        .main-header-wrap{position: fixed;top: 0;left: 0;width: 100%;max-width: 525px;padding: 20px 0;background: #06022F;}
+        .main-header-wrap .main-header-box{display: flex;align-items: center;justify-content: space-between;gap: 14px;}
+        .main-header-wrap .main-header-box .header-left-box{flex: 0 0 auto;}
+        .main-header-wrap .main-header-box .header-left-box .hamburger-button{width: 20px;height: 18px;}
+        .main-header-wrap .main-header-box .header-left-box .hamburger-button img{width: 100%;height: 100%;}
+        .main-header-wrap .main-header-box .header-center-box{flex: 1 1 auto;}
+        .main-header-wrap .main-header-box .header-center-box .main-link{display: block;position: relative;top: -4px;width: 112px;height: 30px;}
+        .main-header-wrap .main-header-box .header-center-box .main-link img{width: 100%;height: 100%;}
+        .main-header-wrap .main-header-box .header-right-box{flex: 0 0 auto;}
+        .main-header-wrap .main-header-box .header-right-box .search-button{width: 22px;height: 22px;}
+        .main-header-wrap .main-header-box .header-right-box .search-button img{width: 100%;height: 100%;}
+
+        @media(max-width:930px){
+            .main-header-wrap{max-width: 680px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="main-header-wrap">
+        <div class="container">
+            <div class="main-header-box">
+                <div class="header-left-box">
+                    <button type="button" class="hamburger-button">
+                        <img src="./image/btn_hamburger_white.png" alt="햄버거버튼">
+                    </button>
+                </div>
+                <div class="header-center-box">
+                    <a href="/m" class="main-link">
+                        <img src="./image/btn_logo.png" alt="사이트로고">
+                    </a>
+                </div>
+                <div class="header-right-box">
+                    <button type="button" class="search-button">
+                        <img src="./image/btn_search_white.png" alt="검색버튼">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-rank-wrap">
+        <div class="container">
+            <div class="top-rank-container swiper">
+                <ul class="top-rank-box swiper-wrapper">
+                    <li class="top-rank-list swiper-slide">
+                        <a href="javascript:void(0)" class="top-rank-link">인기 급상승</a>
+                    </li>
+                    <li class="top-rank-list swiper-slide">
+                        <a href="javascript:void(0)" class="top-rank-link">TikTok Top 100</a>
+                    </li>
+                    <li class="top-rank-list swiper-slide">
+                        <a href="javascript:void(0)" class="top-rank-link">Youtube Shorts Top 100</a>
+                    </li>
+                    <li class="top-rank-list swiper-slide">
+                        <a href="javascript:void(0)" class="top-rank-link">Instagram Reels Top 100</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
