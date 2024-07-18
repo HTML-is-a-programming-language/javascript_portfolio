@@ -1,3 +1,19 @@
+@mixin respond-to($media) {
+    @if $media == mobile {
+        @media (max-width: 600px) {
+            @content;
+        }
+    } @else if $media == tablet {
+        @media (min-width: 601px) and (max-width: 1024px) {
+            @content;
+        }
+    } @else if $media == desktop {
+        @media (min-width: 1025px) {
+            @content;
+        }
+    }
+}
+
 /* font */
 @font-face {
     font-family: 'Noto Sans Korean';
@@ -139,7 +155,7 @@ section.banner{
         align-items: center;
         gap: 20px;
         position: absolute;
-        bottom: 20px;
+        top: 20px;
         left: 20px;
         .banner-descript{
             padding: 10px 20px;
@@ -179,7 +195,7 @@ section.skill{
             }
             .text{
                 position: absolute;
-                bottom: 0;
+                top: 100%;
                 left: 50%;
                 transform: translateX(-50%);
             }
@@ -199,17 +215,31 @@ section.function{
     }
     .function-box{
         display: flex;
+        flex-wrap: wrap;
+        @include respond-to(mobile) {
+            flex-wrap: wrap;
+            row-gap: 10px;
+        }
     }
     .function-list{
         display: flex;
         flex-direction: column;
         gap: 10px;
         width: 50%;
+
+        @include respond-to(mobile) {
+            width: 100%;
+        }
     }
     .function-detail-box{
         display: flex;
         align-items: center;
         gap: 10px;
+    }
+    .function-detail{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
     }
 }
 
@@ -265,6 +295,9 @@ section.modal-overlay{
     }
     .modal-window-wrap.active{
         display: block;
+    }
+    .cp_embed_wrapper{
+        width: 100%;
     }
 }
 section.modal-overlay.active{

@@ -8,14 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const slideNextButton = slider.querySelector('.slide-next-button');
         const slidePageButtonBox = slider.querySelector('.slide-page-button-box');
 
-        let currentIndex = 1; // 첫 번째 슬라이드를 복제했으므로 인덱스 1부터 시작
+        let currentIndex = 1;
         let startX = 0;
         let isDragging = false;
         let animationDuration = 500;
         const totalSlides = slideList.length;
         let autoSlideInterval;
 
-        // 슬라이드 복제 함수
+        if (totalSlides <= 1) {
+            slidePrevButton.style.display = 'none';
+            slideNextButton.style.display = 'none';
+            return;
+        }
+
         function cloneSlides() {
             const firstSlide = slideList[0];
             const lastSlide = slideList[totalSlides - 1];
@@ -25,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             slideBox.appendChild(firstSlideClone);
             slideBox.insertBefore(lastSlideClone, firstSlide);
 
-            slideList = slider.querySelectorAll('.slide-list'); // 슬라이드 목록 업데이트
+            slideList = slider.querySelectorAll('.slide-list');
         }
 
         function createPagination() {
@@ -34,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 slidePageButton.classList.add('slide-page-button');
                 slidePageButton.textContent = i + 1;
                 slidePageButton.addEventListener('click', () => {
-                    currentIndex = i + 1; // 복제된 슬라이드로 인해 인덱스 조정
+                    currentIndex = i + 1;
                     updateSlidePosition();
                 });
                 slidePageButtonBox.appendChild(slidePageButton);
@@ -68,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         slideBox.style.transitionDuration = '0ms';
                         currentIndex = totalSlides;
                         slideBox.style.transform = `translateX(-${currentIndex * 100}%)`;
-                        updatePagination(); // 마지막 슬라이드로 이동한 후 페이지네이션 업데이트
+                        updatePagination();
                     }, animationDuration);
                 } else {
                     updatePagination();
