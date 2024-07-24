@@ -261,6 +261,15 @@ section.project .project-image-box:after {
   content: "";
 }
 
+section.introduct .introduct-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+section.introduct .image-box {
+  flex: 0 0 30%;
+}
+
 section.modal-overlay {
   display: none;
   position: fixed;

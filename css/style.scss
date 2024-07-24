@@ -275,6 +275,17 @@ section.project{
     }
 }
 
+section.introduct{
+    .introduct-link{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    .image-box{
+        flex: 0 0 30%;
+    }
+}
+
 section.modal-overlay{
     display: none;
     position: fixed;
