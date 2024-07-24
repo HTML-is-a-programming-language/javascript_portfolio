@@ -85,6 +85,7 @@ a{
         gap: 4px;
         position: absolute;
         .slide-page-button{
+            width: 42px;
             padding: 10px;
             border: 2px solid #000;
         }
@@ -164,8 +165,9 @@ section.banner{
         }
     }
     .banner-button-box{
-        right: 20px;
         bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -298,6 +300,25 @@ section.modal-overlay{
     }
     .cp_embed_wrapper{
         width: 100%;
+    }
+    .html-wrap{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+    .wrap-title{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .html-box{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .box-title{
+        font-size: 18px;
+        font-weight: bold;
     }
 }
 section.modal-overlay.active{

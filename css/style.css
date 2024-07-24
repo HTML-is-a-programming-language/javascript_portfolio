@@ -73,6 +73,7 @@ a {
   position: absolute;
 }
 .slide-wrap .slide-page-button-box .slide-page-button {
+  width: 42px;
   padding: 10px;
   border: 2px solid #000;
 }
@@ -148,8 +149,9 @@ section.banner .banner-descript-box .banner-descript {
   background: #fff;
 }
 section.banner .banner-button-box {
-  right: 20px;
   bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 section.skill {
@@ -285,6 +287,25 @@ section.modal-overlay .modal-window-wrap.active {
 }
 section.modal-overlay .cp_embed_wrapper {
   width: 100%;
+}
+section.modal-overlay .html-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+section.modal-overlay .wrap-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+section.modal-overlay .html-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+section.modal-overlay .box-title {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 section.modal-overlay.active {
