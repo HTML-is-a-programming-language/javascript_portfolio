@@ -3,7 +3,7 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
   color: #333;
 }
 
@@ -34,7 +34,7 @@ header nav ul li a {
   transition: color 0.3s;
 }
 header nav ul li a:hover {
-  color: #ffdd57;
+  color: #0056b3;
 }
 
 main {
@@ -43,7 +43,7 @@ main {
   margin: 0 auto;
 }
 main .content-section {
-  background: white;
+  background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 2rem;
@@ -51,7 +51,7 @@ main .content-section {
 }
 main .content-section h2 {
   color: #007bff;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid #e0e0e0;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -73,7 +73,7 @@ main .content-section ul li a:hover {
 main .project, main .post, main .certificate, main .recommendation {
   margin-bottom: 2rem;
   padding: 1rem;
-  background-color: #f0f8ff;
+  background-color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
 }
@@ -95,7 +95,7 @@ main .project ul, main .post ul {
   padding: 0;
 }
 main .project ul li, main .post ul li {
-  background: #e9ecef;
+  background: #f8f9fa;
   border-radius: 5px;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
@@ -106,7 +106,7 @@ main .certificate p, main .recommendation p {
 
 footer {
   background-color: #007bff;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 1rem 0;
   position: fixed;
