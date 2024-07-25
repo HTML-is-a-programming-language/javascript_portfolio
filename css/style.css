@@ -1,322 +1,118 @@
-/* font */
-@font-face {
-  font-family: "Noto Sans Korean";
-  src: url(./font/NotoSansKR-VariableFont_wght.ttf);
-}
-/* common */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 body {
-  position: relative;
-  font-family: "Noto Sans Korean", sans-serif;
-  font-size: 16px;
-  color: #000;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-ul, ol {
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+header nav ul {
   list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  justify-content: center;
 }
-
-a {
-  color: inherit;
+header nav ul li {
+  margin: 0 1rem;
+}
+header nav ul li a {
+  color: white;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+header nav ul li a:hover {
+  color: #ffdd57;
 }
 
-.page-wrap {
-  width: 100%;
-  max-width: 1152px;
+main {
+  padding: 2rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
-
-.container {
-  padding: 0 16px;
+main .content-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
-
-.slide-wrap {
-  overflow: hidden;
-  position: relative;
+main .content-section h2 {
+  color: #007bff;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
-.slide-wrap .slide-box {
-  display: flex;
-  width: 100%;
-  box-sizing: border-box;
-  transition: 0.4s;
+main .content-section ul {
+  list-style: none;
+  padding: 0;
 }
-.slide-wrap .slide-list {
-  display: flex;
-  flex-shrink: 0;
-  position: relative;
-  width: 100%;
+main .content-section ul li {
+  margin-bottom: 0.5rem;
 }
-.slide-wrap .slide-prev-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  border: 2px solid #000;
-  transform: translateY(-50%);
+main .content-section ul li a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
-.slide-wrap .slide-next-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  border: 2px solid #000;
-  transform: translateY(-50%);
+main .content-section ul li a:hover {
+  color: #0056b3;
 }
-.slide-wrap .slide-page-button-box {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  position: absolute;
+main .project, main .post, main .certificate, main .recommendation {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f0f8ff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
 }
-.slide-wrap .slide-page-button-box .slide-page-button {
-  width: 42px;
-  padding: 10px;
-  border: 2px solid #000;
+main .project h3, main .project h4, main .post h3, main .post h4, main .certificate h3, main .certificate h4, main .recommendation h3, main .recommendation h4 {
+  margin-top: 0;
+  color: #333;
 }
-.slide-wrap .slide-page-button-box .slide-page-button.active {
-  background: #000;
-  color: #fff;
-}
-
-.block-click {
-  pointer-events: none;
-}
-
-/* header */
-header {
-  padding: 20px 0;
-}
-header .header-wrap {
-  display: flex;
-  flex-flow: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-header .left-box {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-header .menu-box {
-  display: flex;
-  gap: 20px;
-}
-header .btn-menu {
+main .project img, main .project video, main .post img, main .post video, main .certificate img, main .certificate video, main .recommendation img, main .recommendation video {
+  max-width: 100%;
+  height: auto;
   display: block;
-  white-space: nowrap;
+  margin: 1rem 0;
 }
-header .function-box {
-  display: flex;
-  gap: 20px;
+main .project video, main .post video, main .certificate video, main .recommendation video {
+  max-width: 100%;
 }
-header .btn-menu {
-  display: block;
+main .project ul, main .post ul {
+  margin: 0;
+  padding: 0;
 }
-
-.section-title {
-  font-size: 1.5rem;
-  font-weight: bold;
+main .project ul li, main .post ul li {
+  background: #e9ecef;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
 }
-
-section.banner .banner-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  border: 2px solid #000;
-}
-section.banner .banner-link:after {
-  display: block;
-  padding-top: 60%;
-  content: "";
-}
-section.banner .banner-descript-box {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-section.banner .banner-descript-box .banner-descript {
-  padding: 10px 20px;
-  border: 2px solid #000;
-  background: #fff;
-}
-section.banner .banner-button-box {
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+main .certificate p, main .recommendation p {
+  margin: 0.5rem 0;
 }
 
-section.skill {
-  margin-top: 40px;
-}
-section.skill .skill-wrap {
-  margin-top: 20px;
-}
-section.skill .skill-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 44px 4%;
-}
-section.skill .skill-list {
-  width: 22%;
-}
-section.skill .skill-list .skill-button {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-section.skill .skill-list .skill-button svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60%;
-  height: 60%;
-  transform: translate(-50%, -50%);
-}
-section.skill .skill-list .skill-button .text {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-section.skill .skill-list .skill-button:after {
-  display: block;
-  padding-top: 100%;
-  content: "";
-}
-
-section.function {
-  margin-top: 40px;
-}
-section.function .function-wrap {
-  margin-top: 20px;
-}
-section.function .function-box {
-  display: flex;
-  flex-wrap: wrap;
-}
-@media (max-width: 600px) {
-  section.function .function-box {
-    flex-wrap: wrap;
-    row-gap: 10px;
-  }
-}
-section.function .function-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 50%;
-}
-@media (max-width: 600px) {
-  section.function .function-list {
-    width: 100%;
-  }
-}
-section.function .function-detail-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-section.function .function-detail {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-section.project {
-  margin-top: 40px;
-}
-section.project .project-wrap {
-  margin-top: 20px;
-}
-section.project .project-box {
-  display: flex;
-  gap: 2%;
-}
-section.project .project-list {
-  width: 32%;
-}
-section.project .project-image-box {
-  position: relative;
-}
-section.project .project-image-box svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60%;
-  height: 60%;
-  transform: translate(-50%, -50%);
-}
-section.project .project-image-box:after {
-  display: block;
-  padding-top: 100%;
-  content: "";
-}
-
-section.introduct .introduct-link {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-section.introduct .image-box {
-  flex: 0 0 30%;
-}
-
-section.modal-overlay {
-  display: none;
+footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
-section.modal-overlay .modal-window-wrap {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1000;
-  transform: translate(-50%, -50%);
-  width: calc(100% - 32px);
-  max-width: 1120px;
-  background: #fff;
-}
-section.modal-overlay .modal-window-wrap.active {
-  display: block;
-}
-section.modal-overlay .cp_embed_wrapper {
+  bottom: 0;
   width: 100%;
 }
-section.modal-overlay .html-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 16px;
-}
-section.modal-overlay .wrap-title {
-  font-size: 20px;
-  font-weight: bold;
-}
-section.modal-overlay .html-box {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-section.modal-overlay .box-title {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-section.modal-overlay.active {
-  display: block;
+footer p {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
