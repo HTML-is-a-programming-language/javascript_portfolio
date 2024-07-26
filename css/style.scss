@@ -243,6 +243,7 @@ section.function{
     .function-detail{
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         gap: 4px;
     }
 }
@@ -333,6 +334,10 @@ section.modal-overlay{
     }
     .cp_embed_wrapper{
         width: 100%;
+        height: 80vh;
+    }
+    .cp_embed_wrapper iframe{
+        height: 100%;
     }
 }
 section.modal-overlay.active{

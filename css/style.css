@@ -232,6 +232,7 @@ section.function .function-detail-box {
 section.function .function-detail {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 4px;
 }
 
@@ -322,6 +323,10 @@ section.modal-overlay .modal-window-wrap.active {
 }
 section.modal-overlay .cp_embed_wrapper {
   width: 100%;
+  height: 80vh;
+}
+section.modal-overlay .cp_embed_wrapper iframe {
+  height: 100%;
 }
 
 section.modal-overlay.active {
