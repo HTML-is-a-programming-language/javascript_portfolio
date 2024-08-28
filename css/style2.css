@@ -1,0 +1,334 @@
+/* font */
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* common */
+body {
+  position: relative;
+  font-family: "Pretendard-Regular", sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-wrap {
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.slide-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.slide-wrap .slide-box {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+.slide-wrap .slide-list {
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+}
+.slide-wrap .slide-prev-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  border: 2px solid #000;
+  transform: translateY(-50%);
+}
+.slide-wrap .slide-next-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  border: 2px solid #000;
+  transform: translateY(-50%);
+}
+.slide-wrap .slide-page-button-box {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: absolute;
+}
+.slide-wrap .slide-page-button-box .slide-page-button {
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+  border: 2px solid #000;
+  font-size: 0.875rem;
+}
+.slide-wrap .slide-page-button-box .slide-page-button.active {
+  background: #000;
+  color: #fff;
+}
+
+.block-click {
+  pointer-events: none;
+}
+
+/* header */
+header {
+  padding: 16px 0;
+}
+header .header-wrap {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+header .left-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+header .menu-box {
+  display: flex;
+  gap: 16px;
+}
+header .menu-button {
+  display: block;
+  white-space: nowrap;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+section.banner .banner-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 2px solid #000;
+  border-radius: 16px;
+}
+section.banner .banner-link:after {
+  display: block;
+  padding: 60% 0 0;
+  content: "";
+}
+section.banner .banner-descript-box {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+section.banner .banner-descript-box .banner-descript {
+  padding: 8px 16px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  background: #fff;
+}
+@media (max-width: 600px) {
+  section.banner .banner-descript-box .banner-descript {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+}
+section.banner .banner-button-box {
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section.skill {
+  margin: 40px 0 0;
+}
+section.skill .skill-wrap {
+  margin: 16px 0 0;
+}
+section.skill .skill-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px 4%;
+}
+section.skill .skill-list {
+  width: 22%;
+}
+section.skill .skill-list .skill-button {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+section.skill .skill-list .skill-button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+}
+section.skill .skill-list .skill-button .text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section.skill .skill-list .skill-button:after {
+  display: block;
+  padding: 100% 0 0;
+  content: "";
+}
+
+section.function {
+  margin: 40px 0 0;
+}
+section.function .function-wrap {
+  margin: 16px 0 0;
+}
+section.function .function-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  section.function .function-box {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+}
+section.function .function-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 50%;
+}
+@media (max-width: 600px) {
+  section.function .function-list {
+    width: 100%;
+  }
+}
+section.function .function-detail-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+section.function .function-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+section.project {
+  margin: 40px 0 0;
+}
+section.project .project-wrap {
+  margin: 16px 0 0;
+}
+section.project .project-box {
+  display: flex;
+  gap: 2%;
+}
+section.project .project-list {
+  width: 32%;
+}
+section.project .project-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+section.project .project-image-box {
+  position: relative;
+}
+section.project .project-image-box svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+}
+section.project .project-image-box:after {
+  display: block;
+  padding: 100% 0 0;
+  content: "";
+}
+
+section.etc {
+  margin: 40px 0 0;
+}
+section.etc .container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+section.etc .etc-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+section.etc .text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+section.etc .box-text {
+  font-size: 1.25rem;
+}
+
+section.introduct {
+  margin: 40px 0 0;
+}
+
+section.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+section.modal-overlay .modal-window-wrap {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 32px);
+  max-width: 1120px;
+  background: #fff;
+}
+section.modal-overlay .modal-window-wrap.active {
+  display: block;
+}
+section.modal-overlay .cp_embed_wrapper {
+  width: 100%;
+  height: 80vh;
+}
+section.modal-overlay .cp_embed_wrapper iframe {
+  height: 100%;
+}
+
+section.modal-overlay.active {
+  display: block;
+}/*# sourceMappingURL=style2.css.map */
