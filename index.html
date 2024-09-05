@@ -2,54 +2,59 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>JavaScript Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
-        <a href="/" class="home-link">
-            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFF">
-                <path d="M226.67-186.67h140v-246.66h226.66v246.66h140v-380L480-756.67l-253.33 190v380ZM160-120v-480l320-240 320 240v480H526.67v-246.67h-93.34V-120H160Zm320-352Z"/>
-            </svg>
-        </a>
-        <h1>JavaScript Portfolio</h1>
+        <div class="container">
+            <h1><a href="#" class="logo">My Portfolio</a></h1>
+            <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+            </nav>
+        </div>
     </header>
 
     <section id="about">
-        <h2>서승준</h2>
-        <h3>프론트엔드 개발자를 꿈꾸는 웹 퍼블리셔</h3>
-        <p>저는 1년 이상의 경험을 가진 웹 퍼블리셔로, 반응형 웹사이트 제작에 특화되어 있습니다. HTML, CSS (SCSS), JavaScript에 능숙하며, 다양한 기기에서 일관된 사용자 경험을 제공하는 데 집중하고 있습니다.</p>
-        <ul>
-            <li>1년 이상의 반응형 웹사이트 퍼블리싱 경험.</li>
-            <li>HTML, CSS (SCSS), JavaScript 전문성.</li>
-            <li>크로스 브라우저 호환성 및 모바일 우선 디자인에 능숙함.</li>
-        </ul>
-        <p>저는 웹 퍼블리셔로서 끊임없이 새로운 기술을 배우고, 더 나은 사용자 경험을 제공하는 데 주력하고 있습니다. 앞으로도 더 나은 웹 퍼블리싱 기술을 습득하여, 보다 효율적이고 직관적인 웹사이트를 제작하는 것이 목표입니다.</p>
-        <p>아래의 포트폴리오를 통해 제가 작업한 프로젝트들을 확인해 보세요.</p>
-    </section>
-
-    <section id="projects">
-        <h2>프로젝트</h2>
-        <div class="project">
-            <h3>프로젝트 1</h3>
-            <p>프로젝트 설명...</p>
-        </div>
+        <h2>About Me</h2>
+        <p>저는 출판 업계에서 1년간 일한 경력을 바탕으로 프론트엔드 개발자로 이직을 목표로 하고 있습니다.<br>특히, 자바스크립트를 활용한 웹 개발에 깊은 관심을 가지고 있으며, 사용자 경험을 개선하는 UI/UX 개발에 열정을 가지고 있습니다.</p>
+        <p>JavaScript를 중심으로 한 웹 애플리케이션 개발에 집중하고 있으며, DOM 조작과 이벤트 처리, 비동기 프로그래밍 등에 익숙합니다.<br>최근에는 자바스크립트만을 활용한 프로젝트를 진행하며 실력을 쌓고 있습니다.</p>
+        <p>프론트엔드 개발은 사용자가 가장 먼저 마주하는 부분이라고 생각하며, 이를 통해 사람들의 삶에 긍정적인 영향을 미칠 수 있다고 믿습니다.<br>앞으로는 React 등 프레임워크를 익히고, 더 나아가 풀스택 개발자로 성장하는 것을 목표로 하고 있습니다.</p>
+        <p>협업을 통해 더 나은 결과물을 만들어내는 것을 중요하게 생각하며, 항상 새로운 기술을 배우고 공유하는 것을 즐깁니다.<br>창의적이고 효율적인 방법으로 문제를 해결하는 것을 좋아합니다.</p>
     </section>
 
     <section id="skills">
-        <h2>기술</h2>
-        <p>HTML, CSS, JavaScript, etc.</p>
+        <h2>Skills</h2>
+        <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>여기에 프로젝트를 추가하세요.</p>
     </section>
 
     <section id="contact">
-        <h2>연락처</h2>
-        <p>Email: example@example.com</p>
+        <h2>Contact</h2>
+        <p>Email: myemail@example.com</p>
+        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
     </section>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
 
     <script src="./js/script.js"></script>
 </body>
