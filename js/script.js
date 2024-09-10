@@ -1,17 +1,34 @@
-// Intersection Observer API로 스크롤 감지
-const header = document.querySelector('header');
-const observer = new IntersectionObserver(([entry]) => {
-  if (!entry.isIntersecting) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-}, { rootMargin: "-100px 0px 0px 0px" });
-
-observer.observe(document.querySelector('main'));
-
 // 햄버거 메뉴 토글 기능
-const menuToggle = document.querySelector('.menu-toggle');
+const menuToggle = document.querySelector('.nav-button');
 menuToggle.addEventListener('click', () => {
-  document.querySelector('nav').classList.toggle('open');
+  document.querySelector('nav').classList.toggle('active');
+});
+
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  if (window.scrollY > 50) {
+    header.classList.add('active');
+  } else {
+    header.classList.remove('active');
+  }
+});
+
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (scrollY >= sectionTop - 50) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
+  });
 });
