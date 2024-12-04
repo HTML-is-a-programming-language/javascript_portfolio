@@ -1,34 +1,28 @@
-// 햄버거 메뉴 토글 기능
-const menuToggle = document.querySelector('.nav-button');
-menuToggle.addEventListener('click', () => {
-  document.querySelector('nav').classList.toggle('active');
-});
+// 메뉴버튼
+function modalWindowOpen(button) {
+  const modalWindowOverlay = document.querySelector('.modal-window-overlay');
+  const buttonData = button.dataset.modal;
 
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-  if (window.scrollY > 50) {
-    header.classList.add('active');
-  } else {
-    header.classList.remove('active');
-  }
-});
-
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-link');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 50) {
-      current = section.getAttribute('id');
+  document.querySelectorAll('.modal-window-wrap').forEach(modal => {
+    const modalWindowData = modal.dataset.modal;
+    if (buttonData === modalWindowData) {
+      modalWindowOverlay.classList.add('active')
+      modal.classList.add('active');
     }
   });
+}
 
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
+// 모달창 닫기
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.querySelector(".modal-window-overlay");
+  const allModalWindowWrap = document.querySelectorAll(".modal-window-wrap");
+
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove("active");
+      allModalWindowWrap.forEach(modal => {
+        modal.classList.remove('active');
+      });
     }
   });
 });
