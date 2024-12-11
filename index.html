@@ -71,18 +71,31 @@
 	</div>
 	<div class="project-wrap">
 		<div class="project-container">
-			<div class="project-image-box"></div>
+			<a href="https://html-is-a-programming-language.github.io/blog/" class="project-image-link"></a>
 			<div class="project-detail-box">
-				<span class="skill-icon"></span>
-				<div class="detail-container">
-					<p class="project-title">프로젝트이름프로젝트이름프로젝트이름프로젝트이름프로젝트이름프로젝트이름프로젝트이름프로젝트이름프로젝트이름</p>
+				<span class="skill-icon">
+					<svg width="100%" height="100%" viewBox="-10.5 -9.45 21 18.9" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-sm me-0 w-10 h-10 text-brand dark:text-brand-dark flex origin-center transition-all ease-in-out">
+						<circle cx="0" cy="0" r="2" fill="#087ea4"></circle>
+						<g stroke="#087ea4" stroke-width="1" fill="none">
+							<ellipse rx="10" ry="4.5"></ellipse>
+							<ellipse rx="10" ry="4.5" transform="rotate(60)"></ellipse>
+							<ellipse rx="10" ry="4.5" transform="rotate(120)"></ellipse>
+						</g>
+					</svg>
+				</span>
+				<a href="https://html-is-a-programming-language.github.io/blog/" class="detail-link">
+					<p class="project-title">ReactBlog</p>
 					<div class="detail-box">
 						<span class="classification">개인프로젝트</span>
-						<span class="period">기간</span>
+						<span class="period">2024-11-14 ~ 2024-12-04</span>
 					</div>
-				</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
 			</div>
-			<button type="button"></button>
 		</div>
 	</div>
 	<div class="skill-demo-wrap">
@@ -94,127 +107,512 @@
 				<span class="title-text">기술 데모</span>
 			</div>
 			<ul class="skill-demo-list">
-				<li class="skill-demo-item"></li>
+				<li class="skill-demo-item">
+					<img src="images/thumbnail_modalwindow.png" alt="">
+					<a href="https://codepen.io/wruwgbcq-the-encoder/pen/GgKjKKJ" class="skill-demo-link">
+						<span class="link-text">모달창</span>
+					</a>
+				</li>
 				<li class="skill-demo-item"></li>
 				<li class="skill-demo-item"></li>
 				<li class="skill-demo-item"></li>
 			</ul>
 		</div>
 	</div>
-	<div class="modal-window-overlay" onclick="modalWindowClose(this)">
-		<div class="modal-window-wrap" data-modal="menu">
-			<a href="/" class="logo-link">
-				<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000">
-					<path d="M264-216h96v-240h240v240h96v-348L480-726 264-564v348Zm-72 72v-456l288-216 288 216v456H528v-240h-96v240H192Zm288-327Z"/>
-				</svg>
+	<div class="project-wrap">
+		<div class="project-container" style="display: none;">
+			<a href="https://html-is-a-programming-language.github.io/pocket_build/" class="project-image-link"></a>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<img src="images/logo_javascript.png" alt="">
+				</span>
+				<a href="https://html-is-a-programming-language.github.io/pocket_build/" class="detail-link">
+					<p class="project-title">Pocket</p>
+					<div class="detail-box">
+						<span class="classification">개인프로젝트</span>
+						<span class="period">2024-10-31 ~ 2024-12-05</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="project-container">
+			<a href="https://shortdeal.net/addon/story/story_detail.asp?seltype=S&uid=10748" class="project-image-link">
+				<img src="images/thumbnail_shortform.png" alt="">
 			</a>
-			<div class="menu-wrap">
-				<ul class="menu-list">
-					<li class="menu-item">
-						<a href="javascript:void(0)" class="menu-link">
-							<span class="link-icon">
-								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
-									<path clip-rule="evenodd" d="m14 2-1.5.886-5.195 3.07C4.637 7.533 3 10.401 3 13.5c0 4.694 3.806 8.5 8.5 8.5s8.5-3.806 8.5-8.5V1l-1.5 1-3 2L14 5V2ZM8.068 7.248l4.432-2.62v3.175l2.332-1.555L18.5 3.803V13.5c0 3.866-3.134 7-7 7s-7-3.134-7-7c0-2.568 1.357-4.946 3.568-6.252ZM9 15c0-1.226.693-2.346 1.789-2.894L15 10v5c0 1.657-1.343 3-3 3s-3-1.343-3-3Z" fill-rule="evenodd"></path>
-								</svg>
-							</span>
-							<span class="link-text">인기 급상승</span>
-						</a>
-					</li>
-					<li class="menu-item">
-						<a href="javascript:void(0)" class="menu-link">
-							<span class="link-icon">
-								<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-									<path clip-rule="evenodd" d="M19 3c0-.271-.146-.521-.383-.654-.237-.133-.527-.127-.758.014l-9 5.5c-.223.136-.359.379-.359.64v7.901C8.059 16.146 7.546 16 7 16c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3v-7.08l7.5-4.583v6.064c-.441-.255-.954-.401-1.5-.401-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3Zm-1.5 13c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5.672 1.5 1.5 1.5 1.5-.672 1.5-1.5Zm-9 3c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5.672 1.5 1.5 1.5 1.5-.672 1.5-1.5Zm9-13.42L10 10.162V8.92l7.5-4.584V5.58Z" fill-rule="evenodd"></path>
-								</svg>
-							</span>
-							<span class="link-text">음악</span>
-						</a>
-					</li>
-					<li class="menu-item">
-						<a href="javascript:void(0)" class="menu-link">
-							<span class="link-icon">
-								<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-									<path clip-rule="evenodd" d="M5.636 5.636c.293-.293.293-.768 0-1.06-.293-.294-.768-.294-1.06 0-.976.974-1.75 2.132-2.277 3.406C1.772 9.256 1.5 10.622 1.5 12c0 1.379.272 2.744.8 4.018.527 1.274 1.3 2.432 2.275 3.407.293.293.768.293 1.061 0 .293-.293.293-.768 0-1.061-.836-.836-1.499-1.828-1.95-2.92C3.232 14.352 3 13.182 3 12s.233-2.352.685-3.444c.452-1.092 1.115-2.084 1.951-2.92Zm2.828 1.768c.293.292.293.767 0 1.06-.464.464-.832 1.016-1.083 1.622C7.129 10.693 7 11.343 7 12c0 .656.13 1.306.38 1.913.252.607.62 1.158 1.084 1.622.293.293.293.768 0 1.06-.292.294-.767.294-1.06 0-.604-.603-1.083-1.32-1.41-2.108C5.669 13.7 5.5 12.853 5.5 12c0-.854.168-1.7.495-2.488.326-.788.805-1.505 1.409-2.108.293-.293.768-.293 1.06 0Zm7.072 0c.292-.293.767-.293 1.06 0C17.816 8.623 18.5 10.276 18.5 12c0 1.724-.685 3.377-1.904 4.596-.293.293-.768.293-1.06 0-.293-.293-.293-.768 0-1.06C16.473 14.597 17 13.325 17 12s-.527-2.598-1.464-3.536c-.293-.293-.293-.768 0-1.06Zm2.828-2.829c.293-.293.768-.293 1.06 0C21.395 6.545 22.5 9.215 22.5 12s-1.106 5.456-3.075 7.425c-.293.293-.768.293-1.061 0-.293-.293-.293-.768 0-1.061C20.052 16.676 21 14.387 21 12s-.948-4.676-2.636-6.364c-.293-.293-.293-.768 0-1.06ZM12 14c1.105 0 2-.895 2-2 0-1.104-.895-2-2-2s-2 .896-2 2c0 1.105.895 2 2 2Z" fill-rule="evenodd"></path>
-								</svg>
-							</span>
-							<span class="link-text">실시간</span>
-						</a>
-					</li>
-					<li class="menu-item">
-						<a href="javascript:void(0)" class="menu-link">
-							<span class="link-icon">
-								<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-									<path clip-rule="evenodd" d="m12 7.75-.772-.464-4.186-2.511L2.5 7.803v6.307L12 19.29l9.5-5.181V7.803l-4.542-3.028-4.186 2.511L12 7.75ZM12 6 7.814 3.488c-.497-.298-1.122-.283-1.604.039L1.668 6.555C1.251 6.833 1 7.3 1 7.803v6.307c0 .548.3 1.054.782 1.316l9.5 5.182c.447.244.989.244 1.436 0l9.5-5.182c.482-.262.782-.768.782-1.316V7.803c0-.502-.25-.97-.668-1.248L17.79 3.527c-.482-.322-1.107-.337-1.604-.039L12 6Zm3.5 6.25c0 .69-.56 1.25-1.25 1.25S13 12.94 13 12.25 13.56 11 14.25 11s1.25.56 1.25 1.25ZM7 8c-.414 0-.75.336-.75.75v1.5h-1.5c-.414 0-.75.336-.75.75s.336.75.75.75h1.5v1.5c0 .414.336.75.75.75s.75-.336.75-.75v-1.5h1.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-1.5v-1.5C7.75 8.336 7.414 8 7 8Zm10.75 3c.69 0 1.25-.56 1.25-1.25s-.56-1.25-1.25-1.25-1.25.56-1.25 1.25.56 1.25 1.25 1.25Z" fill-rule="evenodd"></path>
-								</svg>
-							</span>
-							<span class="link-text">게임</span>
-						</a>
-					</li>
-					<li class="menu-item">
-						<a href="javascript:void(0)" class="menu-link">
-							<span class="link-icon">
-								<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-									<path clip-rule="evenodd" d="M6.5 3.5h11V9c0 3.038-2.462 5.5-5.5 5.5S6.5 12.038 6.5 9V3.5ZM5 3.5C5 2.672 5.672 2 6.5 2h11c.828 0 1.5.672 1.5 1.5V4h2c.552 0 1 .448 1 1v3c0 2.493-1.825 4.56-4.212 4.938-1.082 1.588-2.8 2.707-4.788 2.991V17.5h1.5c.828 0 1.5.672 1.5 1.5v3H8v-3c0-.828.672-1.5 1.5-1.5H11v-1.57c-1.987-.285-3.706-1.404-4.788-2.992C3.825 12.56 2 10.493 2 8V5c0-.552.448-1 1-1h2v-.5Zm0 1.75H3.25V8c0 1.508.89 2.808 2.174 3.403C5.15 10.654 5 9.845 5 9V5.25Zm13.576 6.153C19.86 10.808 20.75 9.508 20.75 8V5.25H19V9c0 .844-.15 1.654-.424 2.403ZM9.5 20.5V19h5v1.5h-5Z" fill-rule="evenodd"></path>
-								</svg>
-							</span>
-							<span class="link-text">스포츠</span>
-						</a>
-					</li>
-					<li class="menu-item">
-						<a href="javascript:void(0)" class="menu-link">
-							<span class="link-icon">
-								<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-									<path clip-rule="evenodd" d="M7.278 4.933C8.675 3.999 10.318 3.5 12 3.5c1.681 0 3.325.499 4.722 1.433 1.398.934 2.488 2.261 3.13 3.814.644 1.553.813 3.262.485 4.911-.328 1.65-1.138 3.164-2.327 4.352-.293.293-.293.768 0 1.061.293.293.768.293 1.061 0 1.399-1.399 2.351-3.18 2.737-5.12.386-1.94.188-3.95-.57-5.778-.756-1.827-2.038-3.389-3.682-4.488C15.91 2.586 13.978 2 12 2c-1.978 0-3.911.586-5.556 1.685-1.644 1.1-2.926 2.66-3.683 4.488-.757 1.827-.955 3.838-.569 5.778.386 1.94 1.338 3.721 2.737 5.12.293.293.768.293 1.06 0 .293-.293.293-.768 0-1.06-1.188-1.19-1.998-2.704-2.326-4.353-.328-1.649-.16-3.358.484-4.91.643-1.554 1.733-2.881 3.13-3.815ZM12 7.5c-.89 0-1.76.264-2.5.758-.74.495-1.317 1.198-1.657 2.02-.341.822-.43 1.727-.257 2.6.174.873.603 1.675 1.232 2.304.293.293.293.768 0 1.06-.293.293-.768.293-1.06 0-.84-.839-1.411-1.908-1.643-3.072-.231-1.163-.112-2.37.342-3.466S7.68 7.67 8.667 7.01C9.653 6.351 10.813 6 12 6c1.187 0 2.347.352 3.333 1.011.987.66 1.756 1.597 2.21 2.693.454 1.096.573 2.303.342 3.466-.232 1.164-.803 2.233-1.642 3.073-.293.293-.768.293-1.061 0-.293-.293-.293-.768 0-1.061.63-.63 1.058-1.431 1.231-2.304.174-.873.085-1.778-.256-2.6-.34-.822-.917-1.525-1.657-2.02-.74-.494-1.61-.758-2.5-.758Zm.875 6.299C13.541 13.474 14 12.79 14 12c0-1.105-.895-2-2-2s-2 .895-2 2c0 .79.459 1.474 1.125 1.799V21c0 .483.392.875.875.875s.875-.392.875-.875v-7.201Z" fill-rule="evenodd"></path>
-								</svg>
-							</span>
-							<span class="link-text">팟캐스트</span>
-						</a>
-					</li>
-				</ul>
-				<ul class="menu-list">
-					<li class="menu-item">
-						<a href="javascript:void(0)" class="menu-link">
-							<span class="link-icon">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
-									<g>
-										<circle id="XMLID_4814__yt119" fill="#FF0033" cx="12" cy="12" r="11"></circle>
-										<path fill="#FFFFFF" d="M12,6.25c3.17,0,5.75,2.58,5.75,5.75s-2.58,5.75-5.75,5.75S6.25,15.17,6.25,12S8.83,6.25,12,6.25 M12,5.25   c-3.73,0-6.75,3.02-6.75,6.75s3.02,6.75,6.75,6.75s6.75-3.02,6.75-6.75S15.73,5.25,12,5.25L12,5.25z"></path>
-										<polygon fill="#FFFFFF" points="10,15 15,12 10,9  "></polygon>
-									</g>
-								</svg>
-							</span>
-							<span class="link-text">YouTube Music</span>
-						</a>
-					</li>
-					<li class="menu-item">
-						<a href="javascript:void(0)" class="menu-link">
-							<span class="link-icon">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
-									<g>
-										<g>
-											<path fill="#FF0033" d="M22.64,13.2c-0.01-1.04-0.62-5.98-0.9-6.74c-0.19-0.5-0.58-1.4-1.31-1.95c-0.94-0.7-1.7-0.83-2.68-0.85    C17.06,3.64,6.12,5.03,4.79,5.51C3.8,5.88,3.03,6.35,2.42,6.95c-0.99,0.98-1.18,1.93-1.02,3.6c0.14,1.52,0.85,6.55,1.21,7.59    c0.39,1.15,1.11,2.03,2.3,2.16c3.62,0.39,4.48-1.6,12.9-1.58c2.55,0.01,3.82-1.11,4.35-2.08C22.77,15.49,22.65,13.99,22.64,13.2z"></path>
-											<path fill="#212121" d="M17.47,4.04C17.47,4.04,17.48,4.04,17.47,4.04c0.94,0.02,1.67,0.14,2.56,0.81    c0.7,0.53,1.08,1.39,1.25,1.86c0.28,0.73,0.85,5.44,0.86,6.43c0.01,0.76,0.12,2.19-0.47,3.28c-0.5,0.92-1.71,1.98-4.13,1.98    c-0.01,0-0.01,0-0.02,0c-0.04,0-0.07,0-0.11,0c-7.23,0-8.55,1.56-11.33,1.56c-0.27,0-0.56-0.02-0.87-0.05    c-1.13-0.12-1.82-0.96-2.19-2.06c-0.34-0.99-1.01-5.79-1.15-7.24c-0.15-1.6,0.03-2.51,0.98-3.44c0.58-0.57,1.32-1.02,2.27-1.37    C6.38,5.35,16.73,4.04,17.47,4.04 M17.47,3.2c-0.47,0-3.53,0.37-6.09,0.72C8.82,4.27,5.6,4.75,4.84,5.03    c-1.06,0.39-1.9,0.9-2.56,1.56C1.05,7.8,0.9,9.06,1.05,10.7c0.12,1.27,0.8,6.28,1.19,7.43c0.53,1.55,1.55,2.48,2.89,2.62    c0.33,0.04,0.64,0.05,0.96,0.05c1.17,0,2.1-0.25,3.18-0.54c1.69-0.45,3.8-1.02,8.15-1.02l0.11,0l0.02,0    c1.07,0,3.68-0.24,4.86-2.42c0.63-1.17,0.6-2.59,0.58-3.43c0-0.09,0-0.18-0.01-0.26c-0.01-1.01-0.59-5.85-0.92-6.72    c-0.38-1-0.89-1.75-1.53-2.23c-1.05-0.79-1.94-0.96-3.04-0.98l-0.01,0L17.47,3.2L17.47,3.2z"></path>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<img src="images/logo_javascript.png" alt="">
+				</span>
+				<a href="https://shortdeal.net/addon/story/story_detail.asp?seltype=S&uid=10748" class="detail-link">
+					<p class="project-title">숏폼</p>
+					<div class="detail-box">
+						<span class="classification">회사프로젝트</span>
+						<span class="period">2024-10-01 ~ 2024-10-31</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="project-container">
+			<a href="https://www.impactone.ai/default.asp" class="project-image-link">
+				<img src="images/thumbnail_impactone.png" alt="">
+			</a>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<img src="images/logo_jquery.png" alt="">
+				</span>
+				<a href="https://www.impactone.ai/default.asp" class="detail-link">
+					<p class="project-title">임팩트원</p>
+					<div class="detail-box">
+						<span class="classification">회사프로젝트</span>
+						<span class="period">2024-08-06 ~ 2024-11-15</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="project-container">
+			<a href="https://starryastmall.com/m/" class="project-image-link">
+				<img src="images/thumbnail_starry.png" alt="">
+			</a>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<img src="images/logo_jquery.png" alt="">
+				</span>
+				<a href="https://starryastmall.com/m/" class="detail-link">
+					<p class="project-title">스태리</p>
+					<div class="detail-box">
+						<span class="classification">회사프로젝트</span>
+						<span class="period">2024-07-12 ~ 2024-08-09</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="project-container">
+			<a href="https://soundrank.net/m/" class="project-image-link">
+				<img src="images/thumbnail_soundrank.png" alt="">
+			</a>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<img src="images/logo_jquery.png" alt="">
+				</span>
+				<a href="https://soundrank.net/m/" class="detail-link">
+					<p class="project-title">사운드랭크</p>
+					<div class="detail-box">
+						<span class="classification">회사프로젝트</span>
+						<span class="period">2024-07-08 ~ 2024-12-06</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="project-container">
+			<a href="https://conceptk.ai/default.asp" class="project-image-link">
+				<img src="images/thumbnail_conceptk.png" alt="">
+			</a>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<img src="images/logo_jquery.png" alt="">
+				</span>
+				<a href="https://conceptk.ai/default.asp" class="detail-link">
+					<p class="project-title">컨셉트K</p>
+					<div class="detail-box">
+						<span class="classification">회사프로젝트</span>
+						<span class="period">2024-06-25 ~ 2024-08-14</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="project-container">
+			<a href="https://koreamedi.net/default.asp" class="project-image-link">
+				<img src="images/thumbnail_koreamedi.png" alt="">
+			</a>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<img src="images/logo_jquery.png" alt="">
+				</span>
+				<a href="https://koreamedi.net/default.asp" class="detail-link">
+					<p class="project-title">코리아메디</p>
+					<div class="detail-box">
+						<span class="classification">회사프로젝트</span>
+						<span class="period">2024-05-03 ~ 2024-07-03</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="project-container">
+			<a href="https://shortdeal.net/m/" class="project-image-link">
+				<img src="images/thumbnail_shortdeal.png" alt="">
+			</a>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<img src="images/logo_jquery.png" alt="">
+				</span>
+				<a href="https://shortdeal.net/m/" class="detail-link">
+					<p class="project-title">숏딜 (글로벌솔루션)</p>
+					<div class="detail-box">
+						<span class="classification">회사프로젝트</span>
+						<span class="period">2024-03-23 ~ 진행 중</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="project-container">
+			<a href="https://www.agarmall.com/m/main/user_home.asp" class="project-image-link">
+				<img src="images/thumbnail_agarmall.png" alt="">
+			</a>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<img src="images/logo_jquery.png" alt="">
+				</span>
+				<a href="https://www.agarmall.com/m/main/user_home.asp" class="detail-link">
+					<p class="project-title">아가몰</p>
+					<div class="detail-box">
+						<span class="classification">회사프로젝트</span>
+						<span class="period">2024-03-13 ~ 2024-04-08</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="project-container">
+			<a href="https://html-is-a-programming-language.github.io/johnahn-react-netflix/" class="project-image-link">
+				<img src="images/thumbnail_react_netflix.png" alt="">
+			</a>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<svg width="100%" height="100%" viewBox="-10.5 -9.45 21 18.9" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-sm me-0 w-10 h-10 text-brand dark:text-brand-dark flex origin-center transition-all ease-in-out">
+						<circle cx="0" cy="0" r="2" fill="#087ea4"></circle>
+						<g stroke="#087ea4" stroke-width="1" fill="none">
+							<ellipse rx="10" ry="4.5"></ellipse>
+							<ellipse rx="10" ry="4.5" transform="rotate(60)"></ellipse>
+							<ellipse rx="10" ry="4.5" transform="rotate(120)"></ellipse>
+						</g>
+					</svg>
+				</span>
+				<a href="https://html-is-a-programming-language.github.io/johnahn-react-netflix/" class="detail-link">
+					<p class="project-title">ReactNetflix</p>
+					<div class="detail-box">
+						<span class="classification">개인프로젝트</span>
+						<span class="period">2024-02-27 ~ 2024-03-20</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="project-container">
+			<a href="https://html-is-a-programming-language.github.io/johnahn-react-todo/" class="project-image-link">
+				<img src="images/thumbnail_react_todo.png" alt="">
+			</a>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<svg width="100%" height="100%" viewBox="-10.5 -9.45 21 18.9" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-sm me-0 w-10 h-10 text-brand dark:text-brand-dark flex origin-center transition-all ease-in-out">
+						<circle cx="0" cy="0" r="2" fill="#087ea4"></circle>
+						<g stroke="#087ea4" stroke-width="1" fill="none">
+							<ellipse rx="10" ry="4.5"></ellipse>
+							<ellipse rx="10" ry="4.5" transform="rotate(60)"></ellipse>
+							<ellipse rx="10" ry="4.5" transform="rotate(120)"></ellipse>
+						</g>
+					</svg>
+				</span>
+				<a href="https://html-is-a-programming-language.github.io/johnahn-react-todo/" class="detail-link">
+					<p class="project-title">ReactTodo</p>
+					<div class="detail-box">
+						<span class="classification">개인프로젝트</span>
+						<span class="period">2024-01-31 ~ 2024-02-27</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="project-container">
+			<a href="https://dbo.mallup.co.kr/m/store_home.asp" class="project-image-link">
+				<img src="images/thumbnail_dailybeer.png" alt="">
+			</a>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<img src="images/logo_jquery.png" alt="">
+				</span>
+				<a href="https://dbo.mallup.co.kr/m/store_home.asp" class="detail-link">
+					<p class="project-title">데일리비어</p>
+					<div class="detail-box">
+						<span class="classification">회사프로젝트</span>
+						<span class="period">2024-01-12 ~ 2024-02-07</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="project-container">
+			<a href="https://kpopcon.net/m/explore/" class="project-image-link">
+				<img src="images/thumbnail_kpopcon.png" alt="">
+			</a>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<img src="images/logo_jquery.png" alt="">
+				</span>
+				<a href="https://kpopcon.net/m/explore/" class="detail-link">
+					<p class="project-title">케이팝콘</p>
+					<div class="detail-box">
+						<span class="classification">회사프로젝트</span>
+						<span class="period">2023-11-09 ~ 2024-01-12</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="project-container">
+			<a href="https://mallpro.co.kr/" class="project-image-link"><img src="images/thumbnail_mallpro.png" alt=""></a>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<img src="images/logo_jquery.png" alt="">
+				</span>
+				<a href="https://mallpro.co.kr/" class="detail-link">
+					<p class="project-title">몰프로</p>
+					<div class="detail-box">
+						<span class="classification">회사프로젝트</span>
+						<span class="period">2023-10-31 ~ 2023-11-01</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="project-container">
+			<a href="https://www.notion.so/2c34ba0c1d43401d99e653bca923ba72?v=32deb47d0c72435aa4ad3899df3063ec" class="project-image-link">
+				<img src="images/thumbnail_allpick.png" alt="">
+			</a>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<img src="images/logo_jquery.png" alt="">
+				</span>
+				<a href="https://www.notion.so/2c34ba0c1d43401d99e653bca923ba72?v=32deb47d0c72435aa4ad3899df3063ec" class="detail-link">
+					<p class="project-title">올픽</p>
+					<div class="detail-box">
+						<span class="classification">회사프로젝트</span>
+						<span class="period">2023-08-04 ~ 2023-10-24</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="project-container">
+			<a href="https://www.innerversion.co.kr/" class="project-image-link">
+				<img src="images/thumbnail_innerversion.png" alt="">
+			</a>
+			<div class="project-detail-box">
+				<span class="skill-icon">
+					<img src="images/logo_jquery.png" alt="">
+				</span>
+				<a href="https://www.innerversion.co.kr/" class="detail-link">
+					<p class="project-title">이너버전</p>
+					<div class="detail-box">
+						<span class="classification">회사프로젝트</span>
+						<span class="period">2023-08-01 ~ 2023-09-12</span>
+					</div>
+				</a>
+				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+						<path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="modal-window-overlay">
+		<div class="modal-window-wrap" data-modal="menu">
+			<div class="modal-window-container">
+				<a href="/" class="logo-link">
+					<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000">
+						<path d="M264-216h96v-240h240v240h96v-348L480-726 264-564v348Zm-72 72v-456l288-216 288 216v456H528v-240h-96v240H192Zm288-327Z"/>
+					</svg>
+				</a>
+				<div class="menu-wrap">
+					<ul class="menu-list">
+						<li class="menu-item">
+							<a href="javascript:void(0)" class="menu-link">
+								<span class="link-icon">
+									<svg width="24" height="24" viewBox="-10.5 -9.45 21 18.9" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-sm me-0 w-10 h-10 text-brand dark:text-brand-dark flex origin-center transition-all ease-in-out">
+										<circle cx="0" cy="0" r="2" fill="#087ea4"></circle>
+										<g stroke="#087ea4" stroke-width="1" fill="none">
+											<ellipse rx="10" ry="4.5"></ellipse>
+											<ellipse rx="10" ry="4.5" transform="rotate(60)"></ellipse>
+											<ellipse rx="10" ry="4.5" transform="rotate(120)"></ellipse>
 										</g>
-										<g>
-											<path fill="#FFFFFF" d="M15.28,11.85c-0.03,0.02-0.05,0.03-0.08,0.05c-0.21,0.14-0.42,0.28-0.63,0.43    c-0.49,0.33-3.33,2.26-3.33,2.26c-0.24,0.18-0.7,0.47-0.87,0.38c-0.17-0.09-0.23-0.72-0.27-1.02l-0.01-0.07    c-0.05-0.36-0.46-3.83-0.51-4.21C9.56,9.56,9.5,9.17,9.62,9.08c0.13-0.1,0.47,0.01,0.58,0.05c0.66,0.21,3.93,1.35,4.95,1.86    c0.03,0.02,0.06,0.03,0.1,0.04c0.15,0.06,0.35,0.15,0.35,0.39C15.6,11.65,15.42,11.76,15.28,11.85z"></path>
-											<path fill="#212121" d="M10.04,9.59c1.14,0.38,3.77,1.32,5.01,1.87c-0.15,0.1-0.3,0.2-0.45,0.3c-0.58,0.39-3.94,2.68-3.94,2.68    l-0.02,0.01l-0.02,0.01c0,0,0,0,0,0c0-0.03-0.01-0.05-0.01-0.07l-0.02-0.13l-0.01-0.08c-0.04-0.31-0.31-2.58-0.48-3.94    C10.08,9.98,10.06,9.76,10.04,9.59 M9.4,8.56c-0.07,0-0.14,0.01-0.18,0.05c-0.15,0.11-0.07,0.58-0.05,0.7    c0.05,0.45,0.54,4.56,0.6,4.99l0.01,0.08c0.05,0.36,0.12,1.1,0.33,1.21c0.03,0.01,0.06,0.02,0.1,0.02c0.25,0,0.68-0.28,0.93-0.47    c0,0,3.36-2.29,3.94-2.68c0.25-0.17,0.5-0.34,0.75-0.51c0.03-0.02,0.06-0.04,0.1-0.06c0.17-0.1,0.38-0.23,0.38-0.5    c-0.01-0.29-0.24-0.39-0.41-0.46c-0.04-0.02-0.08-0.03-0.11-0.05c-1.21-0.61-5.09-1.96-5.87-2.21C9.8,8.63,9.58,8.56,9.4,8.56    L9.4,8.56z"></path>
+									</svg>
+								</span>
+								<span class="link-text">React</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="javascript:void(0)" class="menu-link">
+								<span class="link-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1052 1052">
+										<path fill="#f0db4f" d="M0 0h1052v1052H0z"/>
+										<path d="M965.9 801.1c-7.7-48-39-88.3-131.7-125.9-32.2-14.8-68.1-25.399-78.8-49.8-3.8-14.2-4.3-22.2-1.9-30.8 6.9-27.9 40.2-36.6 66.6-28.6 17 5.7 33.1 18.801 42.8 39.7 45.4-29.399 45.3-29.2 77-49.399-11.6-18-17.8-26.301-25.4-34-27.3-30.5-64.5-46.2-124-45-10.3 1.3-20.699 2.699-31 4-29.699 7.5-58 23.1-74.6 44-49.8 56.5-35.6 155.399 25 196.1 59.7 44.8 147.4 55 158.6 96.9 10.9 51.3-37.699 67.899-86 62-35.6-7.4-55.399-25.5-76.8-58.4-39.399 22.8-39.399 22.8-79.899 46.1 9.6 21 19.699 30.5 35.8 48.7 76.2 77.3 266.899 73.5 301.1-43.5 1.399-4.001 10.6-30.801 3.199-72.101zm-394-317.6h-98.4c0 85-.399 169.4-.399 254.4 0 54.1 2.8 103.7-6 118.9-14.4 29.899-51.7 26.2-68.7 20.399-17.3-8.5-26.1-20.6-36.3-37.699-2.8-4.9-4.9-8.7-5.601-9-26.699 16.3-53.3 32.699-80 49 13.301 27.3 32.9 51 58 66.399 37.5 22.5 87.9 29.4 140.601 17.3 34.3-10 63.899-30.699 79.399-62.199 22.4-41.3 17.6-91.3 17.4-146.6.5-90.2 0-180.4 0-270.9z" fill="#323330"/>
+									</svg>
+								</span>
+								<span class="link-text">JavaScript</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="javascript:void(0)" class="menu-link">
+								<span class="link-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 100 100">
+										<g transform="matrix(.945094 0 0 .945094 6.301403 4.347014)">
+											<path d="M20.44 13.78c-5.283 7.733-4.625 17.793-.6 26l.296.585.2.37c.037.072.08.143.118.213.07.13.14.255.2.383l.385.673.22.37.447.712.2.3c.2.32.426.638.648.952.005.008.012.017.018.025.035.05.074.1.1.15.192.27.4.536.6.8l.222.288.545.682.208.254a31.65 31.65 0 0 0 .76.884l.016.016c.01.013.02.02.03.033a23.73 23.73 0 0 0 .772.83l.248.254.617.616.252.244a34.49 34.49 0 0 0 .845.783l.16.14.767.66.318.258.64.5.342.265.978.715c.025.017.047.035.072.052.23.16.463.315.697.47l.302.205 1.092.68.302.173.82.468c.15.082.303.16.453.238l.586.3.135.066.24.118.93.438.197.1a32.93 32.93 0 0 0 1.084.459l.264.106 1.023.386.128.046a34.62 34.62 0 0 0 1.14.38l.275.084c.4.12.775.263 1.177.34C67.457 62.6 74.88 42.218 74.88 42.218c-6.233 8.27-17.296 10.45-27.778 8.023-.397-.1-.782-.217-1.17-.334l-.292-.1c-.378-.118-.754-.243-1.126-.373l-.155-.057a35.02 35.02 0 0 1-.993-.375l-.28-.112a31.57 31.57 0 0 1-1.072-.454l-.214-.096-.904-.43-.26-.128a30.9 30.9 0 0 1-.7-.363l-.467-.25a26.89 26.89 0 0 1-.838-.479l-.283-.16c-.368-.22-.732-.45-1.092-.68-.1-.065-.196-.134-.295-.2l-.777-.526-.25-.18-.735-.54-.326-.25-.663-.528-.296-.24-.825-.7c-.028-.025-.06-.05-.1-.077-.294-.263-.583-.533-.868-.804l-.244-.24-.624-.622-.244-.25a31.33 31.33 0 0 1-.765-.824c-.012-.014-.026-.027-.038-.04a31.49 31.49 0 0 1-.776-.9l-.203-.246-.56-.703-.205-.26-.645-.875c-5.82-8.085-7.9-19.235-3.26-28.393M36.84 7.264c-3.82 5.6-3.613 13.094-.633 19.016a24.87 24.87 0 0 0 1.69 2.873c.572.835 1.207 1.83 1.967 2.5.275.3.563.6.857.906.074.077.15.15.226.227a25.21 25.21 0 0 0 .876.829c.012.01.023.022.036.032a26.31 26.31 0 0 0 1.031.87l.232.184a25.13 25.13 0 0 0 1.07.796.6.6 0 0 0 .03.023c.16.113.325.22.488.328.078.052.152.107.23.156a21.65 21.65 0 0 0 .793.495l.112.066.7.4c.082.047.166.088.25.132l.5.258c.025.013.05.023.074.035.337.17.676.33 1.023.485.074.033.15.063.226.095.277.12.557.236.84.347l.36.134a26.33 26.33 0 0 0 .77.273l.348.113c.367.117.73.263 1.113.328 19.725 3.328 24.28-12.14 24.28-12.14-4.105 6.02-12.054 8.894-20.538 6.652a21.09 21.09 0 0 1-1.117-.33c-.113-.035-.224-.072-.336-.1a22.36 22.36 0 0 1-.781-.274l-.353-.134c-.283-.1-.563-.225-.84-.345-.076-.033-.152-.063-.227-.098a19.53 19.53 0 0 1-1.03-.487c-.174-.087-.345-.178-.516-.268l-.298-.156a20.05 20.05 0 0 1-.653-.375l-.156-.1a25.46 25.46 0 0 1-.79-.492c-.08-.052-.158-.1-.238-.162l-.512-.345a27.46 27.46 0 0 1-1.066-.794l-.24-.192c-3.713-2.986-6.657-7.066-8.056-11.693-1.467-4.8-1.15-10.185 1.4-14.556m10.648-.38c-2.252 3.376-2.473 7.568-.9 11.296 1.648 3.957 5.025 7.062 8.966 8.533.162.062.325.117.5.173l.216.07c.232.074.463.16.702.206 10.892 2.143 13.846-5.692 14.632-6.845-2.588 3.795-6.937 4.706-12.273 3.387-.42-.105-.885-.26-1.3-.406a15.62 15.62 0 0 1-1.533-.649 15.81 15.81 0 0 1-2.688-1.671C52.167 12.8 49.2 5.762 52.316.03" fill="#0868ac"/>
+											<g fill="#131b28">
+												<path d="M26.576 74.06l-.738 2.616.738-2.615zm3.796 5.678l-.813-.005.813.005zm-.2 3.906l-4.872.018 4.872-.018zm1.02-3.9l-.814-.005.814.005zm-.582 3.568l.85-3.237-.85 3.237zm17.93-14.907l-1.58 7.433 1.58-7.433zm-4.065 0l-1.2 5.553 1.2-5.553z"/>
+												<path d="M48.26 68.07h-3.38c-.188 0-.374.15-.414.334l-2.4 11.107c-.04.183-.226.333-.413.333H39.26c-2.368 0-2.094-1.637-1.6-3.88l.015-.068.287-1.53.124-.63 1.092-5.332c.038-.184-.085-.335-.273-.335h-3.47a.44.44 0 0 0-.412.334l-1.563 7.414c-.86 3.924-.632 7.666 4.04 7.783l.135.003h7.332c.188 0 .373-.15.413-.334l3.162-14.866c.04-.184-.083-.334-.27-.334zm13.487 11.813c.188 0 .3.15.273.334l-.328 1.605m-.328 1.606l.328-1.606-.328 1.606zm-.412.338l-6.23.03 6.23-.03z"/>
+												<path d="M52.704 77.817c-.003-.176.197-.478.385-.478l-.422-.007c-.2 1.914.037.485.037.485zm2.326 5.978h-.065.065zm6.717-3.912c.188 0 .3.15.273.334l-.382 1.866M56.63 83.8h-.014.014zm-.83-.006h-.048.048zm-.253.001h-.08.08zm-.247 0h-.07.07zm.462-.001h-.205.205z"/>
+												<path d="M56.617 83.8l-.816.003.816-.003zm4.337-.025l-4.325.026 4.325-.026zm.4-.347l.275-1.344-.275 1.345zm-5.896.367H55.3h.178zm-.495 0h-.24.24zm.257 0h-.2.2zM5.76 77.857l.525-2.328-.6 2.66-.07.334.146-.668zm6.286-9.825H8.333a.45.45 0 0 0-.417.333l-.704 3.1a.26.26 0 0 0 .266.333h3.742c.188 0 .374-.15.414-.333l.68-3.107c.04-.183-.08-.333-.27-.333zm-.808 5.168l-1.1 5.038 1.1-5.038zM.452 89.895l3.062.024c-.904 0-2.397-.017-3.063-.025z"/>
+												<path d="M6.8 73.2l-.526 2.328L6.8 73.2zm4.17-.333H7.227a.45.45 0 0 0-.417.333l-1.05 4.656-.146.668-1 4.753a7.16 7.16 0 0 1-.18.657s-.7 2.08-1.874 2.057l-1.165-.022a.45.45 0 0 0-.42.326L.2 89.558a.26.26 0 0 0 .261.336l3.063.025c2.936 0 4.483-1.627 5.476-6.307l2.25-10.4c.04-.183-.082-.333-.27-.333zm53.162 10.738c-.188 0-.3-.15-.27-.334l2.815-13.186m1.367 13.185l1.14-5.628-1.14 5.628z"/>
+												<path d="M63.903 83.438c-.023-.092-.01-.317.03-.5l1.336-6.26-1.408 6.593c-.04.184.082.334.27.334h.342c-.188 0-.548-.075-.57-.167zm3.92.092c-.102.04-.34.075-.528.075h.342a.44.44 0 0 0 .41-.335l.068-.334c-.037.184-.2.553-.3.594zm.79-3.074l.503-2.484-.503 2.484zm11.108-9.488l.155.64c.043.183-.076.332-.263.333"/>
+												<path d="M68.112 82.936l.5-2.48-.5 2.48zM79.568 70.3l.153.656-.153-.656zm-10.452 7.672l.138-.664.537-2.515-.608 2.848-.067.33zm-2.393-8.104l-.117.55-1.336 6.26 1.408-6.593.045-.216z"/>
+												<path d="M79.877 71.608l-.155-.64-.23-1c-.304-1.18-1.196-1.863-3.134-1.863l-8.92-.006a.44.44 0 0 0-.412.334l-.138.653-.2.987-2.744 12.853c-.04.184-.053.4-.03.5s.383.167.57.167h2.82c.188 0 .425-.034.528-.075s.254-.4.3-.594l1.07-5.294 1.145-5.364c.04-.183.225-.332.412-.333l8.873-.004c.187 0 .306-.15.263-.333zM91.3 65.815l-.683.003h-2.84a.73.73 0 0 0-.534.282l-6.28 9.2c-.106.155-.227.132-.27-.05l-.462-2.027a.45.45 0 0 0-.417-.333h-4.037c-.188 0-.3.147-.248.328l1.8 6.338c.052.18.055.477.01.66l-.8 3.067a.25.25 0 0 0 .257.331h4c.188 0 .38-.15.426-.33l.8-3.067a2.04 2.04 0 0 1 .29-.604L92.518 66.08c.113-.15.052-.272-.136-.27l-1.07.007zm-32.076 7.937c-.024.2-.212.35-.4.35h-5.12c-.177 0-.267-.12-.24-.27l.004-.027.023-.087c.5-1.3 1.485-2.153 3.356-2.153 2.107 0 2.518 1.03 2.375 2.187zm-1.502-5.908c-6.57 0-8.127 3.988-9 8.013-.874 4.103-.798 7.94 6 7.94H55.8l.83-.003 4.326-.026a.44.44 0 0 0 .407-.335l.657-3.212c.038-.184-.085-.334-.273-.334h-6.112c-2.43 0-3.153-.646-2.887-2.545h9.77c.16-.003.305-.1.362-.252.01-.027.02-.056.024-.085 1.45-5.47 1.034-9.157-5.18-9.157zM26.668 73.73l-.092.327c0 .001-.738 2.616-.738 2.616l-.738 2.614a.48.48 0 0 1-.434.328H20.76c-2.962 0-3.683-2.317-2.962-5.734.72-3.495 2.135-5.668 5.05-5.888 3.984-.3 4.78 2.502 3.82 5.736zm2.678 5.685s1.84-4.47 2.26-7.053c.57-3.457-1.16-8.47-7.845-8.47-6.647 0-9.533 4.786-10.634 10-1.1 5.24.342 9.836 6.95 9.8l10.086-.037a.47.47 0 0 0 .427-.332l.85-3.238a.25.25 0 0 0-.255-.332l-1.627-.01c-.16-.001-.25-.104-.232-.24.004-.025.01-.05.02-.076z"/>
+												<path d="M62.25 76.424c0 .124-.1.224-.224.224s-.224-.1-.224-.224.1-.224.224-.224.224.1.224.224z"/>
+											</g>
 										</g>
-									</g>
-								  </svg>
+									</svg>
+								</span>
+								<span class="link-text">JQuery</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="javascript:void(0)" class="menu-link">
+								<span class="link-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 362.73401 511.99998">
+										<path d="m437.367 100.62-33.046 370.199L255.778 512l-148.134-41.123L74.633 100.62z" style="fill:#264de4" transform="translate(-74.633)"/>
+										<path d="m376.03 447.246 28.24-316.352H256v349.629z" style="fill:#2965f1" transform="translate(-74.633)"/>
+										<path d="m150.31 268.217 4.07 45.41H256v-45.41zM256 176.305H142.132l4.128 45.411H256zM256 433.399v-47.246l-.199.053-50.574-13.656-3.233-36.217h-45.585l6.362 71.301 93.02 25.823z" style="fill:#ebebeb" transform="translate(-74.633)"/>
+										<path d="M85.367 0h55v23h-32v23h32v23h-55zM151.367 0h55v20h-32v4h32v46h-55V49h32v-4h-32zM217.367 0h55v20h-32v4h32v46h-55V49h32v-4h-32z"/>
+										<path d="m311.761 313.627-5.271 58.894-50.647 13.67v47.244l93.094-25.801.683-7.672 10.671-119.551 1.108-12.194 8.198-91.912H255.843v45.411h63.988l-4.132 46.501h-59.856v45.41z" style="fill:#fff" transform="translate(-74.633)"/>
+									</svg>
+								</span>
+								<span class="link-text">CSS</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="javascript:void(0)" class="menu-link">
+								<span class="link-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+										<path fill="#E44D26" d="M107.644 470.877 74.633 100.62h362.734l-33.046 370.199L255.778 512z"/>
+										<path fill="#F16529" d="m256 480.523 120.03-33.277 28.24-316.352H256z"/>
+										<path fill="#EBEBEB" d="M256 268.217h-60.09l-4.15-46.501H256v-45.411H142.132l1.087 12.183 11.161 125.139H256zM256 386.153l-.199.053-50.574-13.656-3.233-36.217h-45.585l6.362 71.301 93.02 25.823.209-.058z"/>
+										<path d="M108.382 0h23.077v22.8h21.11V0h23.078v69.044H152.57v-23.12h-21.11v23.12h-23.077V0zM205.994 22.896h-20.316V0h63.72v22.896h-20.325v46.148h-23.078V22.896zM259.511 0h24.063l14.802 24.26L313.163 0h24.072v69.044h-22.982V34.822l-15.877 24.549h-.397l-15.888-24.549v34.222h-22.58V0zM348.72 0h23.084v46.222h32.453v22.822H348.72V0z"/>
+										<path fill="#FFF" d="M255.843 268.217v45.41h55.918l-5.271 58.894-50.647 13.67v47.244l93.094-25.801.683-7.672 10.671-119.551 1.108-12.194h-12.237zM255.843 176.305V221.716h109.688l.911-10.207 2.069-23.021 1.086-12.183z"/>
+									</svg>
+								</span>
+								<span class="link-text">HTML</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<span class="copyright">© 2024 html-is-a-programming-language</span>
+			</div>
+		</div>
+		<div class="modal-window-wrap" data-modal="more">
+			<div class="modal-window-container">
+				<div class="drag-handle-box">
+					<span class="drag-handle"></span>
+				</div>
+				<ul class="more-list">
+					<li class="more-item">
+						<button type="button">
+							<span class="icon">
+								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+									<path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q54 0 104-17.5t92-50.5L228-676q-33 42-50.5 92T160-480q0 134 93 227t227 93Zm252-124q33-42 50.5-92T800-480q0-134-93-227t-227-93q-54 0-104 17.5T284-732l448 448Z"/>
+								</svg>
 							</span>
-							<span class="link-text">Youtube Kids</span>
-						</a>
+							<span class="button-text">관심 없음</span>
+						</button>
+					</li>
+					<li class="more-item">
+						<button type="button">
+							<span class="icon">
+								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+									<path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+								</svg>
+							</span>
+							<span class="button-text">채널 추천 안함</span>
+						</button>
+					</li>
+					<li class="more-item">
+						<button type="button">
+							<span class="icon">
+								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+									<path d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"/>
+								</svg>
+							</span>
+							<span class="button-text">나중에 볼 동영상에 저장</span>
+						</button>
 					</li>
 				</ul>
 			</div>
-			<ul class="policy-list">
-				<li class="policy-item">
-					<a href="javascript:void(0)" class="policy-link">개인정보처리방침</a>
-				</li>
-				<li class="policy-item">
-					<a href="javascript:void(0)" class="policy-link">서비스 약관</a>
-				</li>
-			</ul>
 		</div>
 	</div>
 	<script src="js/script.js"></script>

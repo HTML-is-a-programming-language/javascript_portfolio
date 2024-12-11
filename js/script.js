@@ -1,4 +1,4 @@
-// 메뉴버튼
+// 모달창 열기
 function modalWindowOpen(button) {
   const modalWindowOverlay = document.querySelector('.modal-window-overlay');
   const buttonData = button.dataset.modal;
@@ -10,6 +10,8 @@ function modalWindowOpen(button) {
       modal.classList.add('active');
     }
   });
+
+  document.body.classList.add('active');
 }
 
 // 모달창 닫기
@@ -24,5 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.classList.remove('active');
       });
     }
+    document.body.classList.remove('active');
   });
 });
