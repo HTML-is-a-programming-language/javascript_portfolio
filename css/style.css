@@ -47,39 +47,42 @@ body.active {
     line-height: 1;
     scrollbar-width: none;
     transform: translateX(-50%);
-  }
-  .nav-wrap::-webkit-scrollbar {
+}
+.nav-wrap::-webkit-scrollbar {
     display: none;
-  }
-  .nav-wrap .menu-button {
+}
+.nav-wrap .menu-button {
     padding: 4px 8px;
     border-radius: 2px;
     background: #0000000d;
-  }
-  .nav-wrap .nav-container .nav-list {
+}
+.nav-wrap .nav-container .nav-list {
     display: flex;
     gap: 12px;
-  }
-  .nav-wrap .nav-container .nav-list .nav-item .nav-button {
+}
+.nav-wrap .nav-container .nav-list .nav-item .nav-button {
     padding: 9px 12px;
     border-radius: 8px;
     background: #0000000d;
     font-size: 0.875rem;
     font-weight: 500;
     white-space: nowrap;
-  }
-  .nav-wrap .nav-container .nav-list .nav-item .nav-button.active {
+}
+.nav-wrap .nav-container .nav-list .nav-item .nav-button.active {
     background: #000;
     color: #FFF;
-  }
-  .nav-height {
+}
+.nav-height {
     height: 50px;
-  }
+}
 
 .introduction-wrap .introduction-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     padding: 16px 12px;
 }
 .introduction-wrap .introduction-container .profile-box {
@@ -129,6 +132,11 @@ body.active {
     background: #0000000d;
 }
 
+.project-wrap {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
 .project-wrap .project-container .project-image-link {
     display: flex;
     position: relative;
