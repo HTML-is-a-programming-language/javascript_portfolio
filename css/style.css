@@ -181,6 +181,7 @@ body.active {
     display: flex;
     gap: 8px;
     padding: 8px 12px;
+    box-sizing: border-box;
 }
 .project-wrap .project-container .project-detail-box .skill-icon {
     display: flex;
