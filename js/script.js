@@ -38,16 +38,38 @@ function filterButton(e) {
   const buttonData = e.dataset.filter;
   const projectContainer = document.querySelectorAll('.project-container');
   const projectContainerData = document.querySelectorAll(`.project-container[data-filter="${buttonData}"]`);
+  const navButton = document.querySelectorAll('.nav-button');
+  const navButtonData = document.querySelector(`.nav-button[data-filter="${buttonData}"]`);
 
   projectContainer.forEach((container)=>{
-    container.classList.remove('active');
+    if (buttonData == 'all') {
+      container.classList.add('active');
+    } else {
+      container.classList.remove('active');
+    }
   })
 
   projectContainerData.forEach((container)=>{
-    container.classList.add('active');
+    if (buttonData != 'all') {
+      container.classList.add('active');
+    }
   })
 
   if (e.classList.contains('menu-button')) {
     modalWindowClose();
+
+    navButton.forEach((button)=>{
+      button.classList.remove('active');
+    });
+
+    navButtonData.classList.add('active');
+  }
+
+  if (e.classList.contains('nav-button')) {
+    navButton.forEach((button)=>{
+      button.classList.remove('active');
+    });
+
+    e.classList.add('active');
   }
 }
