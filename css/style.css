@@ -82,14 +82,16 @@ body.active {
     height: 50px;
 }
 
-.introduction-wrap .introduction-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.introduction-wrap {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
     padding: 16px 12px;
+}
+.introduction-wrap .introduction-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 .introduction-wrap .introduction-container .profile-box {
     display: flex;
