@@ -31,6 +31,7 @@ body.active {
     display: none;
 }
 .header-height {
+    max-width: 600px;
     height: 48px;
 }
 
@@ -79,6 +80,7 @@ body.active {
     color: #FFF;
 }
 .nav-height {
+    max-width: 600px;
     height: 50px;
 }
 
