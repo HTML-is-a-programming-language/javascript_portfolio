@@ -6,7 +6,7 @@ function modalWindowOpen(button) {
   document.querySelectorAll('.modal-window-wrap').forEach(modal => {
     const modalWindowData = modal.dataset.modal;
     if (buttonData === modalWindowData) {
-      modalWindowOverlay.classList.add('active')
+      modalWindowOverlay.classList.add('active');
       modal.classList.add('active');
     }
   });
@@ -15,17 +15,39 @@ function modalWindowOpen(button) {
 }
 
 // 모달창 닫기
+function modalWindowClose() {
+  const overlay = document.querySelector('.modal-window-overlay');
+  const allModals = document.querySelectorAll('.modal-window-wrap');
+
+  overlay.classList.remove('active');
+  allModals.forEach(modal => modal.classList.remove('active'));
+  document.body.classList.remove('active');
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.querySelector(".modal-window-overlay");
-  const allModalWindowWrap = document.querySelectorAll(".modal-window-wrap");
-
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) {
-      overlay.classList.remove("active");
-      allModalWindowWrap.forEach(modal => {
-        modal.classList.remove('active');
-      });
+      modalWindowClose();
     }
-    document.body.classList.remove('active');
   });
 });
+
+// 필터 버튼
+function filterButton(e) {
+  const buttonData = e.dataset.filter;
+  const projectContainer = document.querySelectorAll('.project-container');
+  const projectContainerData = document.querySelectorAll(`.project-container[data-filter="${buttonData}"]`);
+
+  projectContainer.forEach((container)=>{
+    container.classList.remove('active');
+  })
+
+  projectContainerData.forEach((container)=>{
+    container.classList.add('active');
+  })
+
+  if (e.classList.contains('menu-button')) {
+    modalWindowClose();
+  }
+}

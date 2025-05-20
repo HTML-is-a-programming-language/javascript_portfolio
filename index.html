@@ -14,6 +14,7 @@
 				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
 					<path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"></path>
 				</svg>
+				<span class="link-text">Portfolio</span>
 			</a>
 			<button type="button" class="search-button">
 				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
@@ -32,22 +33,22 @@
 		<div class="nav-container">
 			<ul class="nav-list">
 				<li class="nav-item">
-					<button type="button" class="nav-button active">전체</button>
+					<button type="button" class="nav-button active" data-filter="all" onclick="filterButton(this);">전체</button>
 				</li>
 				<li class="nav-item">
-					<button type="button" class="nav-button">React</button>
+					<button type="button" class="nav-button" data-filter="react" onclick="filterButton(this);">React</button>
 				</li>
 				<li class="nav-item">
-					<button type="button" class="nav-button">JavaScript</button>
+					<button type="button" class="nav-button" data-filter="javascript" onclick="filterButton(this);">JavaScript</button>
 				</li>
 				<li class="nav-item">
-					<button type="button" class="nav-button">JQuery</button>
+					<button type="button" class="nav-button" data-filter="jquery" onclick="filterButton(this);">JQuery</button>
 				</li>
-				<li class="nav-item">
-					<button type="button" class="nav-button ">CSS</button>
+				<li class="nav-item" style="display: none;">
+					<button type="button" class="nav-button">CSS</button>
 				</li>
-				<li class="nav-item">
-					<button type="button" class="nav-button ">HTML</button>
+				<li class="nav-item" style="display: none;">
+					<button type="button" class="nav-button">HTML</button>
 				</li>
 			</ul>
 		</div>
@@ -74,7 +75,7 @@
 		</div>
 	</div>
 	<div class="project-wrap">
-		<div class="project-container">
+		<div class="project-container active" data-filter="react">
 			<a href="https://html-is-a-programming-language.github.io/blog/" class="project-image-link">
 				<img src="images/thumbnail_reactblog.png" alt="">
 			</a>
@@ -126,7 +127,7 @@
 		</div>
 	</div>
 	<div class="project-wrap">
-		<div class="project-container" style="display: none;">
+		<div class="project-container active" style="display: none;">
 			<a href="https://html-is-a-programming-language.github.io/pocket_build/" class="project-image-link"></a>
 			<div class="project-detail-box">
 				<span class="skill-icon">
@@ -146,7 +147,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://tanglejp.com/m/" class="project-image-link">
 				<img src="images/thumbnail_tanglejp.png" alt="">
 			</a>
@@ -168,7 +169,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://goodshopmall.com/" class="project-image-link">
 				<img src="images/thumbnail_goodshopmall.png" alt="">
 			</a>
@@ -190,7 +191,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://labang.tv/" class="project-image-link">
 				<img src="images/thumbnail_labangtv.png" alt="">
 			</a>
@@ -212,7 +213,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://sayrobin.com/m/" class="project-image-link">
 				<img src="images/thumbnail_sayrobin.png" alt="">
 			</a>
@@ -234,7 +235,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://zeromart.co.kr/" class="project-image-link">
 				<img src="images/thumbnail_zeromart.png" alt="">
 			</a>
@@ -256,7 +257,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://zeropaymall.com/" class="project-image-link">
 				<img src="images/thumbnail_zeropaymall.png" alt="">
 			</a>
@@ -278,7 +279,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://encyklglobal.com/" class="project-image-link">
 				<img src="images/thumbnail_encyklglobal.png" alt="">
 			</a>
@@ -300,7 +301,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://metaceleb.com/" class="project-image-link">
 				<img src="images/thumbnail_metaceleb.png" alt="">
 			</a>
@@ -322,7 +323,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://goest.mallpro.co.kr/" class="project-image-link">
 				<img src="images/thumbnail_goest.png" alt="">
 			</a>
@@ -344,7 +345,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://metaceleb.com/m/lettaga/index.html" class="project-image-link">
 				<img src="images/thumbnail_lettaga.png" alt="">
 			</a>
@@ -366,7 +367,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="javascript">
 			<a href="https://shortdeal.net/addon/story/story_detail.asp?seltype=S&uid=10748" class="project-image-link">
 				<img src="images/thumbnail_shortform.png" alt="">
 			</a>
@@ -388,7 +389,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://blockmoon.net/m/" class="project-image-link">
 				<img src="images/thumbnail_blockmoon.png" alt="">
 			</a>
@@ -410,7 +411,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://www.impactone.ai/default.asp" class="project-image-link">
 				<img src="images/thumbnail_impactone.png" alt="">
 			</a>
@@ -432,7 +433,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://starryastmall.com/m/" class="project-image-link">
 				<img src="images/thumbnail_starry.png" alt="">
 			</a>
@@ -454,7 +455,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://soundrank.net/m/main.asp" class="project-image-link">
 				<img src="images/thumbnail_soundrank.png" alt="">
 			</a>
@@ -476,7 +477,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://conceptk.ai/default.asp" class="project-image-link">
 				<img src="images/thumbnail_conceptk.png" alt="">
 			</a>
@@ -498,7 +499,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://koreamedi.net/default.asp" class="project-image-link">
 				<img src="images/thumbnail_koreamedi.png" alt="">
 			</a>
@@ -520,7 +521,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://shortdeal.net/m/" class="project-image-link">
 				<img src="images/thumbnail_shortdeal.png" alt="">
 			</a>
@@ -532,7 +533,7 @@
 					<p class="project-title">숏딜 (글로벌솔루션)</p>
 					<div class="detail-box">
 						<span class="classification">회사프로젝트</span>
-						<span class="period">2024-03-23 ~ 진행 중</span>
+						<span class="period">2024-03-23 ~ 2024-12-23</span>
 					</div>
 				</a>
 				<button type="button" class="more-button" data-modal="more" onclick="modalWindowOpen(this)">
@@ -542,7 +543,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://www.agarmall.com/m/main/user_home.asp" class="project-image-link">
 				<img src="images/thumbnail_agarmall.png" alt="">
 			</a>
@@ -564,7 +565,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="react">
 			<a href="https://html-is-a-programming-language.github.io/johnahn-react-netflix/" class="project-image-link">
 				<img src="images/thumbnail_react_netflix.png" alt="">
 			</a>
@@ -593,7 +594,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="react">
 			<a href="https://html-is-a-programming-language.github.io/johnahn-react-todo/" class="project-image-link">
 				<img src="images/thumbnail_react_todo.png" alt="">
 			</a>
@@ -622,7 +623,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://dbo.mallup.co.kr/m/store_home.asp" class="project-image-link">
 				<img src="images/thumbnail_dailybeer.png" alt="">
 			</a>
@@ -644,7 +645,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://kpopcon.net/m/explore/" class="project-image-link">
 				<img src="images/thumbnail_kpopcon.png" alt="">
 			</a>
@@ -666,7 +667,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://mallpro.co.kr/" class="project-image-link"><img src="images/thumbnail_mallpro.png" alt=""></a>
 			<div class="project-detail-box">
 				<span class="skill-icon">
@@ -686,7 +687,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://allpick.kr/m/main/main_ssmk_normal.asp" class="project-image-link">
 				<img src="images/thumbnail_allpick.png" alt="">
 			</a>
@@ -708,7 +709,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="project-container">
+		<div class="project-container active" data-filter="jquery">
 			<a href="https://www.innerversion.co.kr/" class="project-image-link">
 				<img src="images/thumbnail_innerversion.png" alt="">
 			</a>
@@ -742,7 +743,7 @@
 				<div class="menu-wrap">
 					<ul class="menu-list">
 						<li class="menu-item">
-							<button class="menu-button">
+							<button class="menu-button" data-filter="react" onclick="filterButton(this);">
 								<span class="link-icon">
 									<svg width="24" height="24" viewBox="-10.5 -9.45 21 18.9" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-sm me-0 w-10 h-10 text-brand dark:text-brand-dark flex origin-center transition-all ease-in-out">
 										<circle cx="0" cy="0" r="2" fill="#087ea4"></circle>
@@ -756,7 +757,7 @@
 							</button>
 						</li>
 						<li class="menu-item">
-							<button class="menu-button">
+							<button class="menu-button" data-filter="javascript" onclick="filterButton(this);">
 								<span class="button-icon">
 									<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1052 1052">
 										<path fill="#f0db4f" d="M0 0h1052v1052H0z"></path>
@@ -767,7 +768,7 @@
 							</button>
 						</li>
 						<li class="menu-item">
-							<button class="menu-button">
+							<button class="menu-button" data-filter="jquery" onclick="filterButton(this);">
 								<span class="button-icon">
 									<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 100 100">
 										<g transform="matrix(.945094 0 0 .945094 6.301403 4.347014)">
@@ -789,7 +790,7 @@
 								<span class="button-text">JQuery</span>
 							</button>
 						</li>
-						<li class="menu-item">
+						<li class="menu-item" style="display: none;">
 							<button class="menu-button">
 								<span class="button-icon">
 									<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 362.73401 511.99998">
@@ -803,7 +804,7 @@
 								<span class="button-text">CSS</span>
 							</button>
 						</li>
-						<li class="menu-item">
+						<li class="menu-item" style="display: none;">
 							<button class="menu-button">
 								<span class="button-icon">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
