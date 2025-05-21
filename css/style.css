@@ -178,7 +178,7 @@ body.active {
     object-position: center;
 }
 .project-wrap .project-container .project-detail-box {
-    display: flex;
+
     gap: 8px;
     padding: 8px 12px;
     box-sizing: border-box;
@@ -190,7 +190,7 @@ body.active {
     border-radius: 100%;
 }
 .project-wrap .project-container .project-detail-box .detail-link {
-    display: flex;
+
     gap: 4px;
 }
 .project-wrap .project-container .project-detail-box .detail-link .project-title {
