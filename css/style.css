@@ -189,6 +189,10 @@ body.active {
     height: 40px;
     border-radius: 100%;
 }
+.project-wrap .project-container .project-detail-box .skill-icon img {
+    width: 100%;
+    height: 100%;
+}
 .project-wrap .project-container .project-detail-box .detail-link {
     display: flex;
     flex-direction: column;
