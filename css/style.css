@@ -192,7 +192,9 @@ body.active {
 .project-wrap .project-container .project-detail-box .detail-link {
     display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
     gap: 4px;
+    width: 100%;
 }
 .project-wrap .project-container .project-detail-box .detail-link .project-title {
     display: -webkit-box;
